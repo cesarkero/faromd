@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": 1,
-    "actualizado": "2026-08-30T09:23:52Z",
+    "actualizado": "2026-08-30T10:36:45Z",
     "areas": {
       "AP": "Atencion Primaria",
       "URG": "Urgencias y Emergencias",
@@ -1383,7 +1383,7 @@
               "fechaEstudio": null,
               "fechaUltimoRepaso": null,
               "fechaProximoRepaso": null,
-              "minutosDedicados": 0,
+              "minutosDedicados": 25,
               "aplazado": 0,
               "fuentes": []
             },
@@ -1437,13 +1437,13 @@
             {
               "id": "ap-salud-mental--insomnio-y-psicofarmacos--insomnio-cronico-higiene-del-sueno-y-tcc-i",
               "nombre": "Insomnio cronico: higiene del sueno y TCC-i",
-              "estado": "sin_empezar",
+              "estado": "programado",
               "anki": false,
               "repasos": 0,
               "fechaEstudio": null,
               "fechaUltimoRepaso": null,
               "fechaProximoRepaso": null,
-              "minutosDedicados": 0,
+              "minutosDedicados": 50,
               "aplazado": 0,
               "fuentes": []
             },
@@ -3738,5 +3738,46 @@
       ]
     }
   ],
-  "sesiones": []
+  "sesiones": [
+    {
+      "fecha": "2026-08-30",
+      "bloques": [
+        {
+          "pomodoro": 1,
+          "rol": "repaso",
+          "tipo": "repaso",
+          "rotulo": "REPASO",
+          "microtemaId": "ap-dermatologia-en-ap--lesiones-tumorales-y-cribado--queratosis-actinica-y-campo-de-cancerizacion",
+          "hecho": false
+        },
+        {
+          "pomodoro": 2,
+          "rol": "tema_repaso",
+          "tipo": "tema",
+          "rotulo": "TEMA / REPASO",
+          "microtemaId": "ap-salud-mental--insomnio-y-psicofarmacos--insomnio-cronico-higiene-del-sueno-y-tcc-i",
+          "hecho": true
+        },
+        {
+          "pomodoro": 3,
+          "rol": "tema",
+          "tipo": "tema",
+          "rotulo": "TEMA PRINCIPAL",
+          "microtemaId": "ap-salud-mental--insomnio-y-psicofarmacos--insomnio-cronico-higiene-del-sueno-y-tcc-i",
+          "hecho": true
+        },
+        {
+          "pomodoro": 4,
+          "rol": "cierre",
+          "tipo": "cierre",
+          "rotulo": "CIERRE ACTIVO",
+          "microtemaId": "ap-salud-mental--depresion-y-ansiedad--deteccion-y-diagnostico-de-la-depresion-gravedad",
+          "hecho": true
+        }
+      ],
+      "completada": false,
+      "cerrada": true,
+      "minutos": 75
+    }
+  ]
 }
