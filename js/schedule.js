@@ -200,7 +200,7 @@ export function composeSession(plan, iso = todayISO()) {
     b(3, "tema", "tema", id(principalR), "TEMA PRINCIPAL"),
     b(4, "cierre", "cierre", id(principalR), "CIERRE ACTIVO"),
   ];
-  return { fecha: iso, elite: false, bloques, completada: false };
+  return { fecha: iso, bloques, completada: false };
 }
 
 // Marca / desmarca un bloque concreto de la sesion, aplicando o revirtiendo
@@ -397,7 +397,6 @@ export function weeklyStats(plan, iso = todayISO()) {
     minutos: pomodoros * min,
     metaMin: (plan.config.metaHorasSemana || 10) * 60,
     metaSesiones: plan.config.sesionesSemana || 5,
-    elite: semana.some((s) => s.elite),
   };
 }
 

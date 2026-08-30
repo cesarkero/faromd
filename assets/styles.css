@@ -188,15 +188,18 @@ main {
 .bar-seg { display: block; min-width: 2px; border-right: 1px solid rgba(255,255,255,.5); }
 .bar-seg:last-child { border-right: 0; }
 
-/* ============ tira semana ============ */
-.strip { display: flex; flex-wrap: wrap; gap: 10px 28px; align-items: center; }
-.strip-cell { display: flex; flex-direction: column; gap: 2px; min-width: 120px; }
-.strip-label { font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
-.strip-value { font-size: 19px; font-weight: 850; }
-.strip-value small { font-size: 12px; font-weight: 650; color: var(--muted); }
-.strip-sub { font-size: 10.5px; color: var(--muted); }
-.strip-cell.elite { flex: 1; align-items: flex-start; }
-.strip-cell.elite span:last-child { display: flex; align-items: center; gap: 6px; font-size: 12px; }
+/* ============ tira semana (compacta, arriba) ============ */
+.card-strip { padding: 9px 16px; }
+.strip { display: flex; flex-wrap: wrap; gap: 4px 22px; align-items: center; }
+.strip-cell { display: flex; align-items: baseline; gap: 6px; }
+.strip-label { font-size: 9.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.strip-value { font-size: 16px; font-weight: 850; line-height: 1.2; }
+.strip-value small { font-size: 11px; font-weight: 650; color: var(--muted); }
+.strip-sub { font-size: 11px; color: var(--muted); }
+.strip-grow { flex: 1; justify-content: flex-end; }
+.strip-bar { flex: 0 1 140px; height: 5px; background: var(--track); border-radius: 999px; overflow: hidden; }
+.strip-bar span { display: block; height: 100%; background: var(--ap); }
+@media (max-width: 560px) { .strip-bar, .strip-grow { display: none; } }
 .progress { margin-top: 4px; height: 6px; width: 100%; max-width: 180px; background: var(--track); border-radius: 999px; overflow: hidden; }
 .progress span { display: block; height: 100%; background: var(--ap); }
 

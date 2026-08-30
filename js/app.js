@@ -124,8 +124,8 @@ function toggleBloque(idx) {
   const b = session.bloques[idx];
   if (b.hecho) unmarkBloque(plan, session, idx);
   else markBloque(plan, session, idx, todayISO());
-  // si la sesion queda vacia y no es elite, la soltamos para que se recomponga
-  if (!session.bloques.some((x) => x.hecho) && !session.elite) {
+  // si la sesion queda vacia, la soltamos para que se recomponga
+  if (!session.bloques.some((x) => x.hecho)) {
     plan.sesiones = (plan.sesiones || []).filter((s) => s.fecha !== todayISO());
     refreshSession();
   }
@@ -165,8 +165,7 @@ function render() {
       session.bloques.forEach((b, i) => {
         if (b.hecho) unmarkBloque(plan, session, i);
       });
-      if (!session.elite)
-        plan.sesiones = (plan.sesiones || []).filter((s) => s.fecha !== todayISO());
+      plan.sesiones = (plan.sesiones || []).filter((s) => s.fecha !== todayISO());
       refreshSession();
       mutate();
     },
@@ -183,37 +182,26 @@ function renderWeekly() {
   const w = weeklyStats(plan);
   const g = progresoGlobal(plan);
   const pct = Math.min(100, Math.round((w.minutos / w.metaMin) * 100));
-  const eliteChecked = session.elite ? "checked" : "";
   $("#weekly").innerHTML = `
     <div class="strip">
       <div class="strip-cell">
-        <span class="strip-label">Semana en curso</span>
-        <span class="strip-value">${(w.minutos / 60).toFixed(1)} <small>/ ${(w.metaMin / 60).toFixed(0)} h</small></span>
-        <div class="progress"><span style="width:${pct}%"></span></div>
+        <span class="strip-label">Semana</span>
+        <span class="strip-value">${(w.minutos / 60).toFixed(1)}<small> / ${(w.metaMin / 60).toFixed(0)} h</small></span>
       </div>
+      <div class="strip-bar"><span style="width:${pct}%"></span></div>
       <div class="strip-cell">
         <span class="strip-label">Sesiones</span>
-        <span class="strip-value">${w.sesiones} <small>/ ${w.metaSesiones}</small></span>
+        <span class="strip-value">${w.sesiones}<small> / ${w.metaSesiones}</small></span>
       </div>
       <div class="strip-cell">
         <span class="strip-label">Temario</span>
-        <span class="strip-value">${g.finalizados} <small>/ ${g.total}</small></span>
+        <span class="strip-value">${g.finalizados}<small> / ${g.total}</small></span>
+      </div>
+      <div class="strip-cell strip-grow">
+        <span class="strip-label">Estado</span>
         <span class="strip-sub">${g.programados} en curso · ${g.sinEmpezar} sin empezar</span>
       </div>
-      <label class="strip-cell elite">
-        <span class="strip-label">Sesion elite</span>
-        <span><input type="checkbox" class="w-elite" ${eliteChecked} ${
-    readonly() ? "disabled" : ""
-  }> hoy cuenta como elite</span>
-      </label>
     </div>`;
-  const el = $("#weekly .w-elite");
-  if (el)
-    el.onchange = () => {
-      session.elite = el.checked;
-      upsertSession(plan, session);
-      mutate();
-    };
 }
 
 function renderOverdue() {
