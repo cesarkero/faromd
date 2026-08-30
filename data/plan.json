@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": 1,
-    "actualizado": "2026-08-30T10:36:45Z",
+    "actualizado": "2026-08-30T11:06:53Z",
     "areas": {
       "AP": "Atencion Primaria",
       "URG": "Urgencias y Emergencias",
@@ -1437,12 +1437,12 @@
             {
               "id": "ap-salud-mental--insomnio-y-psicofarmacos--insomnio-cronico-higiene-del-sueno-y-tcc-i",
               "nombre": "Insomnio cronico: higiene del sueno y TCC-i",
-              "estado": "programado",
+              "estado": "finalizado",
               "anki": false,
               "repasos": 0,
-              "fechaEstudio": null,
+              "fechaEstudio": "2026-08-30",
               "fechaUltimoRepaso": null,
-              "fechaProximoRepaso": null,
+              "fechaProximoRepaso": "2026-08-31",
               "minutosDedicados": 50,
               "aplazado": 0,
               "fuentes": []
