@@ -232,6 +232,47 @@ main {
 .overdue-list li.od-retra { background: #f6e3d6; }
 .overdue-list li.od-retra .od-name { color: #9a5a2f; }
 
+/* ============ artículos y cursos ============ */
+.act-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.act-sum { font-size: 11px; font-weight: 600; color: var(--muted); text-transform: none; letter-spacing: 0; }
+.act-add { margin-left: auto; }
+.act-list { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.act-item {
+  display: grid; grid-template-columns: auto 1fr auto; align-items: start; gap: 4px 10px;
+  padding: 8px 10px; background: var(--surface-2); border-radius: 10px;
+}
+.act-item-curso { background: #efe7d6; }
+.act-chip {
+  font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em;
+  padding: 2px 7px; border-radius: 999px; background: var(--track); color: var(--muted);
+  white-space: nowrap; margin-top: 1px;
+}
+.act-chip-articulo { background: #dfe8ec; color: #3f6474; }
+.act-chip-curso { background: #e7ddc6; color: #7a5f2e; }
+.act-chip-sesion { background: #e4dcec; color: #5c4a76; }
+.act-body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.act-titulo { font-size: 12.5px; font-weight: 700; }
+.act-titulo a { font-weight: 700; }
+.act-meta { font-size: 11px; color: var(--muted); }
+.act-notas { font-size: 11.5px; color: var(--ink); opacity: .8; }
+.act-acc { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+
+.act-form {
+  display: flex; flex-wrap: wrap; gap: 10px 12px; margin-top: 12px;
+  padding: 12px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px;
+}
+.act-form label {
+  display: flex; flex-direction: column; gap: 3px;
+  font-size: 10.5px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; color: var(--muted);
+}
+.act-form input, .act-form select {
+  font: inherit; font-size: 12.5px; font-weight: 550; text-transform: none; letter-spacing: 0;
+  padding: 7px 9px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); color: var(--ink);
+}
+.act-form .act-f-grow { flex: 1 1 240px; }
+.act-form-acc { flex-basis: 100%; display: flex; gap: 8px; }
+.act-form .mini-primary { background: var(--ap); border-color: transparent; color: #fff; }
+
 /* ============ tabla ============ */
 .filters {
   display: flex; flex-wrap: wrap; gap: 10px; align-items: center;

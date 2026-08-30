@@ -385,6 +385,15 @@ export function bloqueLabel(plan, bloque) {
 
 // --- agregados ----------------------------------------------------
 export function timeByTema(plan) {
+  // minutos de actividades de formacion, por tema vinculado o transversales
+  const porTema = {};
+  let transversal = 0;
+  for (const a of plan.actividades || []) {
+    const m = a.minutos || 0;
+    if (a.ambito === "tema" && a.temaId) porTema[a.temaId] = (porTema[a.temaId] || 0) + m;
+    else transversal += m;
+  }
+
   const rows = [];
   for (const tema of plan.temas || []) {
     const segments = [];
@@ -397,9 +406,34 @@ export function timeByTema(plan) {
       if (m > 0) segments.push({ nombre: sub.nombre, minutos: m });
       total += m;
     }
+    if (porTema[tema.id]) {
+      segments.push({ nombre: "Artículos y cursos", minutos: porTema[tema.id] });
+      total += porTema[tema.id];
+    }
     rows.push({ tema, total, segments });
   }
-  return rows.filter((r) => r.total > 0).sort((a, b) => b.total - a.total);
+  const out = rows.filter((r) => r.total > 0).sort((a, b) => b.total - a.total);
+  if (transversal > 0) {
+    out.push({
+      tema: { id: "_transversal", nombre: "Formación transversal", area: "FORMACION" },
+      total: transversal,
+      segments: [{ nombre: "Artículos y cursos", minutos: transversal }],
+    });
+  }
+  return out;
+}
+
+// Actividades de formacion (articulos, cursos, sesiones clinicas) de una semana.
+export function actividadesSemana(plan, iso = todayISO()) {
+  const lunes = mondayOf(iso);
+  const domingo = addDays(lunes, 6);
+  return (plan.actividades || [])
+    .filter((a) => a.fecha && a.fecha >= lunes && a.fecha <= domingo)
+    .sort((a, b) => (a.fecha < b.fecha ? 1 : -1));
+}
+// Cursos empezados y sin fecha de fin (siguen en marcha aunque no sean de esta semana).
+export function cursosActivos(plan) {
+  return (plan.actividades || []).filter((a) => a.tipo === "curso" && !a.fechaFin);
 }
 
 export function weeklyStats(plan, iso = todayISO()) {
@@ -408,12 +442,22 @@ export function weeklyStats(plan, iso = todayISO()) {
   const min = plan.config.minutosPomodoro || 25;
   const semana = (plan.sesiones || []).filter((s) => s.fecha >= lunes && s.fecha <= domingo);
   const pomodoros = semana.reduce((n, s) => n + s.bloques.filter((b) => b.hecho).length, 0);
+  const acts = actividadesSemana(plan, iso);
+  const actMin = acts.reduce((n, a) => n + (a.minutos || 0), 0);
   return {
     lunes,
     domingo,
     sesiones: semana.filter((s) => s.bloques.some((b) => b.hecho)).length,
     pomodoros,
-    minutos: pomodoros * min,
+    minutosSesiones: pomodoros * min,
+    minutos: pomodoros * min + actMin, // total de la semana: temario + formacion
+    actividades: {
+      articulos: acts.filter((a) => a.tipo === "articulo").length,
+      cursos: acts.filter((a) => a.tipo === "curso").length,
+      sesiones: acts.filter((a) => a.tipo === "sesion").length,
+      total: acts.length,
+      minutos: actMin,
+    },
     metaMin: (plan.config.metaHorasSemana || 10) * 60,
     metaSesiones: plan.config.sesionesSemana || 5,
   };

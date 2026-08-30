@@ -27,6 +27,7 @@ import {
 } from "./schedule.js";
 import { renderCircle } from "./ui/circle.js";
 import { renderBars } from "./ui/bars.js";
+import { renderActividades } from "./ui/actividades.js";
 import { renderTable } from "./ui/table.js";
 import { openSettings } from "./ui/settings.js";
 import { downloadCSV, downloadJSON, downloadXLSX } from "./csv.js";
@@ -171,6 +172,7 @@ function render() {
   });
 
   renderBars($("#bars"), plan);
+  renderActividades($("#actividades"), plan, { onMutate: mutate, readonly: readonly() });
   renderWeekly();
   renderOverdue();
   renderTable($("#table"), plan, { onMutate: mutate, readonly: readonly(), session });
@@ -195,6 +197,12 @@ function renderWeekly() {
       <div class="strip-cell">
         <span class="strip-label">Temario</span>
         <span class="strip-value">${g.finalizados}<small> / ${g.total}</small></span>
+      </div>
+      <div class="strip-cell">
+        <span class="strip-label">Formación</span>
+        <span class="strip-value">${w.actividades.total}<small> ${
+          w.actividades.total ? `· ${(w.actividades.minutos / 60).toFixed(1)} h` : "esta semana"
+        }</small></span>
       </div>
       <div class="strip-cell strip-grow">
         <span class="strip-label">Estado</span>

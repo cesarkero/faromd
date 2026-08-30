@@ -45,10 +45,11 @@ están en `data/plan.json`, que es la **única fuente de verdad**.
 - `assets/styles.css` – estilos y paleta (tomada de `/img`, suavizada a pastel).
 - `js/config.js` – **owner / repo / branch** del repositorio y claves de localStorage.
 - `js/store.js` – carga y guardado vía API de GitHub, borrador local, importar plan.
-- `js/schedule.js` – repaso espaciado, composición de la sesión del día, cierre de día.
+- `js/schedule.js` – repaso espaciado, composición de la sesión del día, cierre de día,
+  agregados de la semana y de la bitácora de formación.
 - `js/csv.js` – exportación del temario a CSV / Excel (.xlsx) / JSON.
-- `js/ui/*` – círculo de sesión, barras apiladas, tabla, ajustes.
-- `data/plan.json` – temario + configuración + registro de sesiones (**fuente única**).
+- `js/ui/*` – círculo de sesión, barras apiladas, tabla, artículos y cursos, ajustes.
+- `data/plan.json` – temario + configuración + sesiones + bitácora de formación (**fuente única**).
 - `data/plan.example.json` – plan "de fábrica" (temario en blanco) para *Restaurar*.
 - `data/temario.csv` / `data/temario.xlsx` – el temario (clasificación temas ▸ subtemas ▸
   microtemas) para llevarlo a otro sistema. Se regeneran desde `plan.json`; el menú
@@ -186,6 +187,27 @@ fuente incluye una URL al material digitalizado, aparece como enlace **abrir mat
 añadir/editar: enlace *＋ fuente* junto al nombre (o *Editar fuentes* en la ficha), varias
 separadas por `|`. Se exportan a CSV/Excel en su columna `Fuentes`.
 
+## Artículos y cursos (bitácora de formación)
+
+Panel **Artículos y cursos**, entre *Tiempo por tema* y *Repasos vencidos*. Es un registro
+aparte del temario (no entra en el repaso espaciado). Con *＋ añadir* se anota:
+
+- **tipo**: artículo · curso · sesión clínica,
+- **título**, **fecha**, **minutos**, **enlace** (opcional),
+- **ámbito**: transversal, o **vinculado a un tema** del temario,
+- una **nota** con la idea que te llevas.
+
+Cómo se refleja:
+
+- **Tira semanal**: celda *Formación* con el nº de la semana y las horas.
+- Los **minutos suman al total semanal** (la meta de 10 h incluye formación) y a *Tiempo por
+  tema*: si está vinculada a un tema, engorda su barra; si es transversal, aparece la barra
+  *Formación transversal*.
+- El panel muestra lo de **esta semana** y los **cursos en marcha** (sin fecha de fin);
+  *terminado* cierra el curso, *editar* / *borrar* lo gestionan.
+- Se guarda en `data/plan.json` (`plan.actividades[]`) y se exporta en la hoja **Actividades**
+  del Excel y en el JSON de copia.
+
 ## Modo edición y solo lectura
 
 - **En local** (`localhost`): edición siempre activa; los cambios van al borrador y a *Datos →
@@ -248,6 +270,11 @@ reaparecen.
 **Edité desde la web publicada, ¿cómo lo veo en mi PC?**
 `git pull` en la carpeta del repo. Solo cambia `data/plan.json`. Ver *Traer los cambios a tu
 copia local*.
+
+**¿Dónde apunto un artículo leído o un curso?**
+Panel *Artículos y cursos* → *＋ añadir*. No entra en el repaso espaciado; se registra y se
+refleja en la semana (celda *Formación* de la tira, y los minutos suman al total y a *Tiempo por
+tema*). Puedes vincularlo a un tema o dejarlo transversal.
 
 **¿El mismo token vale para dos PC / dos personas?**
 Sí. Se pega en **Ajustes** en cada navegador. Si dos guardan a la vez, la web detecta el

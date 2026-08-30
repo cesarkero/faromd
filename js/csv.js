@@ -47,6 +47,22 @@ const COLS = [
   "MinutosDedicados",
 ];
 
+const ACT_COLS = ["Tipo", "Titulo", "Fecha", "FechaFin", "Minutos", "Ambito", "Tema", "Enlace", "Notas"];
+function actividadRows(plan) {
+  const temas = Object.fromEntries((plan.temas || []).map((t) => [t.id, t.nombre]));
+  return (plan.actividades || []).map((a) => ({
+    Tipo: a.tipo || "",
+    Titulo: a.titulo || "",
+    Fecha: a.fecha || "",
+    FechaFin: a.fechaFin || "",
+    Minutos: a.minutos || 0,
+    Ambito: a.ambito === "tema" ? "tema" : "transversal",
+    Tema: a.ambito === "tema" ? temas[a.temaId] || a.temaId || "" : "",
+    Enlace: a.url || "",
+    Notas: a.notas || "",
+  }));
+}
+
 function cell(v) {
   const s = v == null ? "" : String(v);
   return /[";\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
@@ -96,5 +112,13 @@ export async function downloadXLSX(plan) {
   ws["!autofilter"] = { ref: XLSX.utils.encode_range({ s: { r: 0, c: 0 }, e: { r: rowsFor(plan).length, c: COLS.length - 1 } }) };
   const wb = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(wb, ws, "Temario");
+
+  const acts = actividadRows(plan);
+  if (acts.length) {
+    const wa = XLSX.utils.json_to_sheet(acts, { header: ACT_COLS });
+    wa["!cols"] = ACT_COLS.map((k) => ({ wch: k === "Titulo" || k === "Notas" || k === "Enlace" ? 40 : 13 }));
+    XLSX.utils.book_append_sheet(wb, wa, "Actividades");
+  }
+
   XLSX.writeFile(wb, "temario.xlsx");
 }

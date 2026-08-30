@@ -7,6 +7,7 @@ const AREA_VAR = {
   EXTRA: "--extra",
   DERMATOSCOPIA: "--derm",
   MIR: "--mir",
+  FORMACION: "--derm",
 };
 
 function fmt(min) {
