@@ -103,8 +103,8 @@ en Ajustes.
 
 ## Registrar y corregir datos
 
-1. Con el token puesto, edita la tabla (estado, Anki, nº de repasos, fechas, fuentes) o usa los
-   botones rápidos de cada fila:
+1. Con el token puesto, edita la tabla (estado, Anki, nº de repasos, fechas; las fuentes desde la
+   ficha que se despliega al pasar el ratón por el nombre) o usa los botones rápidos de cada fila:
    - **Estudiado**: marca el microtema como estudiado hoy, pone `estado = finalizado`,
      `fecha de estudio = hoy`, y **programa el 1.er repaso** (hoy + 1 día, o el intervalo
      configurado).
@@ -176,9 +176,15 @@ y `1-2-5-12-30` para los subtemas `frecuente` (HTA, DM, dislipemia…). Editable
 ## Tabla del temario
 
 Arranca **plegada** (solo los títulos de tema). Se despliega tema a tema, o entera al buscar/
-filtrar. En **móvil** se oculta (usa *Datos → Exportar CSV*). Columnas: microtema, **Fuentes**
-(dónde está en los libros; varias separadas por `|`, p. ej. `semFYC cap. 12 · p. 145 | Vázquez Lima cap. 33`),
-estado, Anki, repasos, fechas.
+filtrar. En **móvil** se oculta (usa *Datos → Exportar CSV*). Columnas: microtema, estado, Anki,
+repasos, fechas.
+
+**Fuentes** (dónde está el microtema en los libros): no ocupan columna. El nombre del microtema
+sale con subrayado punteado cuando tiene fuentes anotadas; **al pasar el ratón por encima** se
+despliega la ficha con la lista (`semFYC cap. 12 · p. 145`, `Vázquez Lima cap. 33`…). Si una
+fuente incluye una URL al material digitalizado, aparece como enlace **abrir material ↗**. Para
+añadir/editar: enlace *＋ fuente* junto al nombre (o *Editar fuentes* en la ficha), varias
+separadas por `|`. Se exportan a CSV/Excel en su columna `Fuentes`.
 
 ## Modo edición y solo lectura
 
@@ -198,8 +204,9 @@ En **Ajustes → Zona peligrosa → Restaurar plan de fábrica** (pide escribir 
 
 ## Futuras implementaciones
 
-- Que cada bloque de estudio del círculo **enlace a la ruta del material** a estudiar (capítulo/
-  página, o el PDF si está digitalizado) usando el campo `fuentes` de cada microtema.
+- Que **el bloque del círculo** (no solo la fila de la tabla) enlace también a la ruta del
+  material vía `fuentes`. La ficha de fuentes del nombre ya muestra el enlace **abrir material ↗**
+  cuando la fuente incluye una URL.
 - Rellenar `fuentes` a partir de los índices fotografiados en `img/indices/`.
 - Campo de **minutos a mano** por fila, para registrar tiempo de estudio hecho fuera del círculo.
 
@@ -270,3 +277,4 @@ Libros
   (fotos en `img/indices/`). **Aún NO analizados**: el temario actual es una propuesta
   a partir de los índices *conocidos* de la semFYC y de Urgencias (Vázquez Lima), no de estas fotos.
 - [ ] Enlazar los bloques de estudio con la ruta del material (ver *Futuras implementaciones*).
+- Podría ser interesante platear siempre al entrar a la herramienta una pregunta del MIR a responder, es una forma random interactiva de empezar a pensar en "medicina".

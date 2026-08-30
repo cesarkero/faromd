@@ -68,7 +68,7 @@ export function renderTable(container, plan, { onMutate, readonly, session }) {
       state.soloVencidos ? "checked" : ""
     }> Solo repasos vencidos</label>`;
   container.appendChild(bar);
-  const rerender = () => renderTable(container, plan, { onMutate, readonly });
+  const rerender = () => renderTable(container, plan, { onMutate, readonly, session });
   bar.querySelector(".f-q").oninput = (e) => {
     state.q = e.target.value;
     state._focusQ = true;
@@ -145,7 +145,7 @@ export function renderTable(container, plan, { onMutate, readonly, session }) {
         table.className = "grid";
         table.innerHTML = `
           <thead><tr>
-            <th>Microtema</th><th>Fuentes (libro · cap./pág.)</th><th>Estado</th><th>Anki</th><th>Rep.</th>
+            <th>Microtema</th><th>Estado</th><th>Anki</th><th>Rep.</th>
             <th>Ult. repaso</th><th>F. estudio</th><th>Prox. repaso</th><th></th>
           </tr></thead>`;
         const tb = document.createElement("tbody");
@@ -179,13 +179,33 @@ function row(plan, tema, sub, m, today, onMutate, readonly, bloqueHoy) {
   if (vencido) tr.classList.add("is-overdue");
   if (bloqueHoy) tr.classList.add("is-today", bloqueHoy.hecho ? "is-today-done" : "is-today-pending");
 
-  // nombre
+  // nombre + fuentes (se despliegan al pasar el raton por encima del nombre)
   const tdName = document.createElement("td");
   tdName.className = "cell-name";
   const nameSpan = document.createElement("span");
   nameSpan.className = "name-txt";
   nameSpan.textContent = m.nombre;
   tdName.appendChild(nameSpan);
+
+  const nFuentes = (m.fuentes || []).length;
+  if (nFuentes) {
+    nameSpan.classList.add("has-src");
+    const open = () => showSrcPopover(nameSpan, m, readonly, onMutate);
+    nameSpan.tabIndex = 0;
+    nameSpan.addEventListener("mouseenter", open);
+    nameSpan.addEventListener("focus", open);
+    nameSpan.addEventListener("mouseleave", hideSrcPopover);
+    nameSpan.addEventListener("blur", hideSrcPopover);
+  } else if (!readonly) {
+    const add = document.createElement("button");
+    add.type = "button";
+    add.className = "src-add";
+    add.textContent = "＋ fuente";
+    add.title = "Anotar dónde está este microtema en los libros";
+    add.onclick = () => editFuentes(m, onMutate);
+    tdName.appendChild(add);
+  }
+
   if (bloqueHoy) {
     const tag = document.createElement("span");
     tag.className = "today-tag";
@@ -194,22 +214,6 @@ function row(plan, tema, sub, m, today, onMutate, readonly, bloqueHoy) {
     tdName.appendChild(tag);
   }
   tr.appendChild(tdName);
-
-  // fuentes (localizacion en los libros; varias separadas por " | ")
-  const tdFuentes = document.createElement("td");
-  tdFuentes.className = "cell-fuentes";
-  const fi = document.createElement("input");
-  fi.type = "text";
-  fi.className = "inp";
-  fi.placeholder = "semFYC cap. 12 · p. 145 | Vázquez Lima cap. 33";
-  fi.value = (m.fuentes || []).join(" | ");
-  fi.disabled = readonly;
-  fi.onchange = () => {
-    m.fuentes = fi.value.split("|").map((s) => s.trim()).filter(Boolean);
-    onMutate();
-  };
-  tdFuentes.appendChild(fi);
-  tr.appendChild(tdFuentes);
 
   // estado
   tr.appendChild(
@@ -344,4 +348,81 @@ let t;
 function debounce(fn) {
   clearTimeout(t);
   t = setTimeout(fn, 200);
+}
+
+// --- fuentes: popover al pasar el raton por el nombre --------------
+function editFuentes(m, onMutate) {
+  const actual = (m.fuentes || []).join(" | ");
+  const next = prompt(
+    "Fuentes de este microtema (dónde está en los libros).\n" +
+      "Separa varias con «|». Puedes incluir una URL al material:\n" +
+      "semFYC cap. 12 · p. 145 | Vázquez Lima cap. 33 | https://…",
+    actual
+  );
+  if (next === null) return;
+  m.fuentes = next.split("|").map((s) => s.trim()).filter(Boolean);
+  onMutate();
+}
+
+let srcPop, srcHideT;
+function ensureSrcPop() {
+  if (srcPop) return srcPop;
+  srcPop = document.createElement("div");
+  srcPop.className = "src-pop";
+  srcPop.hidden = true;
+  srcPop.addEventListener("mouseenter", () => clearTimeout(srcHideT));
+  srcPop.addEventListener("mouseleave", hideSrcPopover);
+  document.body.appendChild(srcPop);
+  return srcPop;
+}
+function hideSrcPopover() {
+  srcHideT = setTimeout(() => {
+    if (srcPop) srcPop.hidden = true;
+  }, 180);
+}
+function showSrcPopover(anchor, m, readonly, onMutate) {
+  const p = ensureSrcPop();
+  clearTimeout(srcHideT);
+  p.innerHTML = "";
+
+  const items = m.fuentes || [];
+  const ul = document.createElement("ul");
+  for (const f of items) ul.appendChild(fuenteLine(f));
+  p.appendChild(ul);
+
+  if (!readonly) {
+    const edit = document.createElement("button");
+    edit.type = "button";
+    edit.className = "src-edit";
+    edit.textContent = "Editar fuentes";
+    edit.onclick = () => {
+      p.hidden = true;
+      editFuentes(m, onMutate);
+    };
+    p.appendChild(edit);
+  }
+
+  p.hidden = false;
+  const r = anchor.getBoundingClientRect();
+  const pw = p.offsetWidth || 300;
+  const left = Math.min(window.scrollX + r.left, window.scrollX + window.innerWidth - pw - 12);
+  p.style.top = `${window.scrollY + r.bottom + 6}px`;
+  p.style.left = `${Math.max(8, left)}px`;
+}
+function fuenteLine(f) {
+  const li = document.createElement("li");
+  const url = f.match(/https?:\/\/[^\s|]+/);
+  if (!url) {
+    li.textContent = f;
+    return li;
+  }
+  const label = f.replace(url[0], "").replace(/^[\s·|–-]+|[\s·|–-]+$/g, "").trim();
+  if (label) li.appendChild(document.createTextNode(label + " "));
+  const a = document.createElement("a");
+  a.href = url[0];
+  a.target = "_blank";
+  a.rel = "noopener";
+  a.textContent = "abrir material ↗";
+  li.appendChild(a);
+  return li;
 }
