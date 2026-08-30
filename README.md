@@ -201,6 +201,54 @@ En **Ajustes → Zona peligrosa → Restaurar plan de fábrica** (pide escribir 
 - Que cada bloque de estudio del círculo **enlace a la ruta del material** a estudiar (capítulo/
   página, o el PDF si está digitalizado) usando el campo `fuentes` de cada microtema.
 - Rellenar `fuentes` a partir de los índices fotografiados en `img/indices/`.
+- Campo de **minutos a mano** por fila, para registrar tiempo de estudio hecho fuera del círculo.
+
+# Preguntas frecuentes
+
+**Marqué un bloque en el círculo, ¿cuándo se rellenan `F. estudio` y `Próx. repaso`?**
+No con el círculo. Marcar un bloque de un tema nuevo solo lo pasa a `Programado` y le suma 25 min.
+Las fechas aparecen cuando el microtema pasa a `Finalizado`: botón **Estudiado** (1.ª vez) o
+**Repaso** (siguientes) en su fila de la tabla.
+
+**Mientras no pulse "Estudiado", ¿el tema sigue apareciendo?**
+Sí. Un microtema `Programado` es el P3 · Tema principal de cada día hasta que lo marcas como
+estudiado. Es lo buscado: seguir con el tema a medias hasta acabarlo.
+
+**¿Para qué sirve el botón "Repaso"?**
+Registra un repaso hecho hoy de algo **ya estudiado**: `Repasos` +1, `Últ. repaso = hoy` y
+reprograma `Próx. repaso` con el siguiente intervalo (`1-3-7-21-60`; `1-2-5-12-30` si es
+frecuente). No lo uses en algo `Sin empezar` (para eso está **Estudiado**).
+
+**Diferencia entre "Estudiado" y "Repaso":**
+*Estudiado* = primera vez, arranca el ciclo (`F. estudio = hoy`, repaso 1 mañana).
+*Repaso* = refresco de algo ya visto, avanza la cadena y aleja la siguiente fecha.
+
+**Hoy estudié algo distinto a lo propuesto en el círculo, ¿qué hago?**
+En la tabla, botón **Estudiado** (o **Repaso**) en ese microtema. El círculo se recompone solo
+con los bloques que no hayas marcado; lo que te proponía y no tocaste sigue pendiente y vuelve a
+salir. La planificación se recalcula cada día desde el estado real del temario, no te penaliza.
+
+**¿Y el tiempo de lo que estudié fuera del círculo?**
+Los botones **Estudiado / Repaso** no suman minutos a *Tiempo por tema* (solo lo hacen los
+bloques del círculo, atados a un microtema concreto). Ese día el reparto de horas queda
+incompleto. Pendiente: campo de minutos a mano (ver *Futuras implementaciones*).
+
+**Si no marco todos los bloques, ¿pierdo el progreso?**
+No. Al **Cerrar día** (a mano o automático al abrir la web otro día) los repasos vencidos sin
+hacer se deslizan a mañana (sube su contador `aplazado`); los bloques de estudio simplemente
+reaparecen.
+
+**Edité desde la web publicada, ¿cómo lo veo en mi PC?**
+`git pull` en la carpeta del repo. Solo cambia `data/plan.json`. Ver *Traer los cambios a tu
+copia local*.
+
+**¿El mismo token vale para dos PC / dos personas?**
+Sí. Se pega en **Ajustes** en cada navegador. Si dos guardan a la vez, la web detecta el
+conflicto por el `sha` y ofrece recargar.
+
+**¿Por qué no reacciona / no deja editar en la web publicada?**
+Por defecto es **solo lectura**. Hay que pegar un token en **Ajustes**. En `localhost` la edición
+está siempre activa (los cambios van al borrador y a *Datos → Exportar*, nunca a GitHub).
 
 # Material para el plan de estudio
 
