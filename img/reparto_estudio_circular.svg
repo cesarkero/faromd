@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Sesión circular de estudio con Pomodoro 25-5</title>
+  <desc id="desc">Sesión habitual de dos horas dividida en cuatro Pomodoros y descansos. Incluye reparto dinámico de repasos, método de repaso y sustituciones semanales.</desc>
+  <defs>
+    <style>
+      .bg { fill:#f7f1e7; }
+      .ink { fill:#1d1b19; }
+      .muted { fill:#665f57; }
+      .cream { fill:#fffdf9; }
+      .review { fill:#a34f59; }
+      .topic { fill:#5b879f; }
+      .topic2 { fill:#47758f; }
+      .urgent { fill:#53866f; }
+      .mir { fill:#80669a; }
+      .course { fill:#be7d43; }
+      .title { font-family:Inter,Arial,sans-serif; font-size:52px; font-weight:850; letter-spacing:-1.2px; }
+      .eyebrow { font-family:Inter,Arial,sans-serif; font-size:18px; font-weight:800; letter-spacing:2.8px; }
+      .h2 { font-family:Inter,Arial,sans-serif; font-size:29px; font-weight:850; letter-spacing:-.4px; }
+      .h3 { font-family:Inter,Arial,sans-serif; font-size:21px; font-weight:850; }
+      .body { font-family:Inter,Arial,sans-serif; font-size:19px; font-weight:550; }
+      .small { font-family:Inter,Arial,sans-serif; font-size:16px; font-weight:650; }
+      .tiny { font-family:Inter,Arial,sans-serif; font-size:14px; font-weight:700; }
+      .ringlabel { font-family:Inter,Arial,sans-serif; font-size:20px; font-weight:850; text-anchor:middle; }
+      .ringtiny { font-family:Inter,Arial,sans-serif; font-size:14px; font-weight:750; text-anchor:middle; }
+      .line { stroke:#1d1b19; stroke-width:2; opacity:.17; }
+    </style>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="7" result="blur"/>
+      <feOffset dy="5" result="offset"/>
+      <feColorMatrix in="offset" type="matrix" values="0 0 0 0 0.15 0 0 0 0 0.12 0 0 0 0 0.09 0 0 0 .12 0"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect class="bg" width="1600" height="1200" rx="34"/>
+  <rect x="0" y="0" width="18" height="1200" fill="#a34f59"/>
+  <text x="72" y="65" class="eyebrow muted">ESTUDIO · GUÍA VISUAL</text>
+  <text x="72" y="125" class="title ink">TU SESIÓN HABITUAL · 2 HORAS</text>
+  <text x="72" y="164" class="body muted">Siempre 4 Pomodoros de 25 min + 5 min de descanso · reparto dinámico según los repasos</text>
+  <line x1="72" y1="196" x2="1528" y2="196" class="line"/>
+
+  <!-- Main circular schedule -->
+  <circle cx="500" cy="558" r="370" class="cream" filter="url(#shadow)"/>
+  <circle cx="500" cy="558" r="280" fill="none" stroke="#ded4c6" stroke-width="130"/>
+  <circle cx="500" cy="558" r="280" fill="none" stroke="#a34f59" stroke-width="130" stroke-dasharray="366.52 1392.77" transform="rotate(-90 500 558)"/>
+  <circle cx="500" cy="558" r="280" fill="none" stroke="#5b879f" stroke-width="130" stroke-dasharray="366.52 1392.77" transform="rotate(0 500 558)"/>
+  <circle cx="500" cy="558" r="280" fill="none" stroke="#5b879f" stroke-width="130" stroke-dasharray="366.52 1392.77" transform="rotate(90 500 558)"/>
+  <circle cx="500" cy="558" r="280" fill="none" stroke="#47758f" stroke-width="130" stroke-dasharray="366.52 1392.77" transform="rotate(180 500 558)"/>
+  <circle cx="500" cy="558" r="192" fill="#f7f1e7"/>
+  <text x="500" y="508" text-anchor="middle" class="eyebrow muted">CASI TODOS LOS DÍAS</text>
+  <text x="500" y="559" text-anchor="middle" class="title ink" font-size="44">4 × 25/5</text>
+  <text x="500" y="598" text-anchor="middle" class="h3 ink">2 horas totales</text>
+  <text x="500" y="630" text-anchor="middle" class="small muted">sin aumentar la carga</text>
+
+  <!-- labels within arcs -->
+  <text x="671" y="319" class="ringtiny" fill="#fbecef">P1 · 25 MIN</text>
+  <text x="671" y="344" class="ringlabel" fill="white">REPASO</text>
+  <text x="724" y="720" class="ringtiny" fill="#eaf5fa">P2 · 25 MIN</text>
+  <text x="724" y="745" class="ringlabel" fill="white">TEMA / REPASO</text>
+  <text x="329" y="772" class="ringtiny" fill="#eaf5fa">P3 · 25 MIN</text>
+  <text x="329" y="797" class="ringlabel" fill="white">TEMA ACTUAL</text>
+  <text x="276" y="373" class="ringtiny" fill="#eaf5fa">P4 · 25 MIN</text>
+  <text x="276" y="398" class="ringlabel" fill="white">CIERRE ACTIVO</text>
+
+  <!-- 5-minute breaks -->
+  <circle cx="821" cy="516" r="28" fill="#eee5d9" stroke="#cfc3b3" stroke-width="2"/>
+  <text x="821" y="523" text-anchor="middle" class="small ink">5′</text>
+  <circle cx="542" cy="879" r="28" fill="#eee5d9" stroke="#cfc3b3" stroke-width="2"/>
+  <text x="542" y="886" text-anchor="middle" class="small ink">5′</text>
+  <circle cx="179" cy="600" r="28" fill="#eee5d9" stroke="#cfc3b3" stroke-width="2"/>
+  <text x="179" y="607" text-anchor="middle" class="small ink">5′</text>
+  <circle cx="458" cy="237" r="28" fill="#eee5d9" stroke="#cfc3b3" stroke-width="2"/>
+  <text x="458" y="244" text-anchor="middle" class="small ink">5′</text>
+
+  <rect x="185" y="902" width="630" height="54" rx="17" fill="#eee5d9"/>
+  <text x="500" y="936" text-anchor="middle" class="small ink">Sin repaso vencido → P1 también se dedica al tema actual</text>
+
+  <!-- right reminders -->
+  <rect x="920" y="230" width="608" height="222" rx="24" class="cream"/>
+  <text x="954" y="270" class="eyebrow muted">ELIGE SEGÚN LA CARGA</text>
+  <text x="954" y="307" class="h2 ink">Pomodoros de repaso</text>
+
+  <text x="954" y="349" class="small ink">Carga normal</text>
+  <circle cx="1125" cy="343" r="14" class="review"/><circle cx="1162" cy="343" r="14" class="topic"/><circle cx="1199" cy="343" r="14" class="topic"/><circle cx="1236" cy="343" r="14" class="topic"/>
+  <text x="1272" y="349" class="small muted">1 repaso + 3 tema</text>
+  <text x="954" y="389" class="small ink">Carga alta</text>
+  <circle cx="1125" cy="383" r="14" class="review"/><circle cx="1162" cy="383" r="14" class="review"/><circle cx="1199" cy="383" r="14" class="topic"/><circle cx="1236" cy="383" r="14" class="topic"/>
+  <text x="1272" y="389" class="small muted">2 repasos + 2 tema</text>
+  <text x="954" y="429" class="small ink">Acumulación</text>
+  <circle cx="1125" cy="423" r="14" class="review"/><circle cx="1162" cy="423" r="14" class="review"/><circle cx="1199" cy="423" r="14" class="review"/><circle cx="1236" cy="423" r="14" class="review"/>
+  <text x="1272" y="429" class="small muted">día de consolidación</text>
+
+  <rect x="920" y="472" width="608" height="250" rx="24" class="cream"/>
+  <text x="954" y="512" class="eyebrow muted">CÓMO REPASAR UN MICROTEMA</text>
+  <text x="954" y="554" class="h3 ink">1 · Recordarlo entero sin mirar</text>
+  <text x="954" y="591" class="h3 ink">2 · Comparar con reMarkable</text>
+  <text x="954" y="628" class="h3 ink">3 · Releer lagunas o todo si fue mal</text>
+  <text x="954" y="665" class="h3 ink">4 · Anki para fijar los fallos</text>
+  <text x="954" y="700" class="small muted">Anki no sustituye la revisión del microtema.</text>
+
+  <rect x="920" y="742" width="608" height="214" rx="24" class="cream"/>
+  <text x="954" y="782" class="eyebrow muted">TIEMPO ORIENTATIVO</text>
+  <rect x="954" y="807" width="168" height="112" rx="18" fill="#f1dfe1"/>
+  <text x="1038" y="842" text-anchor="middle" class="h3 ink">R1–R2</text>
+  <text x="1038" y="875" text-anchor="middle" class="h2 review">25 min</text>
+  <text x="1038" y="901" text-anchor="middle" class="tiny muted">o recuerdo malo</text>
+  <rect x="1138" y="807" width="168" height="112" rx="18" fill="#efe8d2"/>
+  <text x="1222" y="842" text-anchor="middle" class="h3 ink">R3–R4</text>
+  <text x="1222" y="875" text-anchor="middle" class="h2 ink">10–15 min</text>
+  <text x="1222" y="901" text-anchor="middle" class="tiny muted">revisar lagunas</text>
+  <rect x="1322" y="807" width="172" height="112" rx="18" fill="#dfece5"/>
+  <text x="1408" y="842" text-anchor="middle" class="h3 ink">R5</text>
+  <text x="1408" y="875" text-anchor="middle" class="h2 urgent">5–10 min</text>
+  <text x="1408" y="901" text-anchor="middle" class="tiny muted">mantenimiento</text>
+
+  <!-- weekly substitutions -->
+  <line x1="72" y1="986" x2="1528" y2="986" class="line"/>
+  <text x="72" y="1028" class="eyebrow muted">SUSTITUYEN POMODOROS DEL TEMA · NO SE AÑADEN ENCIMA</text>
+  <rect x="72" y="1052" width="456" height="106" rx="21" class="urgent"/>
+  <text x="100" y="1087" class="tiny" fill="#e8f5ef">URGENCIAS Y EMERGENCIAS</text>
+  <text x="100" y="1127" class="h2" fill="white">2 fijos por semana</text>
+  <rect x="550" y="1052" width="428" height="106" rx="21" class="mir"/>
+  <text x="578" y="1087" class="tiny" fill="#f2eafb">MIR · FASE INICIAL</text>
+  <text x="578" y="1127" class="h2" fill="white">0–1 opcional</text>
+  <rect x="1000" y="1052" width="528" height="106" rx="21" class="course"/>
+  <text x="1028" y="1087" class="tiny" fill="#fff1e7">CURSO O ARTÍCULO</text>
+  <text x="1028" y="1127" class="h2" fill="white">reemplaza tema actual</text>
+</svg>

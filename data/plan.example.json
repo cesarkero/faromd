@@ -1,0 +1,3742 @@
+{
+  "meta": {
+    "version": 1,
+    "actualizado": "2026-08-30T09:23:52Z",
+    "areas": {
+      "AP": "Atencion Primaria",
+      "URG": "Urgencias y Emergencias",
+      "EXTRA": "Emergencias Extrahospitalarias",
+      "DERMATOSCOPIA": "Dermatoscopia",
+      "MIR": "MIR"
+    }
+  },
+  "config": {
+    "intervalosRepaso": [
+      1,
+      3,
+      7,
+      21,
+      60
+    ],
+    "intervalosFrecuente": [
+      1,
+      2,
+      5,
+      12,
+      30
+    ],
+    "pomodorosSesion": 4,
+    "minutosPomodoro": 25,
+    "metaHorasSemana": 10,
+    "sesionesSemana": 5,
+    "avisoAplazado": 3
+  },
+  "temas": [
+    {
+      "id": "ap-cardiovascular-y-riesgo-vascular",
+      "nombre": "Cardiovascular y riesgo vascular",
+      "area": "AP",
+      "subtemas": [
+        {
+          "id": "ap-cardiovascular-y-riesgo-vascular--hipertension-arterial",
+          "nombre": "Hipertension arterial",
+          "frecuente": true,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-cardiovascular-y-riesgo-vascular--hipertension-arterial--hta-definicion-cribado-y-medida-correcta-de-la-pa",
+              "nombre": "HTA: definicion, cribado y medida correcta de la PA",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-cardiovascular-y-riesgo-vascular--hipertension-arterial--mapa-ampa-e-hta-de-bata-blanca-y-enmascarada",
+              "nombre": "MAPA / AMPA e HTA de bata blanca y enmascarada",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-cardiovascular-y-riesgo-vascular--hipertension-arterial--estudio-inicial-y-busqueda-de-lesion-de-organo-diana",
+              "nombre": "Estudio inicial y busqueda de lesion de organo diana",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-cardiovascular-y-riesgo-vascular--hipertension-arterial--tratamiento-no-farmacologico-y-objetivos-de-pa",
+              "nombre": "Tratamiento no farmacologico y objetivos de PA",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-cardiovascular-y-riesgo-vascular--hipertension-arterial--escalones-de-tratamiento-farmacologico-y-combinaciones",
+              "nombre": "Escalones de tratamiento farmacologico y combinaciones",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-cardiovascular-y-riesgo-vascular--hipertension-arterial--hta-resistente-y-derivacion",
+              "nombre": "HTA resistente y derivacion",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-cardiovascular-y-riesgo-vascular--hipertension-arterial--crisis-hipertensiva-urgencia-vs-emergencia",
+              "nombre": "Crisis hipertensiva: urgencia vs emergencia",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-cardiovascular-y-riesgo-vascular--dislipemia",
+          "nombre": "Dislipemia",
+          "frecuente": true,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-cardiovascular-y-riesgo-vascular--dislipemia--cribado-lipidico-y-calculo-del-riesgo-cardiovascular-score2",
+              "nombre": "Cribado lipidico y calculo del riesgo cardiovascular (SCORE2)",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-cardiovascular-y-riesgo-vascular--dislipemia--objetivos-de-cldl-por-categoria-de-riesgo",
+              "nombre": "Objetivos de cLDL por categoria de riesgo",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-cardiovascular-y-riesgo-vascular--dislipemia--estatinas-eleccion-potencia-y-efectos-adversos",
+              "nombre": "Estatinas: eleccion, potencia y efectos adversos",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-cardiovascular-y-riesgo-vascular--dislipemia--ezetimiba-ipcsk9-y-terapia-combinada",
+              "nombre": "Ezetimiba, iPCSK9 y terapia combinada",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-cardiovascular-y-riesgo-vascular--dislipemia--hipertrigliceridemia-y-dislipemia-aterogenica",
+              "nombre": "Hipertrigliceridemia y dislipemia aterogenica",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-cardiovascular-y-riesgo-vascular--fibrilacion-auricular",
+          "nombre": "Fibrilacion auricular",
+          "frecuente": true,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-cardiovascular-y-riesgo-vascular--fibrilacion-auricular--diagnostico-clasificacion-y-estudio-inicial",
+              "nombre": "Diagnostico, clasificacion y estudio inicial",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-cardiovascular-y-riesgo-vascular--fibrilacion-auricular--anticoagulacion-cha2ds2-vasc-has-bled-y-eleccion-de-acod",
+              "nombre": "Anticoagulacion: CHA2DS2-VASc, HAS-BLED y eleccion de ACOD",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-cardiovascular-y-riesgo-vascular--fibrilacion-auricular--control-de-frecuencia-vs-control-de-ritmo",
+              "nombre": "Control de frecuencia vs control de ritmo",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-cardiovascular-y-riesgo-vascular--fibrilacion-auricular--seguimiento-en-ap-del-paciente-anticoagulado",
+              "nombre": "Seguimiento en AP del paciente anticoagulado",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-cardiovascular-y-riesgo-vascular--insuficiencia-cardiaca-cronica",
+          "nombre": "Insuficiencia cardiaca cronica",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-cardiovascular-y-riesgo-vascular--insuficiencia-cardiaca-cronica--diagnostico-peptidos-natriureticos-y-fenotipos-fer-felr-fep",
+              "nombre": "Diagnostico, peptidos natriureticos y fenotipos (FEr/FElr/FEp)",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-cardiovascular-y-riesgo-vascular--insuficiencia-cardiaca-cronica--tratamiento-de-la-ic-fer-las-cuatro-familias",
+              "nombre": "Tratamiento de la IC-FEr: las cuatro familias",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-cardiovascular-y-riesgo-vascular--insuficiencia-cardiaca-cronica--manejo-de-descompensaciones-y-ajuste-de-diureticos",
+              "nombre": "Manejo de descompensaciones y ajuste de diureticos",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-cardiovascular-y-riesgo-vascular--insuficiencia-cardiaca-cronica--seguimiento-educacion-y-signos-de-alarma",
+              "nombre": "Seguimiento, educacion y signos de alarma",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-cardiovascular-y-riesgo-vascular--cardiopatia-isquemica-cronica",
+          "nombre": "Cardiopatia isquemica cronica",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-cardiovascular-y-riesgo-vascular--cardiopatia-isquemica-cronica--angina-estable-diagnostico-y-estratificacion",
+              "nombre": "Angina estable: diagnostico y estratificacion",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-cardiovascular-y-riesgo-vascular--cardiopatia-isquemica-cronica--tratamiento-antianginoso-y-prevencion-secundaria",
+              "nombre": "Tratamiento antianginoso y prevencion secundaria",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-cardiovascular-y-riesgo-vascular--cardiopatia-isquemica-cronica--antiagregacion-y-manejo-post-sca-en-ap",
+              "nombre": "Antiagregacion y manejo post-SCA en AP",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-cardiovascular-y-riesgo-vascular--enfermedad-tromboembolica-venosa",
+          "nombre": "Enfermedad tromboembolica venosa",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-cardiovascular-y-riesgo-vascular--enfermedad-tromboembolica-venosa--tvp-probabilidad-clinica-dimero-d-y-ecografia",
+              "nombre": "TVP: probabilidad clinica, dimero D y ecografia",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-cardiovascular-y-riesgo-vascular--enfermedad-tromboembolica-venosa--tratamiento-anticoagulante-y-duracion",
+              "nombre": "Tratamiento anticoagulante y duracion",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-cardiovascular-y-riesgo-vascular--enfermedad-tromboembolica-venosa--profilaxis-de-etv-en-el-paciente-ambulatorio",
+              "nombre": "Profilaxis de ETV en el paciente ambulatorio",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ap-endocrino-y-metabolico",
+      "nombre": "Endocrino y metabolico",
+      "area": "AP",
+      "subtemas": [
+        {
+          "id": "ap-endocrino-y-metabolico--diabetes-mellitus-tipo-2",
+          "nombre": "Diabetes mellitus tipo 2",
+          "frecuente": true,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-endocrino-y-metabolico--diabetes-mellitus-tipo-2--cribado-diagnostico-y-prediabetes",
+              "nombre": "Cribado, diagnostico y prediabetes",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-endocrino-y-metabolico--diabetes-mellitus-tipo-2--objetivos-de-control-glucemico-individualizados-hba1c",
+              "nombre": "Objetivos de control glucemico individualizados (HbA1c)",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-endocrino-y-metabolico--diabetes-mellitus-tipo-2--algoritmo-de-tratamiento-metformina-isglt2-arglp1",
+              "nombre": "Algoritmo de tratamiento: metformina, iSGLT2, arGLP1",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-endocrino-y-metabolico--diabetes-mellitus-tipo-2--insulinizacion-en-ap-pautas-y-titulacion",
+              "nombre": "Insulinizacion en AP: pautas y titulacion",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-endocrino-y-metabolico--diabetes-mellitus-tipo-2--cribado-y-manejo-de-complicaciones-micro-y-macrovasculares",
+              "nombre": "Cribado y manejo de complicaciones micro y macrovasculares",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-endocrino-y-metabolico--diabetes-mellitus-tipo-2--pie-diabetico-exploracion-y-prevencion",
+              "nombre": "Pie diabetico: exploracion y prevencion",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-endocrino-y-metabolico--diabetes-mellitus-tipo-2--hipoglucemia-prevencion-y-manejo",
+              "nombre": "Hipoglucemia: prevencion y manejo",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-endocrino-y-metabolico--patologia-tiroidea",
+          "nombre": "Patologia tiroidea",
+          "frecuente": true,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-endocrino-y-metabolico--patologia-tiroidea--hipotiroidismo-primario-y-subclinico",
+              "nombre": "Hipotiroidismo primario y subclinico",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-endocrino-y-metabolico--patologia-tiroidea--hipertiroidismo-causas-y-manejo-inicial",
+              "nombre": "Hipertiroidismo: causas y manejo inicial",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-endocrino-y-metabolico--patologia-tiroidea--nodulo-tiroideo-y-solicitud-de-pruebas",
+              "nombre": "Nodulo tiroideo y solicitud de pruebas",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-endocrino-y-metabolico--patologia-tiroidea--tiroides-y-embarazo",
+              "nombre": "Tiroides y embarazo",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-endocrino-y-metabolico--obesidad",
+          "nombre": "Obesidad",
+          "frecuente": true,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-endocrino-y-metabolico--obesidad--valoracion-comorbilidad-y-objetivos",
+              "nombre": "Valoracion, comorbilidad y objetivos",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-endocrino-y-metabolico--obesidad--intervencion-sobre-estilo-de-vida",
+              "nombre": "Intervencion sobre estilo de vida",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-endocrino-y-metabolico--obesidad--tratamiento-farmacologico-y-criterios-de-cirugia-bariatrica",
+              "nombre": "Tratamiento farmacologico y criterios de cirugia bariatrica",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-endocrino-y-metabolico--osteoporosis-y-metabolismo-oseo",
+          "nombre": "Osteoporosis y metabolismo oseo",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-endocrino-y-metabolico--osteoporosis-y-metabolismo-oseo--cribado-frax-y-densitometria",
+              "nombre": "Cribado, FRAX y densitometria",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-endocrino-y-metabolico--osteoporosis-y-metabolismo-oseo--suplementacion-de-calcio-y-vitamina-d",
+              "nombre": "Suplementacion de calcio y vitamina D",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-endocrino-y-metabolico--osteoporosis-y-metabolismo-oseo--bifosfonatos-y-otros-tratamientos-duracion",
+              "nombre": "Bifosfonatos y otros tratamientos; duracion",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ap-respiratorio",
+      "nombre": "Respiratorio",
+      "area": "AP",
+      "subtemas": [
+        {
+          "id": "ap-respiratorio--epoc",
+          "nombre": "EPOC",
+          "frecuente": true,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-respiratorio--epoc--diagnostico-espirometrico-y-valoracion-de-gravedad-gold",
+              "nombre": "Diagnostico espirometrico y valoracion de gravedad (GOLD)",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-respiratorio--epoc--fenotipos-eosinofilos-y-eleccion-de-inhaladores",
+              "nombre": "Fenotipos, eosinofilos y eleccion de inhaladores",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-respiratorio--epoc--agudizacion-de-epoc-manejo-ambulatorio",
+              "nombre": "Agudizacion de EPOC: manejo ambulatorio",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-respiratorio--epoc--oxigenoterapia-cronica-domiciliaria-y-rehabilitacion",
+              "nombre": "Oxigenoterapia cronica domiciliaria y rehabilitacion",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-respiratorio--asma",
+          "nombre": "Asma",
+          "frecuente": true,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-respiratorio--asma--diagnostico-y-confirmacion-de-la-variabilidad",
+              "nombre": "Diagnostico y confirmacion de la variabilidad",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-respiratorio--asma--escalones-gina-y-terapia-con-ci-formoterol-a-demanda",
+              "nombre": "Escalones GINA y terapia con CI-formoterol a demanda",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-respiratorio--asma--asma-no-controlada-revision-de-tecnica-y-adherencia",
+              "nombre": "Asma no controlada: revision de tecnica y adherencia",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-respiratorio--asma--crisis-asmatica-valoracion-de-gravedad-y-tratamiento",
+              "nombre": "Crisis asmatica: valoracion de gravedad y tratamiento",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-respiratorio--tabaquismo",
+          "nombre": "Tabaquismo",
+          "frecuente": true,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-respiratorio--tabaquismo--intervencion-breve-y-entrevista-motivacional",
+              "nombre": "Intervencion breve y entrevista motivacional",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-respiratorio--tabaquismo--tratamiento-farmacologico-tsn-vareniclina-bupropion",
+              "nombre": "Tratamiento farmacologico: TSN, vareniclina, bupropion",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-respiratorio--infecciones-respiratorias",
+          "nombre": "Infecciones respiratorias",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-respiratorio--infecciones-respiratorias--faringoamigdalitis-criterios-de-centor-y-antibioterapia",
+              "nombre": "Faringoamigdalitis: criterios de Centor y antibioterapia",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-respiratorio--infecciones-respiratorias--neumonia-adquirida-en-la-comunidad-crb-65-y-tratamiento",
+              "nombre": "Neumonia adquirida en la comunidad: CRB-65 y tratamiento",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-respiratorio--infecciones-respiratorias--bronquitis-aguda-y-tos-persistente",
+              "nombre": "Bronquitis aguda y tos persistente",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ap-digestivo",
+      "nombre": "Digestivo",
+      "area": "AP",
+      "subtemas": [
+        {
+          "id": "ap-digestivo--dispepsia-y-erge",
+          "nombre": "Dispepsia y ERGE",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-digestivo--dispepsia-y-erge--dispepsia-no-investigada-signos-de-alarma-y-test-and-treat",
+              "nombre": "Dispepsia no investigada: signos de alarma y test-and-treat",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-digestivo--dispepsia-y-erge--helicobacter-pylori-diagnostico-y-pautas-de-erradicacion",
+              "nombre": "Helicobacter pylori: diagnostico y pautas de erradicacion",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-digestivo--dispepsia-y-erge--erge-manejo-escalonado-y-deprescripcion-de-ibp",
+              "nombre": "ERGE: manejo escalonado y deprescripcion de IBP",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-digestivo--patologia-intestinal",
+          "nombre": "Patologia intestinal",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-digestivo--patologia-intestinal--sindrome-de-intestino-irritable-criterios-de-roma-y-manejo",
+              "nombre": "Sindrome de intestino irritable: criterios de Roma y manejo",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-digestivo--patologia-intestinal--enfermedad-celiaca-cribado-y-diagnostico",
+              "nombre": "Enfermedad celiaca: cribado y diagnostico",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-digestivo--patologia-intestinal--estrenimiento-cronico-y-uso-de-laxantes",
+              "nombre": "Estrenimiento cronico y uso de laxantes",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-digestivo--patologia-intestinal--sangre-oculta-en-heces-y-cribado-de-cancer-colorrectal",
+              "nombre": "Sangre oculta en heces y cribado de cancer colorrectal",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-digestivo--patologia-hepatobiliar",
+          "nombre": "Patologia hepatobiliar",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-digestivo--patologia-hepatobiliar--alteracion-de-la-bioquimica-hepatica-enfoque",
+              "nombre": "Alteracion de la bioquimica hepatica: enfoque",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-digestivo--patologia-hepatobiliar--higado-graso-metabolico-masld",
+              "nombre": "Higado graso metabolico (MASLD)",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-digestivo--patologia-hepatobiliar--cribado-y-seguimiento-del-consumo-de-alcohol",
+              "nombre": "Cribado y seguimiento del consumo de alcohol",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ap-nefrourologia",
+      "nombre": "Nefrourologia",
+      "area": "AP",
+      "subtemas": [
+        {
+          "id": "ap-nefrourologia--enfermedad-renal-cronica",
+          "nombre": "Enfermedad renal cronica",
+          "frecuente": true,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-nefrourologia--enfermedad-renal-cronica--deteccion-fg-cociente-albumina-creatinina-y-clasificacion",
+              "nombre": "Deteccion: FG, cociente albumina/creatinina y clasificacion",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-nefrourologia--enfermedad-renal-cronica--nefroproteccion-isglt2-ieca-ara2-y-control-de-pa",
+              "nombre": "Nefroproteccion: iSGLT2, IECA/ARA2 y control de PA",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-nefrourologia--enfermedad-renal-cronica--ajuste-de-farmacos-y-criterios-de-derivacion-a-nefrologia",
+              "nombre": "Ajuste de farmacos y criterios de derivacion a nefrologia",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-nefrourologia--patologia-urinaria-comun",
+          "nombre": "Patologia urinaria comun",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-nefrourologia--patologia-urinaria-comun--itu-no-complicada-y-en-el-varon-itu-recurrente",
+              "nombre": "ITU no complicada y en el varon; ITU recurrente",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-nefrourologia--patologia-urinaria-comun--hematuria-enfoque-diagnostico",
+              "nombre": "Hematuria: enfoque diagnostico",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-nefrourologia--patologia-urinaria-comun--hiperplasia-benigna-de-prostata-sintomas-del-tracto-urinario-inferior",
+              "nombre": "Hiperplasia benigna de prostata: sintomas del tracto urinario inferior",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-nefrourologia--patologia-urinaria-comun--litiasis-renal-manejo-del-colico-y-prevencion",
+              "nombre": "Litiasis renal: manejo del colico y prevencion",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ap-neurologia",
+      "nombre": "Neurologia",
+      "area": "AP",
+      "subtemas": [
+        {
+          "id": "ap-neurologia--cefaleas",
+          "nombre": "Cefaleas",
+          "frecuente": true,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-neurologia--cefaleas--cefalea-banderas-rojas-y-criterios-de-neuroimagen",
+              "nombre": "Cefalea: banderas rojas y criterios de neuroimagen",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-neurologia--cefaleas--migrana-tratamiento-de-la-crisis-y-preventivo",
+              "nombre": "Migrana: tratamiento de la crisis y preventivo",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-neurologia--cefaleas--cefalea-tensional-y-cefalea-por-abuso-de-analgesicos",
+              "nombre": "Cefalea tensional y cefalea por abuso de analgesicos",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-neurologia--ictus-y-prevencion",
+          "nombre": "Ictus y prevencion",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-neurologia--ictus-y-prevencion--codigo-ictus-y-reconocimiento-precoz",
+              "nombre": "Codigo ictus y reconocimiento precoz",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-neurologia--ictus-y-prevencion--prevencion-primaria-y-secundaria-del-ictus",
+              "nombre": "Prevencion primaria y secundaria del ictus",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-neurologia--ictus-y-prevencion--ait-estratificacion-del-riesgo-y-actuacion",
+              "nombre": "AIT: estratificacion del riesgo y actuacion",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-neurologia--deterioro-cognitivo-y-demencia",
+          "nombre": "Deterioro cognitivo y demencia",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-neurologia--deterioro-cognitivo-y-demencia--valoracion-del-deterioro-cognitivo-leve",
+              "nombre": "Valoracion del deterioro cognitivo leve",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-neurologia--deterioro-cognitivo-y-demencia--diagnostico-diferencial-de-las-demencias",
+              "nombre": "Diagnostico diferencial de las demencias",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-neurologia--deterioro-cognitivo-y-demencia--manejo-de-sintomas-conductuales-y-apoyo-al-cuidador",
+              "nombre": "Manejo de sintomas conductuales y apoyo al cuidador",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-neurologia--otros-trastornos-neurologicos",
+          "nombre": "Otros trastornos neurologicos",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-neurologia--otros-trastornos-neurologicos--temblor-y-enfermedad-de-parkinson-aproximacion-inicial",
+              "nombre": "Temblor y enfermedad de Parkinson: aproximacion inicial",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-neurologia--otros-trastornos-neurologicos--mareo-y-vertigo-periferico-vs-central-maniobras",
+              "nombre": "Mareo y vertigo: periferico vs central; maniobras",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-neurologia--otros-trastornos-neurologicos--paralisis-facial-periferica-y-neuropatias-frecuentes",
+              "nombre": "Parálisis facial periferica y neuropatias frecuentes",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ap-salud-mental",
+      "nombre": "Salud mental",
+      "area": "AP",
+      "subtemas": [
+        {
+          "id": "ap-salud-mental--depresion-y-ansiedad",
+          "nombre": "Depresion y ansiedad",
+          "frecuente": true,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-salud-mental--depresion-y-ansiedad--deteccion-y-diagnostico-de-la-depresion-gravedad",
+              "nombre": "Deteccion y diagnostico de la depresion; gravedad",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-salud-mental--depresion-y-ansiedad--tratamiento-isrs-seguimiento-y-duracion",
+              "nombre": "Tratamiento: ISRS, seguimiento y duracion",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-salud-mental--depresion-y-ansiedad--trastornos-de-ansiedad-abordaje-inicial-y-derivacion",
+              "nombre": "Trastornos de ansiedad: abordaje inicial y derivacion",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-salud-mental--depresion-y-ansiedad--riesgo-de-suicidio-valoracion-y-actuacion",
+              "nombre": "Riesgo de suicidio: valoracion y actuacion",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-salud-mental--insomnio-y-psicofarmacos",
+          "nombre": "Insomnio y psicofarmacos",
+          "frecuente": true,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-salud-mental--insomnio-y-psicofarmacos--insomnio-cronico-higiene-del-sueno-y-tcc-i",
+              "nombre": "Insomnio cronico: higiene del sueno y TCC-i",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-salud-mental--insomnio-y-psicofarmacos--deprescripcion-de-benzodiacepinas",
+              "nombre": "Deprescripcion de benzodiacepinas",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-salud-mental--insomnio-y-psicofarmacos--uso-racional-de-hipnoticos",
+              "nombre": "Uso racional de hipnoticos",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-salud-mental--otros",
+          "nombre": "Otros",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-salud-mental--otros--trastorno-mental-grave-seguimiento-compartido",
+              "nombre": "Trastorno mental grave: seguimiento compartido",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-salud-mental--otros--consumo-de-alcohol-y-otras-adicciones",
+              "nombre": "Consumo de alcohol y otras adicciones",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-salud-mental--otros--somatizacion-y-sintomas-sin-explicacion-medica",
+              "nombre": "Somatizacion y sintomas sin explicacion medica",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ap-infeccioso-y-vacunas",
+      "nombre": "Infeccioso y vacunas",
+      "area": "AP",
+      "subtemas": [
+        {
+          "id": "ap-infeccioso-y-vacunas--vacunacion",
+          "nombre": "Vacunacion",
+          "frecuente": true,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-infeccioso-y-vacunas--vacunacion--calendario-del-adulto-y-vacunacion-del-mayor",
+              "nombre": "Calendario del adulto y vacunacion del mayor",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-infeccioso-y-vacunas--vacunacion--vacunas-en-el-paciente-cronico-e-inmunodeprimido",
+              "nombre": "Vacunas en el paciente cronico e inmunodeprimido",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-infeccioso-y-vacunas--vacunacion--gripe-neumococo-herpes-zoster-y-vrs",
+              "nombre": "Gripe, neumococo, herpes zoster y VRS",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-infeccioso-y-vacunas--infecciones-comunes",
+          "nombre": "Infecciones comunes",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-infeccioso-y-vacunas--infecciones-comunes--uso-prudente-de-antibioticos-y-resistencias",
+              "nombre": "Uso prudente de antibioticos y resistencias",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-infeccioso-y-vacunas--infecciones-comunes--infecciones-de-piel-y-partes-blandas",
+              "nombre": "Infecciones de piel y partes blandas",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-infeccioso-y-vacunas--infecciones-comunes--enfermedades-de-transmision-sexual-cribado-y-tratamiento",
+              "nombre": "Enfermedades de transmision sexual: cribado y tratamiento",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-infeccioso-y-vacunas--infecciones-comunes--consejo-al-viajero-y-fiebre-en-el-viajero",
+              "nombre": "Consejo al viajero y fiebre en el viajero",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ap-aparato-locomotor-y-reumatologia",
+      "nombre": "Aparato locomotor y reumatologia",
+      "area": "AP",
+      "subtemas": [
+        {
+          "id": "ap-aparato-locomotor-y-reumatologia--dolor-musculoesqueletico-regional",
+          "nombre": "Dolor musculoesqueletico regional",
+          "frecuente": true,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-aparato-locomotor-y-reumatologia--dolor-musculoesqueletico-regional--lumbalgia-banderas-rojas-y-manejo",
+              "nombre": "Lumbalgia: banderas rojas y manejo",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-aparato-locomotor-y-reumatologia--dolor-musculoesqueletico-regional--cervicalgia-y-dolor-de-hombro",
+              "nombre": "Cervicalgia y dolor de hombro",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-aparato-locomotor-y-reumatologia--dolor-musculoesqueletico-regional--gonalgia-y-patologia-de-rodilla-artrosis",
+              "nombre": "Gonalgia y patologia de rodilla; artrosis",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-aparato-locomotor-y-reumatologia--enfermedades-reumaticas",
+          "nombre": "Enfermedades reumaticas",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-aparato-locomotor-y-reumatologia--enfermedades-reumaticas--artritis-enfoque-del-paciente-con-dolor-articular-inflamatorio",
+              "nombre": "Artritis: enfoque del paciente con dolor articular inflamatorio",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-aparato-locomotor-y-reumatologia--enfermedades-reumaticas--polimialgia-reumatica-y-arteritis-de-celulas-gigantes",
+              "nombre": "Polimialgia reumatica y arteritis de celulas gigantes",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-aparato-locomotor-y-reumatologia--enfermedades-reumaticas--gota-e-hiperuricemia",
+              "nombre": "Gota e hiperuricemia",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-aparato-locomotor-y-reumatologia--osteomuscular-practico",
+          "nombre": "Osteomuscular practico",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-aparato-locomotor-y-reumatologia--osteomuscular-practico--infiltraciones-en-ap-indicaciones-y-tecnica",
+              "nombre": "Infiltraciones en AP: indicaciones y tecnica",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-aparato-locomotor-y-reumatologia--osteomuscular-practico--manejo-del-dolor-cronico-no-oncologico",
+              "nombre": "Manejo del dolor cronico no oncologico",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ap-dermatologia-en-ap",
+      "nombre": "Dermatologia en AP",
+      "area": "AP",
+      "subtemas": [
+        {
+          "id": "ap-dermatologia-en-ap--lesiones-cutaneas-frecuentes",
+          "nombre": "Lesiones cutaneas frecuentes",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-dermatologia-en-ap--lesiones-cutaneas-frecuentes--eczemas-y-dermatitis-atopica",
+              "nombre": "Eczemas y dermatitis atopica",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-dermatologia-en-ap--lesiones-cutaneas-frecuentes--psoriasis-formas-y-tratamiento-topico",
+              "nombre": "Psoriasis: formas y tratamiento topico",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-dermatologia-en-ap--lesiones-cutaneas-frecuentes--acne-y-rosacea",
+              "nombre": "Acne y rosacea",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-dermatologia-en-ap--lesiones-cutaneas-frecuentes--infecciones-cutaneas-micosis-herpes-escabiosis",
+              "nombre": "Infecciones cutaneas: micosis, herpes, escabiosis",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-dermatologia-en-ap--lesiones-tumorales-y-cribado",
+          "nombre": "Lesiones tumorales y cribado",
+          "frecuente": true,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-dermatologia-en-ap--lesiones-tumorales-y-cribado--queratosis-actinica-y-campo-de-cancerizacion",
+              "nombre": "Queratosis actinica y campo de cancerizacion",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-dermatologia-en-ap--lesiones-tumorales-y-cribado--carcinoma-basocelular-y-espinocelular-sospecha-y-derivacion",
+              "nombre": "Carcinoma basocelular y espinocelular: sospecha y derivacion",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-dermatologia-en-ap--lesiones-tumorales-y-cribado--nevus-y-regla-abcde-cuando-derivar",
+              "nombre": "Nevus y regla ABCDE; cuando derivar",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-dermatologia-en-ap--lesiones-tumorales-y-cribado--urticaria-y-angioedema",
+              "nombre": "Urticaria y angioedema",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ap-orl-y-oftalmologia-en-ap",
+      "nombre": "ORL y oftalmologia en AP",
+      "area": "AP",
+      "subtemas": [
+        {
+          "id": "ap-orl-y-oftalmologia-en-ap--orl",
+          "nombre": "ORL",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-orl-y-oftalmologia-en-ap--orl--otitis-media-y-externa-otalgia",
+              "nombre": "Otitis media y externa; otalgia",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-orl-y-oftalmologia-en-ap--orl--rinosinusitis-aguda-y-rinitis-alergica",
+              "nombre": "Rinosinusitis aguda y rinitis alergica",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-orl-y-oftalmologia-en-ap--orl--vertigo-periferico-y-acufenos-hipoacusia",
+              "nombre": "Vertigo periferico y acufenos; hipoacusia",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-orl-y-oftalmologia-en-ap--oftalmologia",
+          "nombre": "Oftalmologia",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-orl-y-oftalmologia-en-ap--oftalmologia--ojo-rojo-diagnostico-diferencial-y-banderas-rojas",
+              "nombre": "Ojo rojo: diagnostico diferencial y banderas rojas",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-orl-y-oftalmologia-en-ap--oftalmologia--perdida-brusca-de-vision-derivacion-urgente",
+              "nombre": "Perdida brusca de vision: derivacion urgente",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-orl-y-oftalmologia-en-ap--oftalmologia--cribado-de-retinopatia-y-glaucoma",
+              "nombre": "Cribado de retinopatia y glaucoma",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ap-salud-de-la-mujer-y-del-hombre",
+      "nombre": "Salud de la mujer y del hombre",
+      "area": "AP",
+      "subtemas": [
+        {
+          "id": "ap-salud-de-la-mujer-y-del-hombre--ginecologia-en-ap",
+          "nombre": "Ginecologia en AP",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-salud-de-la-mujer-y-del-hombre--ginecologia-en-ap--anticoncepcion-eleccion-y-seguimiento",
+              "nombre": "Anticoncepcion: eleccion y seguimiento",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-salud-de-la-mujer-y-del-hombre--ginecologia-en-ap--cribado-de-cancer-de-cervix-y-de-mama",
+              "nombre": "Cribado de cancer de cervix y de mama",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-salud-de-la-mujer-y-del-hombre--ginecologia-en-ap--sangrado-uterino-anormal-y-sindrome-de-ovario-poliquistico",
+              "nombre": "Sangrado uterino anormal y sindrome de ovario poliquistico",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-salud-de-la-mujer-y-del-hombre--ginecologia-en-ap--menopausia-y-terapia-hormonal",
+              "nombre": "Menopausia y terapia hormonal",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-salud-de-la-mujer-y-del-hombre--embarazo-y-lactancia",
+          "nombre": "Embarazo y lactancia",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-salud-de-la-mujer-y-del-hombre--embarazo-y-lactancia--control-del-embarazo-de-bajo-riesgo-en-ap",
+              "nombre": "Control del embarazo de bajo riesgo en AP",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-salud-de-la-mujer-y-del-hombre--embarazo-y-lactancia--farmacos-en-embarazo-y-lactancia",
+              "nombre": "Farmacos en embarazo y lactancia",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-salud-de-la-mujer-y-del-hombre--salud-del-hombre",
+          "nombre": "Salud del hombre",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-salud-de-la-mujer-y-del-hombre--salud-del-hombre--disfuncion-erectil-y-hipogonadismo",
+              "nombre": "Disfuncion erectil y hipogonadismo",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-salud-de-la-mujer-y-del-hombre--salud-del-hombre--cribado-de-cancer-de-prostata-informacion-y-decision-compartida",
+              "nombre": "Cribado de cancer de prostata: informacion y decision compartida",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ap-pediatria-en-ap",
+      "nombre": "Pediatria en AP",
+      "area": "AP",
+      "subtemas": [
+        {
+          "id": "ap-pediatria-en-ap--programa-del-nino-sano",
+          "nombre": "Programa del nino sano",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-pediatria-en-ap--programa-del-nino-sano--controles-de-salud-percentiles-y-desarrollo-psicomotor",
+              "nombre": "Controles de salud, percentiles y desarrollo psicomotor",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-pediatria-en-ap--programa-del-nino-sano--calendario-vacunal-infantil-y-dudas-frecuentes",
+              "nombre": "Calendario vacunal infantil y dudas frecuentes",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-pediatria-en-ap--programa-del-nino-sano--alimentacion-en-el-primer-ano-y-ferropenia",
+              "nombre": "Alimentacion en el primer ano y ferropenia",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-pediatria-en-ap--patologia-pediatrica-frecuente",
+          "nombre": "Patologia pediatrica frecuente",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-pediatria-en-ap--patologia-pediatrica-frecuente--fiebre-sin-foco-y-sindrome-febril-en-el-nino",
+              "nombre": "Fiebre sin foco y sindrome febril en el nino",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-pediatria-en-ap--patologia-pediatrica-frecuente--infecciones-respiratorias-y-bronquiolitis",
+              "nombre": "Infecciones respiratorias y bronquiolitis",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-pediatria-en-ap--patologia-pediatrica-frecuente--gastroenteritis-y-deshidratacion-exantemas",
+              "nombre": "Gastroenteritis y deshidratacion; exantemas",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-pediatria-en-ap--patologia-pediatrica-frecuente--tdah-y-problemas-de-conducta-cribado-y-derivacion",
+              "nombre": "TDAH y problemas de conducta: cribado y derivacion",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ap-mayor-cronicidad-y-paliativos",
+      "nombre": "Mayor, cronicidad y paliativos",
+      "area": "AP",
+      "subtemas": [
+        {
+          "id": "ap-mayor-cronicidad-y-paliativos--atencion-al-paciente-cronico-complejo",
+          "nombre": "Atencion al paciente cronico complejo",
+          "frecuente": true,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-mayor-cronicidad-y-paliativos--atencion-al-paciente-cronico-complejo--valoracion-geriatrica-integral-en-ap",
+              "nombre": "Valoracion geriatrica integral en AP",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-mayor-cronicidad-y-paliativos--atencion-al-paciente-cronico-complejo--polifarmacia-y-deprescripcion-criterios-stopp-start",
+              "nombre": "Polifarmacia y deprescripcion (criterios STOPP/START)",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-mayor-cronicidad-y-paliativos--atencion-al-paciente-cronico-complejo--sindromes-geriatricos-caidas-fragilidad-delirium",
+              "nombre": "Sindromes geriatricos: caidas, fragilidad, delirium",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-mayor-cronicidad-y-paliativos--atencion-al-paciente-cronico-complejo--incontinencia-urinaria-en-el-mayor",
+              "nombre": "Incontinencia urinaria en el mayor",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-mayor-cronicidad-y-paliativos--cuidados-paliativos",
+          "nombre": "Cuidados paliativos",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-mayor-cronicidad-y-paliativos--cuidados-paliativos--identificacion-de-necesidades-paliativas-necpal",
+              "nombre": "Identificacion de necesidades paliativas (NECPAL)",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-mayor-cronicidad-y-paliativos--cuidados-paliativos--control-de-sintomas-dolor-disnea-nauseas",
+              "nombre": "Control de sintomas: dolor, disnea, nauseas",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-mayor-cronicidad-y-paliativos--cuidados-paliativos--ultimos-dias-sedacion-paliativa-y-atencion-a-la-familia",
+              "nombre": "Ultimos dias, sedacion paliativa y atencion a la familia",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ap-prevencion-y-actividades-comunitarias",
+      "nombre": "Prevencion y actividades comunitarias",
+      "area": "AP",
+      "subtemas": [
+        {
+          "id": "ap-prevencion-y-actividades-comunitarias--actividades-preventivas",
+          "nombre": "Actividades preventivas",
+          "frecuente": true,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-prevencion-y-actividades-comunitarias--actividades-preventivas--papps-recomendaciones-de-cribado-por-edad-y-sexo",
+              "nombre": "PAPPS: recomendaciones de cribado por edad y sexo",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-prevencion-y-actividades-comunitarias--actividades-preventivas--prevencion-cuaternaria-y-no-hacer-recomendaciones",
+              "nombre": "Prevencion cuaternaria y no hacer (recomendaciones)",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-prevencion-y-actividades-comunitarias--actividades-preventivas--consejo-sobre-actividad-fisica-alimentacion-y-alcohol",
+              "nombre": "Consejo sobre actividad fisica, alimentacion y alcohol",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "ap-prevencion-y-actividades-comunitarias--gestion-de-la-consulta",
+          "nombre": "Gestion de la consulta",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "ap-prevencion-y-actividades-comunitarias--gestion-de-la-consulta--interpretacion-de-pruebas-sensibilidad-vpp-y-razones-de-verosimilitud",
+              "nombre": "Interpretacion de pruebas: sensibilidad, VPP y razones de verosimilitud",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-prevencion-y-actividades-comunitarias--gestion-de-la-consulta--incapacidad-temporal-y-certificados",
+              "nombre": "Incapacidad temporal y certificados",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "ap-prevencion-y-actividades-comunitarias--gestion-de-la-consulta--lectura-critica-y-medicina-basada-en-la-evidencia",
+              "nombre": "Lectura critica y medicina basada en la evidencia",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "urg-soporte-vital-y-parada-cardiaca",
+      "nombre": "Soporte vital y parada cardiaca",
+      "area": "URG",
+      "subtemas": [
+        {
+          "id": "urg-soporte-vital-y-parada-cardiaca--rcp-y-soporte-vital",
+          "nombre": "RCP y soporte vital",
+          "frecuente": true,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "urg-soporte-vital-y-parada-cardiaca--rcp-y-soporte-vital--svb-y-dea-secuencia-y-calidad-de-las-compresiones",
+              "nombre": "SVB y DEA: secuencia y calidad de las compresiones",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-soporte-vital-y-parada-cardiaca--rcp-y-soporte-vital--sva-algoritmo-de-ritmos-desfibrilables-y-no-desfibrilables",
+              "nombre": "SVA: algoritmo de ritmos desfibrilables y no desfibrilables",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-soporte-vital-y-parada-cardiaca--rcp-y-soporte-vital--farmacos-en-la-pcr-y-causas-reversibles-4h-4t",
+              "nombre": "Farmacos en la PCR y causas reversibles (4H/4T)",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-soporte-vital-y-parada-cardiaca--rcp-y-soporte-vital--cuidados-posresucitacion-y-pronostico",
+              "nombre": "Cuidados posresucitacion y pronostico",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-soporte-vital-y-parada-cardiaca--rcp-y-soporte-vital--via-aerea-en-urgencias-dispositivos-y-secuencia-rapida-de-intubacion",
+              "nombre": "Via aerea en urgencias: dispositivos y secuencia rapida de intubacion",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "urg-urgencias-cardiovasculares",
+      "nombre": "Urgencias cardiovasculares",
+      "area": "URG",
+      "subtemas": [
+        {
+          "id": "urg-urgencias-cardiovasculares--sindrome-coronario-agudo",
+          "nombre": "Sindrome coronario agudo",
+          "frecuente": true,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "urg-urgencias-cardiovasculares--sindrome-coronario-agudo--dolor-toracico-estratificacion-y-ecg-en-10-min",
+              "nombre": "Dolor toracico: estratificacion y ECG en <10 min",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-urgencias-cardiovasculares--sindrome-coronario-agudo--scacest-reperfusion-y-tiempos",
+              "nombre": "SCACEST: reperfusion y tiempos",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-urgencias-cardiovasculares--sindrome-coronario-agudo--scasest-estratificacion-de-riesgo-y-tratamiento",
+              "nombre": "SCASEST: estratificacion de riesgo y tratamiento",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-urgencias-cardiovasculares--sindrome-coronario-agudo--complicaciones-del-iam",
+              "nombre": "Complicaciones del IAM",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "urg-urgencias-cardiovasculares--arritmias-en-urgencias",
+          "nombre": "Arritmias en urgencias",
+          "frecuente": true,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "urg-urgencias-cardiovasculares--arritmias-en-urgencias--taquicardia-de-qrs-estrecho-diagnostico-y-maniobras",
+              "nombre": "Taquicardia de QRS estrecho: diagnostico y maniobras",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-urgencias-cardiovasculares--arritmias-en-urgencias--taquicardia-de-qrs-ancho-y-tv",
+              "nombre": "Taquicardia de QRS ancho y TV",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-urgencias-cardiovasculares--arritmias-en-urgencias--bradiarritmias-y-bloqueos-marcapasos-transcutaneo",
+              "nombre": "Bradiarritmias y bloqueos; marcapasos transcutaneo",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-urgencias-cardiovasculares--arritmias-en-urgencias--fa-con-respuesta-rapida-y-cardioversion",
+              "nombre": "FA con respuesta rapida y cardioversion",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-urgencias-cardiovasculares--arritmias-en-urgencias--manejo-de-la-parada-en-torsade-y-qt-largo",
+              "nombre": "Manejo de la parada en Torsade y QT largo",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "urg-urgencias-cardiovasculares--insuficiencia-cardiaca-aguda",
+          "nombre": "Insuficiencia cardiaca aguda",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "urg-urgencias-cardiovasculares--insuficiencia-cardiaca-aguda--edema-agudo-de-pulmon-tratamiento-inmediato",
+              "nombre": "Edema agudo de pulmon: tratamiento inmediato",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-urgencias-cardiovasculares--insuficiencia-cardiaca-aguda--shock-cardiogenico-reconocimiento-y-soporte",
+              "nombre": "Shock cardiogenico: reconocimiento y soporte",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-urgencias-cardiovasculares--insuficiencia-cardiaca-aguda--sincope-estratificacion-de-riesgo-reglas",
+              "nombre": "Sincope: estratificacion de riesgo (reglas)",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "urg-urgencias-respiratorias",
+      "nombre": "Urgencias respiratorias",
+      "area": "URG",
+      "subtemas": [
+        {
+          "id": "urg-urgencias-respiratorias--insuficiencia-respiratoria-aguda",
+          "nombre": "Insuficiencia respiratoria aguda",
+          "frecuente": true,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "urg-urgencias-respiratorias--insuficiencia-respiratoria-aguda--valoracion-de-la-disnea-y-gasometria",
+              "nombre": "Valoracion de la disnea y gasometria",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-urgencias-respiratorias--insuficiencia-respiratoria-aguda--oxigenoterapia-y-ventilacion-no-invasiva",
+              "nombre": "Oxigenoterapia y ventilacion no invasiva",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-urgencias-respiratorias--insuficiencia-respiratoria-aguda--agudizacion-grave-de-epoc-y-crisis-asmatica-en-urgencias",
+              "nombre": "Agudizacion grave de EPOC y crisis asmatica en urgencias",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-urgencias-respiratorias--insuficiencia-respiratoria-aguda--tromboembolia-pulmonar-escalas-dimero-d-y-tratamiento",
+              "nombre": "Tromboembolia pulmonar: escalas, dimero D y tratamiento",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "urg-urgencias-respiratorias--otras",
+          "nombre": "Otras",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "urg-urgencias-respiratorias--otras--neumotorax-diagnostico-y-drenaje",
+              "nombre": "Neumotorax: diagnostico y drenaje",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-urgencias-respiratorias--otras--hemoptisis-gravedad-y-manejo",
+              "nombre": "Hemoptisis: gravedad y manejo",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-urgencias-respiratorias--otras--aspiracion-y-obstruccion-de-via-aerea-por-cuerpo-extrano",
+              "nombre": "Aspiracion y obstruccion de via aerea por cuerpo extrano",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "urg-urgencias-neurologicas",
+      "nombre": "Urgencias neurologicas",
+      "area": "URG",
+      "subtemas": [
+        {
+          "id": "urg-urgencias-neurologicas--codigo-ictus-y-focalidad",
+          "nombre": "Codigo ictus y focalidad",
+          "frecuente": true,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "urg-urgencias-neurologicas--codigo-ictus-y-focalidad--codigo-ictus-criterios-y-ventana-de-tratamiento",
+              "nombre": "Codigo ictus: criterios y ventana de tratamiento",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-urgencias-neurologicas--codigo-ictus-y-focalidad--hemorragia-subaracnoidea-y-cefalea-centinela",
+              "nombre": "Hemorragia subaracnoidea y cefalea centinela",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-urgencias-neurologicas--codigo-ictus-y-focalidad--estatus-epileptico-y-crisis-en-urgencias",
+              "nombre": "Estatus epileptico y crisis en urgencias",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "urg-urgencias-neurologicas--alteracion-del-nivel-de-conciencia",
+          "nombre": "Alteracion del nivel de conciencia",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "urg-urgencias-neurologicas--alteracion-del-nivel-de-conciencia--coma-enfoque-sistematico-y-escala-de-glasgow",
+              "nombre": "Coma: enfoque sistematico y escala de Glasgow",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-urgencias-neurologicas--alteracion-del-nivel-de-conciencia--sindrome-confusional-agudo-en-urgencias",
+              "nombre": "Sindrome confusional agudo en urgencias",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-urgencias-neurologicas--alteracion-del-nivel-de-conciencia--vertigo-agudo-hints-y-diferenciacion-central",
+              "nombre": "Vertigo agudo: HINTS y diferenciacion central",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "urg-toxicologia-y-ambientales",
+      "nombre": "Toxicologia y ambientales",
+      "area": "URG",
+      "subtemas": [
+        {
+          "id": "urg-toxicologia-y-ambientales--intoxicaciones",
+          "nombre": "Intoxicaciones",
+          "frecuente": true,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "urg-toxicologia-y-ambientales--intoxicaciones--manejo-general-del-intoxicado-y-descontaminacion",
+              "nombre": "Manejo general del intoxicado y descontaminacion",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-toxicologia-y-ambientales--intoxicaciones--antidotos-esenciales-y-sus-indicaciones",
+              "nombre": "Antidotos esenciales y sus indicaciones",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-toxicologia-y-ambientales--intoxicaciones--intoxicaciones-frecuentes-paracetamol-benzodiacepinas-opioides-alcohol",
+              "nombre": "Intoxicaciones frecuentes: paracetamol, benzodiacepinas, opioides, alcohol",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-toxicologia-y-ambientales--intoxicaciones--intoxicacion-por-co-humo-y-toxicos-de-riesgo-vital",
+              "nombre": "Intoxicacion por CO, humo y toxicos de riesgo vital",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "urg-toxicologia-y-ambientales--urgencias-ambientales",
+          "nombre": "Urgencias ambientales",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "urg-toxicologia-y-ambientales--urgencias-ambientales--hipotermia-y-congelaciones",
+              "nombre": "Hipotermia y congelaciones",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-toxicologia-y-ambientales--urgencias-ambientales--golpe-de-calor-y-patologia-por-calor",
+              "nombre": "Golpe de calor y patologia por calor",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-toxicologia-y-ambientales--urgencias-ambientales--ahogamiento-picaduras-y-mordeduras",
+              "nombre": "Ahogamiento; picaduras y mordeduras",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-toxicologia-y-ambientales--urgencias-ambientales--anafilaxia-reconocimiento-y-adrenalina-im",
+              "nombre": "Anafilaxia: reconocimiento y adrenalina IM",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "urg-shock-sepsis-y-metabolico",
+      "nombre": "Shock, sepsis y metabolico",
+      "area": "URG",
+      "subtemas": [
+        {
+          "id": "urg-shock-sepsis-y-metabolico--shock-y-sepsis",
+          "nombre": "Shock y sepsis",
+          "frecuente": true,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "urg-shock-sepsis-y-metabolico--shock-y-sepsis--reconocimiento-del-shock-y-tipos",
+              "nombre": "Reconocimiento del shock y tipos",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-shock-sepsis-y-metabolico--shock-y-sepsis--sepsis-y-shock-septico-paquetes-de-la-primera-hora",
+              "nombre": "Sepsis y shock septico: paquetes de la primera hora",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-shock-sepsis-y-metabolico--shock-y-sepsis--fluidoterapia-y-drogas-vasoactivas-basicas",
+              "nombre": "Fluidoterapia y drogas vasoactivas basicas",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "urg-shock-sepsis-y-metabolico--urgencias-metabolicas-y-endocrinas",
+          "nombre": "Urgencias metabolicas y endocrinas",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "urg-shock-sepsis-y-metabolico--urgencias-metabolicas-y-endocrinas--cetoacidosis-diabetica-y-estado-hiperosmolar",
+              "nombre": "Cetoacidosis diabetica y estado hiperosmolar",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-shock-sepsis-y-metabolico--urgencias-metabolicas-y-endocrinas--hipoglucemia-grave",
+              "nombre": "Hipoglucemia grave",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-shock-sepsis-y-metabolico--urgencias-metabolicas-y-endocrinas--alteraciones-del-potasio-del-sodio-y-del-calcio",
+              "nombre": "Alteraciones del potasio, del sodio y del calcio",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-shock-sepsis-y-metabolico--urgencias-metabolicas-y-endocrinas--crisis-tiroidea-e-insuficiencia-suprarrenal-aguda",
+              "nombre": "Crisis tiroidea e insuficiencia suprarrenal aguda",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "urg-urgencias-abdominales-urologicas-y-otras",
+      "nombre": "Urgencias abdominales, urologicas y otras",
+      "area": "URG",
+      "subtemas": [
+        {
+          "id": "urg-urgencias-abdominales-urologicas-y-otras--abdomen-agudo",
+          "nombre": "Abdomen agudo",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "urg-urgencias-abdominales-urologicas-y-otras--abdomen-agudo--dolor-abdominal-agudo-orientacion-por-localizacion",
+              "nombre": "Dolor abdominal agudo: orientacion por localizacion",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-urgencias-abdominales-urologicas-y-otras--abdomen-agudo--hemorragia-digestiva-alta-y-baja",
+              "nombre": "Hemorragia digestiva alta y baja",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-urgencias-abdominales-urologicas-y-otras--abdomen-agudo--pancreatitis-aguda-y-patologia-biliar",
+              "nombre": "Pancreatitis aguda y patologia biliar",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "urg-urgencias-abdominales-urologicas-y-otras--urologicas-y-ginecologicas",
+          "nombre": "Urologicas y ginecologicas",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "urg-urgencias-abdominales-urologicas-y-otras--urologicas-y-ginecologicas--colico-renal-y-uropatia-obstructiva",
+              "nombre": "Colico renal y uropatia obstructiva",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-urgencias-abdominales-urologicas-y-otras--urologicas-y-ginecologicas--retencion-aguda-de-orina-y-sondaje",
+              "nombre": "Retencion aguda de orina y sondaje",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-urgencias-abdominales-urologicas-y-otras--urologicas-y-ginecologicas--urgencias-ginecologicas-gestacion-ectopica-epi-metrorragia",
+              "nombre": "Urgencias ginecologicas: gestacion ectopica, EPI, metrorragia",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "urg-urgencias-abdominales-urologicas-y-otras--psiquiatricas-y-sociales",
+          "nombre": "Psiquiatricas y sociales",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "urg-urgencias-abdominales-urologicas-y-otras--psiquiatricas-y-sociales--agitacion-psicomotriz-contencion-verbal-farmacologica-y-mecanica",
+              "nombre": "Agitacion psicomotriz: contencion verbal, farmacologica y mecanica",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-urgencias-abdominales-urologicas-y-otras--psiquiatricas-y-sociales--conducta-suicida-en-urgencias",
+              "nombre": "Conducta suicida en urgencias",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-urgencias-abdominales-urologicas-y-otras--psiquiatricas-y-sociales--sospecha-de-violencia-y-parte-de-lesiones",
+              "nombre": "Sospecha de violencia y parte de lesiones",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "urg-trauma",
+      "nombre": "Trauma",
+      "area": "URG",
+      "subtemas": [
+        {
+          "id": "urg-trauma--atencion-inicial-al-politraumatizado",
+          "nombre": "Atencion inicial al politraumatizado",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "urg-trauma--atencion-inicial-al-politraumatizado--valoracion-primaria-abcde-y-control-de-hemorragia",
+              "nombre": "Valoracion primaria ABCDE y control de hemorragia",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-trauma--atencion-inicial-al-politraumatizado--traumatismo-craneoencefalico-criterios-de-tc-y-observacion",
+              "nombre": "Traumatismo craneoencefalico: criterios de TC y observacion",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-trauma--atencion-inicial-al-politraumatizado--traumatismo-toracico-y-abdominal",
+              "nombre": "Traumatismo toracico y abdominal",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "urg-trauma--atencion-inicial-al-politraumatizado--heridas-quemaduras-y-manejo-del-dolor-agudo",
+              "nombre": "Heridas, quemaduras y manejo del dolor agudo",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "extra-emergencias-extrahospitalarias",
+      "nombre": "Emergencias extrahospitalarias",
+      "area": "EXTRA",
+      "subtemas": [
+        {
+          "id": "extra-emergencias-extrahospitalarias--organizacion-y-escena",
+          "nombre": "Organizacion y escena",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "extra-emergencias-extrahospitalarias--organizacion-y-escena--aproximacion-a-la-escena-y-seguridad",
+              "nombre": "Aproximacion a la escena y seguridad",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "extra-emergencias-extrahospitalarias--organizacion-y-escena--triaje-prehospitalario-metodo-start-short",
+              "nombre": "Triaje prehospitalario (metodo START/SHORT)",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "extra-emergencias-extrahospitalarias--organizacion-y-escena--incidente-de-multiples-victimas-y-catastrofes",
+              "nombre": "Incidente de multiples victimas y catastrofes",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "extra-emergencias-extrahospitalarias--organizacion-y-escena--comunicacion-transferencia-y-registro",
+              "nombre": "Comunicacion, transferencia y registro",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "extra-emergencias-extrahospitalarias--tecnicas-y-transporte",
+          "nombre": "Tecnicas y transporte",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "extra-emergencias-extrahospitalarias--tecnicas-y-transporte--movilizacion-e-inmovilizacion-retirada-de-casco",
+              "nombre": "Movilizacion e inmovilizacion; retirada de casco",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "extra-emergencias-extrahospitalarias--tecnicas-y-transporte--fisiopatologia-del-transporte-sanitario",
+              "nombre": "Fisiopatologia del transporte sanitario",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "extra-emergencias-extrahospitalarias--tecnicas-y-transporte--material-y-farmacos-del-vehiculo-asistencial",
+              "nombre": "Material y farmacos del vehiculo asistencial",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "extra-emergencias-extrahospitalarias--tecnicas-y-transporte--atencion-al-parto-extrahospitalario-y-reanimacion-neonatal",
+              "nombre": "Atencion al parto extrahospitalario y reanimacion neonatal",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dermatoscopia-dermatoscopia-diagnostica",
+      "nombre": "Dermatoscopia diagnostica",
+      "area": "DERMATOSCOPIA",
+      "subtemas": [
+        {
+          "id": "dermatoscopia-dermatoscopia-diagnostica--fundamentos",
+          "nombre": "Fundamentos",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "dermatoscopia-dermatoscopia-diagnostica--fundamentos--estructuras-y-colores-dermatoscopicos-basicos",
+              "nombre": "Estructuras y colores dermatoscopicos basicos",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "dermatoscopia-dermatoscopia-diagnostica--fundamentos--algoritmo-en-dos-pasos-melanocitico-vs-no-melanocitico",
+              "nombre": "Algoritmo en dos pasos: melanocitico vs no melanocitico",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "dermatoscopia-dermatoscopia-diagnostica--fundamentos--patrones-de-lesiones-melanociticas-benignas",
+              "nombre": "Patrones de lesiones melanociticas benignas",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        },
+        {
+          "id": "dermatoscopia-dermatoscopia-diagnostica--diagnostico-de-malignidad",
+          "nombre": "Diagnostico de malignidad",
+          "frecuente": true,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "dermatoscopia-dermatoscopia-diagnostica--diagnostico-de-malignidad--criterios-de-melanoma-analisis-de-patrones-y-regla-de-los-7-puntos",
+              "nombre": "Criterios de melanoma: analisis de patrones y regla de los 7 puntos",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "dermatoscopia-dermatoscopia-diagnostica--diagnostico-de-malignidad--melanoma-lentiginoso-facial-y-acral",
+              "nombre": "Melanoma lentiginoso facial y acral",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "dermatoscopia-dermatoscopia-diagnostica--diagnostico-de-malignidad--carcinoma-basocelular-criterios-dermatoscopicos",
+              "nombre": "Carcinoma basocelular: criterios dermatoscopicos",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "dermatoscopia-dermatoscopia-diagnostica--diagnostico-de-malignidad--queratosis-seborreica-angioma-y-lesiones-no-melanociticas-frecuentes",
+              "nombre": "Queratosis seborreica, angioma y lesiones no melanociticas frecuentes",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "dermatoscopia-dermatoscopia-diagnostica--diagnostico-de-malignidad--dermatoscopia-de-la-consulta-flujo-y-seguimiento-digital",
+              "nombre": "Dermatoscopia de la consulta: flujo y seguimiento digital",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mir-preparacion-mir",
+      "nombre": "Preparacion MIR",
+      "area": "MIR",
+      "subtemas": [
+        {
+          "id": "mir-preparacion-mir--preguntas-de-examen",
+          "nombre": "Preguntas de examen",
+          "frecuente": false,
+          "prioridad": 1,
+          "microtemas": [
+            {
+              "id": "mir-preparacion-mir--preguntas-de-examen--bloque-semanal-de-preguntas-mir-cardiologia-y-neumologia",
+              "nombre": "Bloque semanal de preguntas MIR: cardiologia y neumologia",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "mir-preparacion-mir--preguntas-de-examen--bloque-semanal-de-preguntas-mir-digestivo-y-nefrologia",
+              "nombre": "Bloque semanal de preguntas MIR: digestivo y nefrologia",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "mir-preparacion-mir--preguntas-de-examen--bloque-semanal-de-preguntas-mir-infecciosas-y-farmacologia",
+              "nombre": "Bloque semanal de preguntas MIR: infecciosas y farmacologia",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "mir-preparacion-mir--preguntas-de-examen--bloque-semanal-de-preguntas-mir-neurologia-y-psiquiatria",
+              "nombre": "Bloque semanal de preguntas MIR: neurologia y psiquiatria",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            },
+            {
+              "id": "mir-preparacion-mir--preguntas-de-examen--analisis-de-falladas-y-estadistica-del-test",
+              "nombre": "Analisis de falladas y estadistica del test",
+              "estado": "sin_empezar",
+              "anki": false,
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
+              "aplazado": 0,
+              "fuentes": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sesiones": []
+}

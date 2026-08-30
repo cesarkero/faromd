@@ -1,0 +1,12 @@
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+/*.png
+/scratchpad/
+* - copia.*
+*.tmp
+.secrets
+.secrets/
+img/*.zip
+_git_misplaced_backup/
