@@ -1,5 +1,34 @@
-// Exportacion del temario a CSV (se abre directamente en Excel).
+// Exportacion del temario a CSV / Excel (se abre directamente en Excel).
 import { flattenMicros } from "./schedule.js";
+
+function saveBlob(blob, name) {
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = name;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function rowsFor(plan) {
+  const areas = plan.meta?.areas || {};
+  return flattenMicros(plan).map(({ tema, sub, micro }) => ({
+    Area: areas[tema.area] || tema.area,
+    Tema: tema.nombre,
+    Subtema: sub.nombre,
+    Frecuente: sub.frecuente ? "si" : "no",
+    Microtema: micro.nombre,
+    Fuentes: (micro.fuentes || []).join(" | "),
+    Estado: micro.estado,
+    Anki: micro.anki ? "si" : "no",
+    Repasos: micro.repasos || 0,
+    Aplazado: micro.aplazado || 0,
+    FechaEstudio: micro.fechaEstudio || "",
+    FechaUltimoRepaso: micro.fechaUltimoRepaso || "",
+    FechaProximoRepaso: micro.fechaProximoRepaso || "",
+    MinutosDedicados: micro.minutosDedicados || 0,
+  }));
+}
 
 const COLS = [
   "Area",
@@ -11,6 +40,7 @@ const COLS = [
   "Estado",
   "Anki",
   "Repasos",
+  "Aplazado",
   "FechaEstudio",
   "FechaUltimoRepaso",
   "FechaProximoRepaso",
@@ -23,38 +53,48 @@ function cell(v) {
 }
 
 export function planToCSV(plan) {
-  const areas = plan.meta?.areas || {};
   const rows = [COLS.join(";")];
-  for (const { tema, sub, micro } of flattenMicros(plan)) {
-    rows.push(
-      [
-        areas[tema.area] || tema.area,
-        tema.nombre,
-        sub.nombre,
-        sub.frecuente ? "si" : "no",
-        micro.nombre,
-        (micro.fuentes || []).join(" | "),
-        micro.estado,
-        micro.anki ? "si" : "no",
-        micro.repasos || 0,
-        micro.fechaEstudio || "",
-        micro.fechaUltimoRepaso || "",
-        micro.fechaProximoRepaso || "",
-        micro.minutosDedicados || 0,
-      ]
-        .map(cell)
-        .join(";")
-    );
+  for (const r of rowsFor(plan)) {
+    rows.push(COLS.map((k) => cell(r[k])).join(";"));
   }
   return "﻿" + rows.join("\r\n") + "\r\n"; // BOM para Excel
 }
 
 export function downloadCSV(plan) {
-  const blob = new Blob([planToCSV(plan)], { type: "text/csv;charset=utf-8" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "temario.csv";
-  a.click();
-  URL.revokeObjectURL(url);
+  saveBlob(new Blob([planToCSV(plan)], { type: "text/csv;charset=utf-8" }), "temario.csv");
+}
+
+export function downloadJSON(plan) {
+  saveBlob(
+    new Blob([JSON.stringify(plan, (k, v) => (k.startsWith("_") ? undefined : v), 2) + "\n"], {
+      type: "application/json",
+    }),
+    "plan.json"
+  );
+}
+
+// Excel real (.xlsx): carga SheetJS del CDN solo al pedirlo.
+let xlsxLib = null;
+function loadSheetJS() {
+  if (xlsxLib) return Promise.resolve(xlsxLib);
+  if (window.XLSX) return Promise.resolve((xlsxLib = window.XLSX));
+  return new Promise((resolve, reject) => {
+    const s = document.createElement("script");
+    s.src = "https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js";
+    s.onload = () => resolve((xlsxLib = window.XLSX));
+    s.onerror = () => reject(new Error("No se pudo cargar la libreria de Excel (sin conexion?)."));
+    document.head.appendChild(s);
+  });
+}
+
+export async function downloadXLSX(plan) {
+  const XLSX = await loadSheetJS();
+  const ws = XLSX.utils.json_to_sheet(rowsFor(plan), { header: COLS });
+  ws["!cols"] = COLS.map((k) =>
+    ({ Microtema: 52, Tema: 32, Subtema: 30, Fuentes: 40 }[k] ? { wch: { Microtema: 52, Tema: 32, Subtema: 30, Fuentes: 40 }[k] } : { wch: 13 })
+  );
+  ws["!autofilter"] = { ref: XLSX.utils.encode_range({ s: { r: 0, c: 0 }, e: { r: rowsFor(plan).length, c: COLS.length - 1 } }) };
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, "Temario");
+  XLSX.writeFile(wb, "temario.xlsx");
 }

@@ -6,7 +6,6 @@ import {
   saveDraft,
   loadDraft,
   clearDraft,
-  downloadPlan,
   importPlanFile,
 } from "./store.js";
 import {
@@ -30,7 +29,7 @@ import { renderCircle } from "./ui/circle.js";
 import { renderBars } from "./ui/bars.js";
 import { renderTable } from "./ui/table.js";
 import { openSettings } from "./ui/settings.js";
-import { downloadCSV } from "./csv.js";
+import { downloadCSV, downloadJSON, downloadXLSX } from "./csv.js";
 
 let plan = null;
 let source = "static";
@@ -296,10 +295,35 @@ function wireToolbar() {
     }
   };
 
-  $("#btn-export").onclick = () => downloadPlan(plan);
-  $("#btn-csv").onclick = () => downloadCSV(plan);
+  // menu Datos (exportar / importar)
+  const menu = $("#datos-menu");
+  const menuBtn = $("#btn-datos");
+  const closeMenu = () => {
+    menu.hidden = true;
+    menuBtn.setAttribute("aria-expanded", "false");
+  };
+  menuBtn.onclick = (e) => {
+    e.stopPropagation();
+    menu.hidden = !menu.hidden;
+    menuBtn.setAttribute("aria-expanded", String(!menu.hidden));
+  };
+  document.addEventListener("click", (e) => {
+    if (!menu.hidden && !menu.contains(e.target)) closeMenu();
+  });
+  menu.onclick = async (e) => {
+    const act = e.target.dataset && e.target.dataset.act;
+    if (!act) return;
+    closeMenu();
+    try {
+      if (act === "csv") downloadCSV(plan);
+      else if (act === "json") downloadJSON(plan);
+      else if (act === "xlsx") await downloadXLSX(plan);
+      else if (act === "import") $("#file-import").click();
+    } catch (err) {
+      alert(err.message);
+    }
+  };
 
-  $("#btn-import").onclick = () => $("#file-import").click();
   $("#file-import").onchange = async (e) => {
     const file = e.target.files[0];
     if (!file) return;

@@ -21,9 +21,16 @@
     <div class="topbar-right">
       <span id="status" class="pill">…</span>
       <button id="btn-save" class="btn btn-primary" disabled>Guardar en GitHub</button>
-      <button id="btn-csv" class="btn btn-ghost">Exportar CSV</button>
-      <button id="btn-export" class="btn btn-ghost">Exportar JSON</button>
-      <button id="btn-import" class="btn btn-ghost">Importar</button>
+      <div class="menu-wrap">
+        <button id="btn-datos" class="btn btn-ghost" aria-haspopup="true" aria-expanded="false">Datos ▾</button>
+        <div id="datos-menu" class="menu" hidden>
+          <button data-act="csv">Exportar CSV</button>
+          <button data-act="xlsx">Exportar Excel (.xlsx)</button>
+          <button data-act="json">Exportar JSON (copia de seguridad)</button>
+          <hr>
+          <button data-act="import">Importar plan (JSON)…</button>
+        </div>
+      </div>
       <button id="btn-settings" class="btn btn-ghost">Ajustes</button>
       <input type="file" id="file-import" accept="application/json,.json" hidden>
     </div>
