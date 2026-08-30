@@ -155,50 +155,67 @@ function studyFronts(plan, estado) {
 // Estructura fija de 4 roles (como img/reparto_estudio_circular.svg):
 //   P1 Repaso · P2 Tema/Repaso · P3 Tema principal · P4 Cierre activo
 // El contenido es aleatorio PONDERADO (temas frecuentes / de mayor prioridad
-// salen mas) y estable dentro del dia gracias a la semilla.
+// salen mas), estable dentro del dia por la semilla, y los 4 bloques SIEMPRE
+// son de subtemas distintos.
 export function composeSession(plan, iso = todayISO()) {
   const rng = seededRng(iso + "|" + (plan.meta?.semilla || ""));
+  const usadas = new Set(); // subtema.id ya asignados hoy
 
-  // --- estudio: si hay algo "programado" (a medias) esa es la principal;
-  //     si no, se elige por sorteo ponderado entre los frentes de subtema.
-  const enCurso = studyFronts(plan, "programado")[0];
-  const nuevos = studyFronts(plan, "sin_empezar");
-  const principalR =
-    enCurso ||
-    weightedPick(nuevos, (f) => subWeight(f.sub), rng) ||
-    nuevos[0] ||
-    null;
-  const restoNuevos = nuevos.filter((f) => f.sub.id !== (principalR && principalR.sub.id));
-  const segundoR =
-    weightedPick(restoNuevos, (f) => subWeight(f.sub), rng) || principalR;
-
-  // --- repasos: sorteo ponderado entre los vencidos (peso por prioridad y retraso)
   const od = overdueMicros(plan, iso);
+  const nuevos = studyFronts(plan, "sin_empezar");
+  const enCurso = studyFronts(plan, "programado")[0] || null;
+  const recall = flattenMicros(plan).filter(
+    (r) => r.micro.estado === "finalizado" && (!r.micro.fechaProximoRepaso || r.micro.fechaProximoRepaso > iso)
+  );
+
   const wRep = (r) =>
     subWeight(r.sub) +
-    Math.max(0, daysBetween(r.micro.fechaProximoRepaso, iso)) * 0.3 +
+    Math.max(0, daysBetween(r.micro.fechaProximoRepaso || iso, iso)) * 0.3 +
     (r.micro.aplazado || 0);
-  const rep1 = weightedPick(od, wRep, rng);
-  const rep2 = weightedPick(od.filter((r) => r !== rep1), wRep, rng);
+  const wEst = (r) => subWeight(r.sub);
+
+  // elige de la primera lista con candidatos libres (subtema no usado), ponderado
+  const elegir = (...listasConPeso) => {
+    for (const [lista, peso] of listasConPeso) {
+      const libres = (lista || []).filter((r) => r && r.sub && !usadas.has(r.sub.id));
+      const pick = weightedPick(libres, peso, rng) || libres[0];
+      if (pick) {
+        usadas.add(pick.sub.id);
+        return pick;
+      }
+    }
+    return null;
+  };
+
+  // P3 · tema principal: el microtema a medias, o un tema nuevo por sorteo
+  let p3 = enCurso;
+  if (p3) usadas.add(p3.sub.id);
+  else p3 = elegir([nuevos, wEst], [recall, wRep]);
+
+  // P1 · repaso: vencido; si no hay, recall de algo ya visto; si no, otro tema nuevo
+  const p1 = elegir([od, wRep], [recall, wRep], [nuevos, wEst]);
+  // P2 · tema / repaso: 2o vencido si lo hay; si no, otro tema nuevo
+  const rep2 = elegir([od, wRep]);
+  const est2 = rep2 ? null : elegir([nuevos, wEst], [recall, wRep]);
+  // P4 · cierre activo: otro tema nuevo distinto, o recall
+  const p4 = elegir([nuevos, wEst], [recall, wRep], [od, wRep]);
 
   const id = (x) => (x ? x.micro.id : null);
-  const p1 = id(rep1) || id(principalR);
-  const p2EsRepaso = !!rep2;
-  const b = (pomodoro, rol, tipo, microtemaId, rotulo) => ({
+  const b = (pomodoro, rol, tipo, cand, rotulo) => ({
     pomodoro,
     rol,
     tipo,
     rotulo,
-    microtemaId: microtemaId || null,
+    microtemaId: id(cand),
     hecho: false,
   });
   const bloques = [
     b(1, "repaso", "repaso", p1, "REPASO"),
-    p2EsRepaso
-      ? b(2, "tema_repaso", "repaso", id(rep2), "TEMA / REPASO")
-      : b(2, "tema_repaso", "tema", id(segundoR), "TEMA / REPASO"),
-    b(3, "tema", "tema", id(principalR), "TEMA PRINCIPAL"),
-    b(4, "cierre", "cierre", id(principalR), "CIERRE ACTIVO"),
+    rep2
+      ? b(2, "tema_repaso", "repaso", rep2, "TEMA / REPASO")
+      : b(2, "tema_repaso", "tema", est2, "TEMA / REPASO"),
+    b(3, "tema", "tema", p3, "TEMA PRINCIPAL"),
+    b(4, "cierre", "cierre", p4, "CIERRE ACTIVO"),
   ];
   return { fecha: iso, bloques, completada: false };
 }
@@ -220,13 +237,15 @@ export function markBloque(plan, sesion, idx, iso = todayISO()) {
       minutosDedicados: r.micro.minutosDedicados || 0,
     };
     r.micro.minutosDedicados = (r.micro.minutosDedicados || 0) + (plan.config.minutosPomodoro || 25);
-    if (b.tipo === "repaso" && r.micro.estado === "finalizado") {
-      // repaso real: reprograma el siguiente repaso
+    if (r.micro.estado === "finalizado" && (b.tipo === "repaso" || b.tipo === "cierre")) {
+      // repaso real de algo ya estudiado: reprograma el siguiente repaso
       markReview(r.micro, r.sub, plan.config, iso);
-    } else if (r.micro.estado === "sin_empezar") {
-      // el bloque "repaso" sobre algo sin estudiar sirve de calentamiento
+    } else if (b.tipo === "tema" && r.micro.estado === "sin_empezar") {
+      // solo el bloque de estudio (P2 estudio / P3) arranca un microtema nuevo
       r.micro.estado = "programado";
     }
+    // P1 repaso / P4 cierre sobre algo aun sin estudiar = solo calentamiento
+    // (suma minutos, no cambia el estado)
   }
   sesion.completada = sesion.bloques.every((x) => x.hecho);
 }

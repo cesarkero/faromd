@@ -2,7 +2,7 @@
 import { CONFIG } from "../config.js";
 import { getToken, setToken } from "../store.js";
 
-export function openSettings({ onChange }) {
+export function openSettings({ onChange, onFactoryReset }) {
   const back = document.createElement("div");
   back.className = "modal-back";
   const tokenSet = !!getToken();
@@ -44,6 +44,17 @@ export function openSettings({ onChange }) {
           <li><span>branch</span><code>${CONFIG.branch}</code></li>
           <li><span>path</span><code>${CONFIG.path}</code></li>
         </ul>
+
+        <details class="danger">
+          <summary>Zona peligrosa</summary>
+          <p class="hint">
+            <b>Restaurar plan de fábrica</b>: borra todo tu progreso (estados, fechas, repasos,
+            sesiones, minutos) y vuelve al temario en blanco de <code>data/plan.example.json</code>.
+            Los cambios no se suben hasta que pulses «Guardar en GitHub».
+          </p>
+          <button class="btn s-reset">Restaurar plan de fábrica…</button>
+          <p class="s-msg2"></p>
+        </details>
       </div>
     </div>`;
 
@@ -70,6 +81,28 @@ export function openSettings({ onChange }) {
     onChange();
     close();
   };
+
+  const resetBtn = back.querySelector(".s-reset");
+  if (resetBtn)
+    resetBtn.onclick = async () => {
+      const msg2 = back.querySelector(".s-msg2");
+      const frase = "RESTAURAR";
+      const escrito = prompt(
+        `Esto BORRA todo tu progreso.\n\nEscribe ${frase} para confirmar:`
+      );
+      if (escrito !== frase) {
+        msg2.textContent = "Cancelado.";
+        return;
+      }
+      msg2.textContent = "Restaurando…";
+      try {
+        await onFactoryReset();
+        msg2.textContent = "Plan de fábrica cargado. Revisa y pulsa «Guardar en GitHub».";
+        close();
+      } catch (e) {
+        msg2.textContent = "Error: " + e.message;
+      }
+    };
 
   document.body.appendChild(back);
   back.querySelector(".s-token").focus();

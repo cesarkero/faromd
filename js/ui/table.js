@@ -13,16 +13,18 @@ const ESTADOS = [
   ["finalizado", "Finalizado"],
 ];
 
-function loadCollapsed() {
+// Guardamos los temas DESPLEGADOS; por defecto (nada guardado) la tabla se
+// muestra toda plegada.
+function loadExpanded() {
   try {
-    return new Set(JSON.parse(localStorage.getItem(LS.collapsed) || "[]"));
+    return new Set(JSON.parse(localStorage.getItem(LS.expanded) || "[]"));
   } catch {
     return new Set();
   }
 }
-function saveCollapsed(set) {
+function saveExpanded(set) {
   try {
-    localStorage.setItem(LS.collapsed, JSON.stringify([...set]));
+    localStorage.setItem(LS.expanded, JSON.stringify([...set]));
   } catch {}
 }
 
@@ -35,8 +37,10 @@ const state = {
 
 export function renderTable(container, plan, { onMutate, readonly }) {
   container.innerHTML = "";
-  const collapsed = loadCollapsed();
+  const expanded = loadExpanded();
   const today = todayISO();
+  // al filtrar/buscar se despliega todo temporalmente para ver los resultados
+  const hayFiltro = !!(state.q.trim() || state.area || state.soloPendientes || state.soloVencidos);
 
   // barra de filtros
   const bar = document.createElement("div");
@@ -107,22 +111,22 @@ export function renderTable(container, plan, { onMutate, readonly }) {
     const section = document.createElement("section");
     section.className = "tema";
     const tid = tema.id;
-    const tCollapsed = collapsed.has(tid);
+    const abierto = hayFiltro || expanded.has(tid);
     const head = document.createElement("button");
     head.className = "tema-head";
     head.innerHTML = `
-      <span class="chev ${tCollapsed ? "" : "open"}">▸</span>
+      <span class="chev ${abierto ? "open" : ""}">▸</span>
       <span class="dot area-${tema.area}"></span>
       <span class="tema-name">${tema.nombre}</span>
       <span class="tema-meta">${temaRows.reduce((n, r) => n + r.micros.length, 0)} microtemas</span>`;
     head.onclick = () => {
-      tCollapsed ? collapsed.delete(tid) : collapsed.add(tid);
-      saveCollapsed(collapsed);
+      expanded.has(tid) ? expanded.delete(tid) : expanded.add(tid);
+      saveExpanded(expanded);
       rerender();
     };
     section.appendChild(head);
 
-    if (!tCollapsed) {
+    if (abierto) {
       for (const { sub, micros } of temaRows) {
         const sc = document.createElement("div");
         sc.className = "sub";

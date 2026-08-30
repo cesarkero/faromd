@@ -13,7 +13,7 @@ export const CONFIG = {
 export const LS = {
   token: "labiblia.token",
   draft: "labiblia.draft",
-  collapsed: "labiblia.collapsed",
+  expanded: "labiblia.expanded", // temas desplegados en la tabla (por defecto: ninguno)
 };
 
 export const API = "https://api.github.com";

@@ -43,16 +43,16 @@ están en `data/plan.json`, que es la **única fuente de verdad**.
 
 - `index.html` – una sola hoja.
 - `assets/styles.css` – estilos y paleta (tomada de `/img`, suavizada a pastel).
-- `js/config.js` – **owner / repo / branch** del repositorio (ajústalo tras crear el repo).
-- `js/store.js` – carga y guardado vía API de GitHub, borrador local, export/import.
-- `js/schedule.js` – repaso espaciado, composición de la sesión de hoy, reparto semanal.
-- `js/csv.js` – exportación del temario a CSV.
+- `js/config.js` – **owner / repo / branch** del repositorio y claves de localStorage.
+- `js/store.js` – carga y guardado vía API de GitHub, borrador local, importar plan.
+- `js/schedule.js` – repaso espaciado, composición de la sesión del día, cierre de día.
+- `js/csv.js` – exportación del temario a CSV / Excel (.xlsx) / JSON.
 - `js/ui/*` – círculo de sesión, barras apiladas, tabla, ajustes.
 - `data/plan.json` – temario + configuración + registro de sesiones (**fuente única**).
-- `data/plan.example.json` – copia semilla por si quieres reiniciar.
+- `data/plan.example.json` – plan "de fábrica" (temario en blanco) para *Restaurar*.
 - `data/temario.csv` / `data/temario.xlsx` – el temario (clasificación temas ▸ subtemas ▸
-  microtemas) para llevarlo a otro sistema. Se regeneran desde `plan.json`; el botón
-  **Exportar CSV** descarga el estado actual.
+  microtemas) para llevarlo a otro sistema. Se regeneran desde `plan.json`; el menú
+  **Datos** descarga el estado actual (CSV, Excel o JSON).
 
 ## Ver en local antes de publicar
 
@@ -111,69 +111,75 @@ en Ajustes.
    - **Repaso**: registra un repaso hecho hoy — sube el contador de repasos, pone
      `último repaso = hoy` y **reprograma el siguiente** con el intervalo que toque según el
      número de repasos. Pone `aplazado = 0`.
-2. En el círculo de hoy marca cada **bloque** (pomodoro) según lo estudias — aparece la línea
-   oscura en el borde del trozo. Botones:
+2. En el círculo del día marca cada **bloque** (pomodoro) según lo estudias — aparece una
+   **línea oscura en el borde exterior** del trozo. Botones (en azul):
    - **Marcar toda la sesión**: marca los 4 bloques de golpe.
-   - **Desmarcar todo** (sale cuando están los 4): quita todas las marcas y **revierte** sus
-     efectos (minutos y reprogramación de repasos); vuelve a dejar el día "de cero".
-   - **Cerrar día**: fija la sesión tal como está, mueve a mañana los repasos que queden sin
+   - **Desmarcar todo** (aparece cuando están los 4): quita las marcas y **revierte** sus
+     efectos (minutos y reprogramación de repasos); deja el día "de cero".
+   - **Cerrar día**: fija la sesión tal cual, **desliza a mañana** los repasos que queden sin
      hacer y guarda el registro del día. **Reabrir día** lo deshace.
-3. Pulsa **Guardar en GitHub**: crea un commit en `data/plan.json`.
+3. Pulsa **Guardar en GitHub**: crea un commit en `data/plan.json`. (En local no aplica: los
+   cambios quedan en el borrador del navegador y en *Datos → Exportar*.)
 
-## Sesión élite
+## El círculo del día
 
-El hito semanal es 10 h (5 sesiones de 2 h). La idea de **sesión élite** es que **una** de esas
-sesiones sea más exigente/profunda (no más larga). El check *"hoy cuenta como élite"* de la tira
-*Semana en curso* solo marca la sesión del día como élite para llevar la cuenta; de momento no
-cambia la composición del círculo.
+Estructura fija de 4 roles, como `img/reparto_estudio_circular.svg`:
+**P1 Repaso · P2 Tema/Repaso · P3 Tema principal · P4 Cierre activo**.
 
-## Sesión aleatoria ponderada
+- Los 4 bloques son **siempre de subtemas distintos** (no se repiten en el mismo día).
+- El contenido se **sortea con peso** y semilla del día (estable hasta mañana): más peso a los
+  subtemas `frecuente` (×3) y a los de mayor `prioridad` (`data/plan.json` → `subtemas[].prioridad`,
+  sube a 2 o 3).
+- **P1/P2** toman los repasos vencidos si los hay (el más aplazado/atrasado primero); si no,
+  hacen un repaso ligero de algo ya estudiado o un primer vistazo a un tema nuevo.
+- **P3** es el microtema `programado` (a medias) si existe; si no, un tema nuevo por sorteo.
+  Es el único bloque que arranca un microtema (`sin_empezar → programado`).
+- **P4** cierra con otro tema distinto o un recuerdo activo de algo ya visto.
 
-Los microtemas de la sesión de cada día se **sortean** (con semilla del día, así son estables
-hasta mañana), dando más peso a los subtemas marcados `frecuente` (×3) y a los de mayor
-`prioridad` (`data/plan.json` → `subtemas[].prioridad`, sube a 2 o 3). Si tienes un microtema
-`programado` (a medias), ese es el "tema principal" sin sorteo.
+## Cómo se reajusta la planificación
 
-Sin token la página es **solo lectura** (ideal para el móvil). Cada cambio se guarda además como
-**borrador local**; al recargar se ofrece recuperarlo. **Exportar / Importar JSON** es la
-alternativa manual (subes tú el fichero al repo).
+- **Bloques sin marcar**: no se pierden. El microtema sigue pendiente y el repaso sigue vencido,
+  así que reaparecen. Al **cerrar el día** (a mano o automático al abrir la web otro día) los
+  repasos no hechos **se deslizan a mañana** y suben su contador `aplazado`; a partir de
+  `config.avisoAplazado` (3) se marcan **"⚠ muy retrasado"**.
+- **Ediciones a mano** en la tabla (una fecha de próximo repaso, un estado): la sesión del día
+  se **recompone al momento** para los bloques que aún no has marcado; los marcados quedan fijos.
+- Al hacer un repaso, la siguiente fecha se calcula desde el día **real** en que lo hiciste.
 
-## Lógica de repaso
+## Repaso espaciado
 
 `fechaProximoRepaso = hoy + intervalo[nº de repaso]`. Intervalos por defecto `1-3-7-21-60` días,
-y `1-2-5-12-30` para los subtemas marcados como `frecuente` (HTA, DM, dislipemia…). Todo editable
-en `data/plan.json` (`config.intervalosRepaso`) o a mano en la tabla.
+y `1-2-5-12-30` para los subtemas `frecuente` (HTA, DM, dislipemia…). Editable en
+`data/plan.json` (`config.intervalosRepaso`) o a mano en la tabla.
 
-El **círculo de hoy** tiene 4 roles fijos (como `img/reparto_estudio_circular.svg`):
-**P1 Repaso · P2 Tema/Repaso · P3 Tema principal · P4 Cierre activo**. El contenido se adapta:
-P1 y P2 toman los microtemas vencidos si los hay; P3/P4 el microtema en curso. Marca cada bloque
-según lo estudias (el tick verde dentro del anillo y el botón *marcar* de la lista); al marcar
-los 4 la sesión cuenta como completada, se suman los minutos por microtema y se reprograman los
-repasos.
+## Tabla del temario
 
-**La planificación se reajusta sola:**
-- Los bloques que **no marcas** no se pierden: el microtema sigue pendiente y el repaso sigue
-  vencido, así que reaparecen en la sesión del día siguiente. Al abrir la web se avisa de cuántos
-  bloques quedaron sin marcar.
-- Si **editas a mano** una fecha de próximo repaso (o un estado) en la tabla, la sesión de hoy
-  se recompone al momento: los bloques **aún sin marcar** se rehacen según el nuevo estado del
-  temario; los que ya marcaste quedan fijos. Un repaso que adelantas/atrasas a mano entra en
-  «Repasos vencidos» y en el P1 del día que toque.
-- Al hacer un repaso, la siguiente fecha se calcula desde el día **real** en que lo hiciste,
-  no desde la fecha teórica.
+Arranca **plegada** (solo los títulos de tema). Se despliega tema a tema, o entera al buscar/
+filtrar. En **móvil** se oculta (usa *Datos → Exportar CSV*). Columnas: microtema, **Fuentes**
+(dónde está en los libros; varias separadas por `|`, p. ej. `semFYC cap. 12 · p. 145 | Vázquez Lima cap. 33`),
+estado, Anki, repasos, fechas.
 
-En **local** (`localhost`) la interacción está siempre activa aunque no haya token: los cambios
-van al borrador y a *Exportar*, nunca a GitHub. En la web publicada, sin token es solo lectura.
+## Modo edición y solo lectura
 
-En **móvil** la tabla del temario se oculta; se ve el círculo, la semana, el tiempo por tema y
-los repasos vencidos.
+- **En local** (`localhost`): edición siempre activa; los cambios van al borrador y a *Datos →
+  Exportar*, nunca a GitHub.
+- **Web publicada**: por defecto **solo lectura**. Para editar, pega un token en **Ajustes**
+  (ver abajo). El mismo token se puede usar en varios equipos/navegadores; también podéis tener
+  cada uno el vuestro. Si dos personas guardan a la vez, la app avisa del conflicto (compara el
+  `sha` del fichero) y ofrece recargar.
+- El borrador local guarda cada cambio; al recargar se ofrece recuperarlo.
 
-## Fuentes en los libros
+## Restaurar plan de fábrica
 
-Cada microtema tiene un campo **`fuentes`**: dónde encontrarlo en los libros (puede estar en
-varios). Se edita en la columna *Fuentes* de la tabla, separando varias con `|`
-(p. ej. `semFYC cap. 12 · p. 145 | Vázquez Lima cap. 33`), y sale en `temario.csv` / `.xlsx`.
-Los índices fotografiados de los libros están en `img/indices/`.
+En **Ajustes → Zona peligrosa → Restaurar plan de fábrica** (pide escribir `RESTAURAR`). Carga
+`data/plan.example.json` (temario en blanco, sin fechas ni progreso). No se sube hasta que pulses
+*Guardar en GitHub*. Cuando termines de probar, este es el modo de dejar los datos "de fábrica".
+
+## Futuras implementaciones
+
+- Que cada bloque de estudio del círculo **enlace a la ruta del material** a estudiar (capítulo/
+  página, o el PDF si está digitalizado) usando el campo `fuentes` de cada microtema.
+- Rellenar `fuentes` a partir de los índices fotografiados en `img/indices/`.
 
 # Material para el plan de estudio
 
@@ -188,6 +194,10 @@ Libros
 
 # Cosas por hacer
 - [x] Que se vea bien en modo móvil. La tabla de datos se oculta en el móvil.
-- [x] Poder ver la web en local antes de hacer el push a github (`py -3 -m http.server`).
-- [ ] Afinar el temario con los índices reales de los libros:
-  `img\WhatsApp Unknown 2026-08-29 at 21.43.10.zip` (imágenes de los índices).
+- [x] Poder ver la web en local antes del push (`py -3 -m http.server`).
+- [x] Tabla plegada por defecto.
+- [x] Cierre de día y recalibrado de fechas.
+- [ ] Afinar el temario y rellenar `fuentes` con los índices reales de los libros
+  (fotos en `img/indices/`). **Aún NO analizados**: el temario actual es una propuesta
+  a partir de los índices *conocidos* de la semFYC y de Urgencias (Vázquez Lima), no de estas fotos.
+- [ ] Enlazar los bloques de estudio con la ruta del material (ver *Futuras implementaciones*).
