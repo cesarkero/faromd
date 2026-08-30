@@ -72,6 +72,10 @@ a { color: var(--ap-2); }
 .btn-primary { background: var(--ap); border-color: transparent; color: #fff; }
 .btn-primary:hover { background: var(--ap-2); }
 .btn-ghost { background: transparent; }
+.btn-mini {
+  padding: 8px 12px; font-weight: 850; line-height: 1;
+  text-decoration: none; display: inline-flex; align-items: center;
+}
 
 .menu-wrap { position: relative; }
 .menu {

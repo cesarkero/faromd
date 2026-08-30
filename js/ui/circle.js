@@ -7,6 +7,8 @@ const NS = "http://www.w3.org/2000/svg";
 const COLOR = { repaso: "var(--repaso)", tema: "var(--ap)", cierre: "var(--ap-2)" };
 const TIPO_CORTO = { repaso: "REPASO", tema: "TEMA", cierre: "CIERRE" };
 const TIPO = { repaso: "Repaso", tema: "Tema", cierre: "Cierre activo" };
+// rotulo breve para el anillo del circulo (el texto largo se sale del trozo)
+const RING = { repaso: "Repaso", tema_repaso: "Tema/Rep.", tema: "Tema", cierre: "Cierre" };
 
 function pt(cx, cy, r, deg) {
   const a = (deg * Math.PI) / 180;
@@ -68,7 +70,7 @@ export function renderCircle(container, plan, sesion, opts) {
       })
     );
 
-    const rotulo = b.rotulo || TIPO_CORTO[b.tipo] || b.tipo.toUpperCase();
+    const rotulo = RING[b.rol] || b.rotulo || TIPO_CORTO[b.tipo] || b.tipo.toUpperCase();
     const [lx, ly] = pt(c, c, r, mid);
     g.appendChild(el("text", { x: lx, y: ly - 8, "text-anchor": "middle", class: "ring-kicker" }, `P${i + 1} · 25′`));
     g.appendChild(el("text", { x: lx, y: ly + 13, "text-anchor": "middle", class: "ring-label" }, rotulo));
