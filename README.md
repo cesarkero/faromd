@@ -66,21 +66,24 @@ no funcionan con `file://`).
 
 ## Publicar en GitHub Pages (paso a paso)
 
-1. Crea el repositorio en GitHub: <https://github.com/new> → nombre `labiblia`
-   (público o privado; Pages funciona en ambos con cuenta Pro para privado).
-2. En la carpeta del proyecto:
+El repo Git ya está inicializado **en la raíz del proyecto** (antes estaba dentro de `data/`,
+por eso GitHub solo tenía los datos y no la web; el `.git` mal puesto se movió a
+`data/_git_misplaced_backup`, que está ignorado y puedes borrar).
+
+1. El remoto ya apunta a `https://github.com/cesarkero/labiblia.git`. En GitHub, ese repo
+   contiene ahora mismo un commit antiguo con solo los datos; lo vamos a reemplazar por la app
+   completa:
    ```powershell
-   git init
-   git add .
-   git commit -m "dashboard del plan de estudio"
-   git branch -M main
-   git remote add origin https://github.com/<tu-usuario>/labiblia.git
-   git push -u origin main
+   cd "C:\Users\cesar\ModlEarth\Drive\Proyectos\GitHub\labiblia"
+   git push -u origin main --force
    ```
-3. Edita `js/config.js` y pon tu `owner` (usuario), `repo` y `branch` (`main`). Commit y push.
-4. En GitHub: **Settings → Pages → Build and deployment → Source: Deploy from a branch →
-   Branch: `main` / `/ (root)` → Save**.
-5. Espera ~1 min. La web queda en `https://<tu-usuario>.github.io/labiblia/`.
+   (El `--force` es necesario solo esta vez, para sustituir aquel commit basura.)
+2. En GitHub: **Settings → Pages → Build and deployment → Source: Deploy from a branch →
+   Branch `main` / `/ (root)` → Save**.
+3. Espera ~1 min. La web queda en `https://cesarkero.github.io/labiblia/`.
+4. Para cambios posteriores: `git add -A && git commit -m "..." && git push` (ya sin `--force`).
+
+`js/config.js` ya tiene `owner: cesarkero`, `repo: labiblia`, `branch: main`.
 
 ## Crear el token para editar (paso a paso)
 
@@ -100,11 +103,36 @@ en Ajustes.
 
 ## Registrar y corregir datos
 
-1. Con el token puesto, edita la tabla (estado, Anki, nº de repasos, fechas) o usa los botones
-   rápidos **Estudiado** / **Repaso** de cada fila.
-2. En el círculo de hoy, marca cada **bloque** (pomodoro) segun lo vas estudiando; al marcar
-   todos, la sesión cuenta como completada.
+1. Con el token puesto, edita la tabla (estado, Anki, nº de repasos, fechas, fuentes) o usa los
+   botones rápidos de cada fila:
+   - **Estudiado**: marca el microtema como estudiado hoy, pone `estado = finalizado`,
+     `fecha de estudio = hoy`, y **programa el 1.er repaso** (hoy + 1 día, o el intervalo
+     configurado).
+   - **Repaso**: registra un repaso hecho hoy — sube el contador de repasos, pone
+     `último repaso = hoy` y **reprograma el siguiente** con el intervalo que toque según el
+     número de repasos. Pone `aplazado = 0`.
+2. En el círculo de hoy marca cada **bloque** (pomodoro) según lo estudias — aparece la línea
+   oscura en el borde del trozo. Botones:
+   - **Marcar toda la sesión**: marca los 4 bloques de golpe.
+   - **Desmarcar todo** (sale cuando están los 4): quita todas las marcas y **revierte** sus
+     efectos (minutos y reprogramación de repasos); vuelve a dejar el día "de cero".
+   - **Cerrar día**: fija la sesión tal como está, mueve a mañana los repasos que queden sin
+     hacer y guarda el registro del día. **Reabrir día** lo deshace.
 3. Pulsa **Guardar en GitHub**: crea un commit en `data/plan.json`.
+
+## Sesión élite
+
+El hito semanal es 10 h (5 sesiones de 2 h). La idea de **sesión élite** es que **una** de esas
+sesiones sea más exigente/profunda (no más larga). El check *"hoy cuenta como élite"* de la tira
+*Semana en curso* solo marca la sesión del día como élite para llevar la cuenta; de momento no
+cambia la composición del círculo.
+
+## Sesión aleatoria ponderada
+
+Los microtemas de la sesión de cada día se **sortean** (con semilla del día, así son estables
+hasta mañana), dando más peso a los subtemas marcados `frecuente` (×3) y a los de mayor
+`prioridad` (`data/plan.json` → `subtemas[].prioridad`, sube a 2 o 3). Si tienes un microtema
+`programado` (a medias), ese es el "tema principal" sin sorteo.
 
 Sin token la página es **solo lectura** (ideal para el móvil). Cada cambio se guarda además como
 **borrador local**; al recargar se ofrece recuperarlo. **Exportar / Importar JSON** es la
