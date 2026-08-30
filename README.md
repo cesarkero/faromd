@@ -121,6 +121,27 @@ en Ajustes.
 3. Pulsa **Guardar en GitHub**: crea un commit en `data/plan.json`. (En local no aplica: los
    cambios quedan en el borrador del navegador y en *Datos → Exportar*.)
 
+## Traer los cambios a tu copia local
+
+Cuando editas desde la web publicada, **Guardar en GitHub** hace un commit en el repo. En tu PC
+esos cambios no aparecen solos; para bajarlos:
+
+```powershell
+cd "C:\Users\cesar\ModlEarth\Drive\Proyectos\GitHub\labiblia"
+git pull
+```
+
+- Solo se toca `data/plan.json` (y los `data/temario.*` si se regeneran), así que un `git pull`
+  normal basta y no habrá conflictos con el código.
+- Si además has tocado archivos en local sin commitear, guarda primero (`git stash` o un commit)
+  y luego `git pull`.
+- Al revés (editas el JSON en local): `git add -A && git commit -m "..." && git push`, y la web
+  lo recoge al recargar. Si editaste en la web *y* en local a la vez sobre `plan.json`, el `pull`
+  pedirá resolver el conflicto a mano (o `git checkout --theirs data/plan.json` para quedarte con
+  la versión de GitHub).
+- La web avisa de conflicto (compara el `sha`) si intentas *Guardar en GitHub* sobre una versión
+  que cambió por detrás; recarga y vuelve a aplicar.
+
 ## El círculo del día
 
 Estructura fija de 4 roles, como `img/reparto_estudio_circular.svg`:

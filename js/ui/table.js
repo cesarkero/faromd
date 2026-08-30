@@ -35,10 +35,15 @@ const state = {
   soloVencidos: false,
 };
 
-export function renderTable(container, plan, { onMutate, readonly }) {
+export function renderTable(container, plan, { onMutate, readonly, session }) {
   container.innerHTML = "";
   const expanded = loadExpanded();
   const today = todayISO();
+  // microtemas que forman la sesion de hoy: para resaltar sus filas en verde
+  const hoy = new Map();
+  for (const b of (session && session.bloques) || []) {
+    if (b.microtemaId) hoy.set(b.microtemaId, b);
+  }
   // al filtrar/buscar se despliega todo temporalmente para ver los resultados
   const hayFiltro = !!(state.q.trim() || state.area || state.soloPendientes || state.soloVencidos);
 
@@ -108,16 +113,19 @@ export function renderTable(container, plan, { onMutate, readonly }) {
     if (!temaRows.length) continue;
     visibles += temaRows.reduce((n, r) => n + r.micros.length, 0);
 
-    const section = document.createElement("section");
-    section.className = "tema";
     const tid = tema.id;
-    const abierto = hayFiltro || expanded.has(tid);
+    const tieneHoy = temaRows.some((r) => r.micros.some((m) => hoy.has(m.id)));
+    const section = document.createElement("section");
+    section.className = "tema" + (tieneHoy ? " has-today" : "");
+    // los temas con bloque de hoy se muestran desplegados automaticamente
+    const abierto = hayFiltro || expanded.has(tid) || tieneHoy;
     const head = document.createElement("button");
     head.className = "tema-head";
     head.innerHTML = `
       <span class="chev ${abierto ? "open" : ""}">▸</span>
       <span class="dot area-${tema.area}"></span>
       <span class="tema-name">${tema.nombre}</span>
+      ${tieneHoy ? '<span class="tema-today">hoy</span>' : ""}
       <span class="tema-meta">${temaRows.reduce((n, r) => n + r.micros.length, 0)} microtemas</span>`;
     head.onclick = () => {
       expanded.has(tid) ? expanded.delete(tid) : expanded.add(tid);
@@ -141,7 +149,8 @@ export function renderTable(container, plan, { onMutate, readonly }) {
             <th>Ult. repaso</th><th>F. estudio</th><th>Prox. repaso</th><th></th>
           </tr></thead>`;
         const tb = document.createElement("tbody");
-        for (const m of micros) tb.appendChild(row(plan, tema, sub, m, today, onMutate, readonly));
+        for (const m of micros)
+          tb.appendChild(row(plan, tema, sub, m, today, onMutate, readonly, hoy.get(m.id)));
         table.appendChild(tb);
         sc.appendChild(table);
         section.appendChild(sc);
@@ -163,16 +172,27 @@ export function renderTable(container, plan, { onMutate, readonly }) {
   }
 }
 
-function row(plan, tema, sub, m, today, onMutate, readonly) {
+function row(plan, tema, sub, m, today, onMutate, readonly, bloqueHoy) {
   const tr = document.createElement("tr");
   const vencido =
     m.estado === "finalizado" && m.fechaProximoRepaso && m.fechaProximoRepaso <= today;
-  if (vencido) tr.className = "is-overdue";
+  if (vencido) tr.classList.add("is-overdue");
+  if (bloqueHoy) tr.classList.add("is-today", bloqueHoy.hecho ? "is-today-done" : "is-today-pending");
 
   // nombre
   const tdName = document.createElement("td");
   tdName.className = "cell-name";
-  tdName.textContent = m.nombre;
+  const nameSpan = document.createElement("span");
+  nameSpan.className = "name-txt";
+  nameSpan.textContent = m.nombre;
+  tdName.appendChild(nameSpan);
+  if (bloqueHoy) {
+    const tag = document.createElement("span");
+    tag.className = "today-tag";
+    tag.textContent = "P" + bloqueHoy.pomodoro + (bloqueHoy.hecho ? " ✓" : "");
+    tag.title = bloqueHoy.rotulo + " · sesion de hoy";
+    tdName.appendChild(tag);
+  }
   tr.appendChild(tdName);
 
   // fuentes (localizacion en los libros; varias separadas por " | ")

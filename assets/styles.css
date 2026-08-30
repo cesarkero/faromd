@@ -281,6 +281,20 @@ main {
 .grid tr.is-overdue .cell-name { color: #9a5560; }
 .overdue-cell input { border-color: var(--repaso); background: #fbeff0; }
 
+/* filas del bloque de estudio de hoy */
+.grid tr.is-today td { background: rgba(111, 161, 137, .12); }
+.grid tr.is-today-done td { background: rgba(111, 161, 137, .22); }
+.grid tr.is-today .cell-name { box-shadow: inset 3px 0 0 var(--urg); }
+.today-tag {
+  margin-left: 8px; font-size: 10px; font-weight: 800; letter-spacing: .04em;
+  background: var(--urg); color: #fff; padding: 1px 6px; border-radius: 999px;
+  vertical-align: middle; white-space: nowrap;
+}
+.tema-today {
+  font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em;
+  background: var(--urg); color: #fff; padding: 1px 7px; border-radius: 999px;
+}
+
 .est-sin_empezar { color: var(--muted); }
 .est-programado { color: #8a6415; }
 .est-finalizado { color: #3f6b4f; }

@@ -173,7 +173,7 @@ function render() {
   renderBars($("#bars"), plan);
   renderWeekly();
   renderOverdue();
-  renderTable($("#table"), plan, { onMutate: mutate, readonly: readonly() });
+  renderTable($("#table"), plan, { onMutate: mutate, readonly: readonly(), session });
   renderStatus();
 }
 
