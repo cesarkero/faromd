@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": 1,
-    "actualizado": "2026-09-13T16:25:07Z",
+    "actualizado": "2026-09-13T16:34:39Z",
     "areas": {
       "AP": "Atencion Primaria",
       "URG": "Urgencias y Emergencias",
@@ -385,12 +385,12 @@
             {
               "id": "ap-cardiovascular-y-riesgo-vascular--enfermedad-tromboembolica-venosa--tvp-probabilidad-clinica-dimero-d-y-ecografia",
               "nombre": "TVP: probabilidad clinica, dimero D y ecografia",
-              "estado": "sin_empezar",
+              "estado": "finalizado",
               "anki": false,
-              "repasos": 0,
+              "repasos": 1,
               "fechaEstudio": null,
-              "fechaUltimoRepaso": null,
-              "fechaProximoRepaso": null,
+              "fechaUltimoRepaso": "2026-09-13",
+              "fechaProximoRepaso": "2026-09-14",
               "minutosDedicados": 0,
               "aplazado": 0,
               "fuentes": []
@@ -2378,12 +2378,12 @@
             {
               "id": "ap-prevencion-y-actividades-comunitarias--actividades-preventivas--papps-recomendaciones-de-cribado-por-edad-y-sexo",
               "nombre": "PAPPS: recomendaciones de cribado por edad y sexo",
-              "estado": "sin_empezar",
+              "estado": "finalizado",
               "anki": false,
-              "repasos": 0,
-              "fechaEstudio": null,
-              "fechaUltimoRepaso": null,
-              "fechaProximoRepaso": null,
+              "repasos": 1,
+              "fechaEstudio": "2026-09-13",
+              "fechaUltimoRepaso": "2026-09-13",
+              "fechaProximoRepaso": "2026-09-14",
               "minutosDedicados": 0,
               "aplazado": 0,
               "fuentes": []
@@ -2391,12 +2391,12 @@
             {
               "id": "ap-prevencion-y-actividades-comunitarias--actividades-preventivas--prevencion-cuaternaria-y-no-hacer-recomendaciones",
               "nombre": "Prevencion cuaternaria y no hacer (recomendaciones)",
-              "estado": "sin_empezar",
+              "estado": "finalizado",
               "anki": false,
-              "repasos": 0,
-              "fechaEstudio": null,
-              "fechaUltimoRepaso": null,
-              "fechaProximoRepaso": null,
+              "repasos": 1,
+              "fechaEstudio": "2026-09-13",
+              "fechaUltimoRepaso": "2026-09-13",
+              "fechaProximoRepaso": "2026-09-14",
               "minutosDedicados": 0,
               "aplazado": 0,
               "fuentes": []
@@ -2404,12 +2404,12 @@
             {
               "id": "ap-prevencion-y-actividades-comunitarias--actividades-preventivas--consejo-sobre-actividad-fisica-alimentacion-y-alcohol",
               "nombre": "Consejo sobre actividad fisica, alimentacion y alcohol",
-              "estado": "sin_empezar",
+              "estado": "finalizado",
               "anki": false,
-              "repasos": 0,
-              "fechaEstudio": null,
-              "fechaUltimoRepaso": null,
-              "fechaProximoRepaso": null,
+              "repasos": 1,
+              "fechaEstudio": "2026-09-13",
+              "fechaUltimoRepaso": "2026-09-13",
+              "fechaProximoRepaso": "2026-09-14",
               "minutosDedicados": 0,
               "aplazado": 0,
               "fuentes": []
@@ -2425,12 +2425,12 @@
             {
               "id": "ap-prevencion-y-actividades-comunitarias--gestion-de-la-consulta--interpretacion-de-pruebas-sensibilidad-vpp-y-razones-de-verosimilitud",
               "nombre": "Interpretacion de pruebas: sensibilidad, VPP y razones de verosimilitud",
-              "estado": "sin_empezar",
+              "estado": "finalizado",
               "anki": false,
-              "repasos": 0,
-              "fechaEstudio": null,
-              "fechaUltimoRepaso": null,
-              "fechaProximoRepaso": null,
+              "repasos": 1,
+              "fechaEstudio": "2026-09-13",
+              "fechaUltimoRepaso": "2026-09-13",
+              "fechaProximoRepaso": "2026-09-14",
               "minutosDedicados": 0,
               "aplazado": 0,
               "fuentes": []
@@ -2619,13 +2619,13 @@
             {
               "id": "urg-urgencias-cardiovasculares--arritmias-en-urgencias--taquicardia-de-qrs-estrecho-diagnostico-y-maniobras",
               "nombre": "Taquicardia de QRS estrecho: diagnostico y maniobras",
-              "estado": "programado",
+              "estado": "sin_empezar",
               "anki": false,
               "repasos": 0,
               "fechaEstudio": null,
               "fechaUltimoRepaso": null,
               "fechaProximoRepaso": null,
-              "minutosDedicados": 25,
+              "minutosDedicados": 0,
               "aplazado": 0,
               "fuentes": []
             },
@@ -3738,45 +3738,6 @@
       ]
     }
   ],
-  "sesiones": [
-    {
-      "fecha": "2026-09-13",
-      "bloques": [
-        {
-          "pomodoro": 1,
-          "rol": "repaso",
-          "tipo": "repaso",
-          "rotulo": "REPASO",
-          "microtemaId": "urg-urgencias-cardiovasculares--sindrome-coronario-agudo--dolor-toracico-estratificacion-y-ecg-en-10-min",
-          "hecho": false
-        },
-        {
-          "pomodoro": 2,
-          "rol": "tema_repaso",
-          "tipo": "tema",
-          "rotulo": "TEMA / REPASO",
-          "microtemaId": "ap-prevencion-y-actividades-comunitarias--actividades-preventivas--papps-recomendaciones-de-cribado-por-edad-y-sexo",
-          "hecho": false
-        },
-        {
-          "pomodoro": 3,
-          "rol": "tema",
-          "tipo": "tema",
-          "rotulo": "TEMA PRINCIPAL",
-          "microtemaId": "urg-urgencias-cardiovasculares--arritmias-en-urgencias--taquicardia-de-qrs-estrecho-diagnostico-y-maniobras",
-          "hecho": true
-        },
-        {
-          "pomodoro": 4,
-          "rol": "cierre",
-          "tipo": "cierre",
-          "rotulo": "CIERRE ACTIVO",
-          "microtemaId": "ap-cardiovascular-y-riesgo-vascular--fibrilacion-auricular--diagnostico-clasificacion-y-estudio-inicial",
-          "hecho": false
-        }
-      ],
-      "completada": false
-    }
-  ],
+  "sesiones": [],
   "actividades": []
 }
