@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": 1,
-    "actualizado": "2026-09-13T16:22:05Z",
+    "actualizado": "2026-09-13T16:25:07Z",
     "areas": {
       "AP": "Atencion Primaria",
       "URG": "Urgencias y Emergencias",
@@ -351,10 +351,10 @@
             {
               "id": "ap-cardiovascular-y-riesgo-vascular--cardiopatia-isquemica-cronica--tratamiento-antianginoso-y-prevencion-secundaria",
               "nombre": "Tratamiento antianginoso y prevencion secundaria",
-              "estado": "sin_empezar",
+              "estado": "programado",
               "anki": false,
               "repasos": 0,
-              "fechaEstudio": null,
+              "fechaEstudio": "2026-09-13",
               "fechaUltimoRepaso": null,
               "fechaProximoRepaso": null,
               "minutosDedicados": 0,
@@ -2559,12 +2559,12 @@
             {
               "id": "urg-urgencias-cardiovasculares--sindrome-coronario-agudo--dolor-toracico-estratificacion-y-ecg-en-10-min",
               "nombre": "Dolor toracico: estratificacion y ECG en <10 min",
-              "estado": "sin_empezar",
-              "anki": false,
+              "estado": "finalizado",
+              "anki": true,
               "repasos": 0,
-              "fechaEstudio": null,
+              "fechaEstudio": "2026-09-13",
               "fechaUltimoRepaso": null,
-              "fechaProximoRepaso": null,
+              "fechaProximoRepaso": "2026-09-14",
               "minutosDedicados": 0,
               "aplazado": 0,
               "fuentes": []
