@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": 1,
-    "actualizado": "2026-08-30T11:06:53Z",
+    "actualizado": "2026-09-13T16:22:05Z",
     "areas": {
       "AP": "Atencion Primaria",
       "URG": "Urgencias y Emergencias",
@@ -1383,7 +1383,7 @@
               "fechaEstudio": null,
               "fechaUltimoRepaso": null,
               "fechaProximoRepaso": null,
-              "minutosDedicados": 25,
+              "minutosDedicados": 0,
               "aplazado": 0,
               "fuentes": []
             },
@@ -1437,13 +1437,13 @@
             {
               "id": "ap-salud-mental--insomnio-y-psicofarmacos--insomnio-cronico-higiene-del-sueno-y-tcc-i",
               "nombre": "Insomnio cronico: higiene del sueno y TCC-i",
-              "estado": "finalizado",
+              "estado": "sin_empezar",
               "anki": false,
               "repasos": 0,
-              "fechaEstudio": "2026-08-30",
+              "fechaEstudio": null,
               "fechaUltimoRepaso": null,
-              "fechaProximoRepaso": "2026-08-31",
-              "minutosDedicados": 50,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
               "aplazado": 0,
               "fuentes": []
             },
@@ -2619,13 +2619,13 @@
             {
               "id": "urg-urgencias-cardiovasculares--arritmias-en-urgencias--taquicardia-de-qrs-estrecho-diagnostico-y-maniobras",
               "nombre": "Taquicardia de QRS estrecho: diagnostico y maniobras",
-              "estado": "sin_empezar",
+              "estado": "programado",
               "anki": false,
               "repasos": 0,
               "fechaEstudio": null,
               "fechaUltimoRepaso": null,
               "fechaProximoRepaso": null,
-              "minutosDedicados": 0,
+              "minutosDedicados": 25,
               "aplazado": 0,
               "fuentes": []
             },
@@ -3740,14 +3740,14 @@
   ],
   "sesiones": [
     {
-      "fecha": "2026-08-30",
+      "fecha": "2026-09-13",
       "bloques": [
         {
           "pomodoro": 1,
           "rol": "repaso",
           "tipo": "repaso",
           "rotulo": "REPASO",
-          "microtemaId": "ap-dermatologia-en-ap--lesiones-tumorales-y-cribado--queratosis-actinica-y-campo-de-cancerizacion",
+          "microtemaId": "urg-urgencias-cardiovasculares--sindrome-coronario-agudo--dolor-toracico-estratificacion-y-ecg-en-10-min",
           "hecho": false
         },
         {
@@ -3755,15 +3755,15 @@
           "rol": "tema_repaso",
           "tipo": "tema",
           "rotulo": "TEMA / REPASO",
-          "microtemaId": "ap-salud-mental--insomnio-y-psicofarmacos--insomnio-cronico-higiene-del-sueno-y-tcc-i",
-          "hecho": true
+          "microtemaId": "ap-prevencion-y-actividades-comunitarias--actividades-preventivas--papps-recomendaciones-de-cribado-por-edad-y-sexo",
+          "hecho": false
         },
         {
           "pomodoro": 3,
           "rol": "tema",
           "tipo": "tema",
           "rotulo": "TEMA PRINCIPAL",
-          "microtemaId": "ap-salud-mental--insomnio-y-psicofarmacos--insomnio-cronico-higiene-del-sueno-y-tcc-i",
+          "microtemaId": "urg-urgencias-cardiovasculares--arritmias-en-urgencias--taquicardia-de-qrs-estrecho-diagnostico-y-maniobras",
           "hecho": true
         },
         {
@@ -3771,13 +3771,11 @@
           "rol": "cierre",
           "tipo": "cierre",
           "rotulo": "CIERRE ACTIVO",
-          "microtemaId": "ap-salud-mental--depresion-y-ansiedad--deteccion-y-diagnostico-de-la-depresion-gravedad",
-          "hecho": true
+          "microtemaId": "ap-cardiovascular-y-riesgo-vascular--fibrilacion-auricular--diagnostico-clasificacion-y-estudio-inicial",
+          "hecho": false
         }
       ],
-      "completada": false,
-      "cerrada": true,
-      "minutos": 75
+      "completada": false
     }
   ],
   "actividades": []
