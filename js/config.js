@@ -2,7 +2,7 @@
 // Ajusta estos valores tras crear el repo en GitHub.
 export const CONFIG = {
   owner: "cesarkero",
-  repo: "labiblia",
+  repo: "faromd",
   branch: "main",
   path: "data/plan.json",
   // Mensaje de commit; {fecha} se sustituye por la fecha-hora actual.
@@ -11,9 +11,9 @@ export const CONFIG = {
 
 // Claves de localStorage.
 export const LS = {
-  token: "labiblia.token",
-  draft: "labiblia.draft",
-  expanded: "labiblia.expanded", // temas desplegados en la tabla (por defecto: ninguno)
+  token: "faromd.token",
+  draft: "faromd.draft",
+  expanded: "faromd.expanded", // temas desplegados en la tabla (por defecto: ninguno)
 };
 
 export const API = "https://api.github.com";

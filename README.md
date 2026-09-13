@@ -58,7 +58,7 @@ están en `data/plan.json`, que es la **única fuente de verdad**.
 ## Ver en local antes de publicar
 
 ```powershell
-cd "C:\Users\cesar\ModlEarth\Drive\Proyectos\GitHub\labiblia"
+cd "C:\Users\cesar\ModlEarth\Drive\Proyectos\GitHub\faromd"
 py -3 -m http.server 8000
 ```
 
@@ -71,28 +71,26 @@ El repo Git ya está inicializado **en la raíz del proyecto** (antes estaba den
 por eso GitHub solo tenía los datos y no la web; el `.git` mal puesto se movió a
 `data/_git_misplaced_backup`, que está ignorado y puedes borrar).
 
-1. El remoto ya apunta a `https://github.com/cesarkero/labiblia.git`. En GitHub, ese repo
-   contiene ahora mismo un commit antiguo con solo los datos; lo vamos a reemplazar por la app
-   completa:
+1. El remoto ya apunta a `https://github.com/cesarkero/faromd.git` (repo y carpeta local
+   renombrados de `labiblia` a `faromd`).
    ```powershell
-   cd "C:\Users\cesar\ModlEarth\Drive\Proyectos\GitHub\labiblia"
-   git push -u origin main --force
+   cd "C:\Users\cesar\ModlEarth\Drive\Proyectos\GitHub\faromd"
+   git push
    ```
-   (El `--force` es necesario solo esta vez, para sustituir aquel commit basura.)
 2. En GitHub: **Settings → Pages → Build and deployment → Source: Deploy from a branch →
    Branch `main` / `/ (root)` → Save**.
-3. Espera ~1 min. La web queda en `https://cesarkero.github.io/labiblia/`.
-4. Para cambios posteriores: `git add -A && git commit -m "..." && git push` (ya sin `--force`).
+3. Espera ~1 min. La web queda en `https://cesarkero.github.io/faromd/`.
+4. Para cambios posteriores: `git add -A && git commit -m "..." && git push`.
 
-`js/config.js` ya tiene `owner: cesarkero`, `repo: labiblia`, `branch: main`.
+`js/config.js` ya tiene `owner: cesarkero`, `repo: faromd`, `branch: main`.
 
 ## Crear el token para editar (paso a paso)
 
 1. Ve a <https://github.com/settings/personal-access-tokens/new> (Settings → Developer settings
    → Personal access tokens → **Fine-grained tokens** → *Generate new token*).
-2. **Token name**: `labiblia`. **Expiration**: 90 días (o lo que prefieras; habrá que renovarlo).
+2. **Token name**: `faromd`. **Expiration**: 90 días (o lo que prefieras; habrá que renovarlo).
 3. **Resource owner**: tu usuario.
-4. **Repository access** → *Only select repositories* → elige `labiblia`.
+4. **Repository access** → *Only select repositories* → elige `faromd`.
 5. **Permissions** → *Repository permissions* → **Contents**: cámbialo a **Read and write**.
    (El resto, sin acceso.)
 6. *Generate token* y **copia** el valor (`github_pat_…`); solo se ve una vez.
@@ -128,7 +126,7 @@ Cuando editas desde la web publicada, **Guardar en GitHub** hace un commit en el
 esos cambios no aparecen solos; para bajarlos:
 
 ```powershell
-cd "C:\Users\cesar\ModlEarth\Drive\Proyectos\GitHub\labiblia"
+cd "C:\Users\cesar\ModlEarth\Drive\Proyectos\GitHub\faromd"
 git pull
 ```
 

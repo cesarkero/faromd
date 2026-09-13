@@ -357,7 +357,7 @@ function wireToolbar() {
         const res = await fetch("data/plan.example.json?_=" + Date.now(), { cache: "no-store" });
         if (!res.ok) throw new Error("no se pudo cargar plan.example.json");
         plan = await res.json();
-        try { localStorage.removeItem("labiblia.expanded"); } catch {}
+        try { localStorage.removeItem("faromd.expanded"); } catch {}
         refreshSession();
         dirty = true;
         saveDraft(plan);
