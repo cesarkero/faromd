@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": 1,
-    "actualizado": "2026-08-30T11:06:53Z",
+    "actualizado": "2026-09-13T16:41:32Z",
     "areas": {
       "AP": "Atencion Primaria",
       "URG": "Urgencias y Emergencias",
@@ -351,10 +351,10 @@
             {
               "id": "ap-cardiovascular-y-riesgo-vascular--cardiopatia-isquemica-cronica--tratamiento-antianginoso-y-prevencion-secundaria",
               "nombre": "Tratamiento antianginoso y prevencion secundaria",
-              "estado": "sin_empezar",
+              "estado": "programado",
               "anki": false,
               "repasos": 0,
-              "fechaEstudio": null,
+              "fechaEstudio": "2026-09-13",
               "fechaUltimoRepaso": null,
               "fechaProximoRepaso": null,
               "minutosDedicados": 0,
@@ -385,12 +385,12 @@
             {
               "id": "ap-cardiovascular-y-riesgo-vascular--enfermedad-tromboembolica-venosa--tvp-probabilidad-clinica-dimero-d-y-ecografia",
               "nombre": "TVP: probabilidad clinica, dimero D y ecografia",
-              "estado": "sin_empezar",
+              "estado": "finalizado",
               "anki": false,
-              "repasos": 0,
+              "repasos": 1,
               "fechaEstudio": null,
-              "fechaUltimoRepaso": null,
-              "fechaProximoRepaso": null,
+              "fechaUltimoRepaso": "2026-09-13",
+              "fechaProximoRepaso": "2026-09-14",
               "minutosDedicados": 0,
               "aplazado": 0,
               "fuentes": []
@@ -398,12 +398,12 @@
             {
               "id": "ap-cardiovascular-y-riesgo-vascular--enfermedad-tromboembolica-venosa--tratamiento-anticoagulante-y-duracion",
               "nombre": "Tratamiento anticoagulante y duracion",
-              "estado": "sin_empezar",
+              "estado": "finalizado",
               "anki": false,
-              "repasos": 0,
+              "repasos": 1,
               "fechaEstudio": null,
-              "fechaUltimoRepaso": null,
-              "fechaProximoRepaso": null,
+              "fechaUltimoRepaso": "2026-09-13",
+              "fechaProximoRepaso": "2026-09-14",
               "minutosDedicados": 0,
               "aplazado": 0,
               "fuentes": []
@@ -1383,7 +1383,7 @@
               "fechaEstudio": null,
               "fechaUltimoRepaso": null,
               "fechaProximoRepaso": null,
-              "minutosDedicados": 25,
+              "minutosDedicados": 0,
               "aplazado": 0,
               "fuentes": []
             },
@@ -1437,13 +1437,13 @@
             {
               "id": "ap-salud-mental--insomnio-y-psicofarmacos--insomnio-cronico-higiene-del-sueno-y-tcc-i",
               "nombre": "Insomnio cronico: higiene del sueno y TCC-i",
-              "estado": "finalizado",
+              "estado": "sin_empezar",
               "anki": false,
               "repasos": 0,
-              "fechaEstudio": "2026-08-30",
+              "fechaEstudio": null,
               "fechaUltimoRepaso": null,
-              "fechaProximoRepaso": "2026-08-31",
-              "minutosDedicados": 50,
+              "fechaProximoRepaso": null,
+              "minutosDedicados": 0,
               "aplazado": 0,
               "fuentes": []
             },
@@ -2378,12 +2378,12 @@
             {
               "id": "ap-prevencion-y-actividades-comunitarias--actividades-preventivas--papps-recomendaciones-de-cribado-por-edad-y-sexo",
               "nombre": "PAPPS: recomendaciones de cribado por edad y sexo",
-              "estado": "sin_empezar",
+              "estado": "finalizado",
               "anki": false,
-              "repasos": 0,
-              "fechaEstudio": null,
-              "fechaUltimoRepaso": null,
-              "fechaProximoRepaso": null,
+              "repasos": 1,
+              "fechaEstudio": "2026-09-11",
+              "fechaUltimoRepaso": "2026-09-03",
+              "fechaProximoRepaso": "2026-09-17",
               "minutosDedicados": 0,
               "aplazado": 0,
               "fuentes": []
@@ -2391,12 +2391,12 @@
             {
               "id": "ap-prevencion-y-actividades-comunitarias--actividades-preventivas--prevencion-cuaternaria-y-no-hacer-recomendaciones",
               "nombre": "Prevencion cuaternaria y no hacer (recomendaciones)",
-              "estado": "sin_empezar",
+              "estado": "finalizado",
               "anki": false,
               "repasos": 0,
-              "fechaEstudio": null,
+              "fechaEstudio": "2026-09-01",
               "fechaUltimoRepaso": null,
-              "fechaProximoRepaso": null,
+              "fechaProximoRepaso": "2026-09-15",
               "minutosDedicados": 0,
               "aplazado": 0,
               "fuentes": []
@@ -2404,12 +2404,12 @@
             {
               "id": "ap-prevencion-y-actividades-comunitarias--actividades-preventivas--consejo-sobre-actividad-fisica-alimentacion-y-alcohol",
               "nombre": "Consejo sobre actividad fisica, alimentacion y alcohol",
-              "estado": "sin_empezar",
+              "estado": "finalizado",
               "anki": false,
-              "repasos": 0,
-              "fechaEstudio": null,
-              "fechaUltimoRepaso": null,
-              "fechaProximoRepaso": null,
+              "repasos": 1,
+              "fechaEstudio": "2026-09-11",
+              "fechaUltimoRepaso": "2026-09-12",
+              "fechaProximoRepaso": "2026-09-13",
               "minutosDedicados": 0,
               "aplazado": 0,
               "fuentes": []
@@ -2425,12 +2425,12 @@
             {
               "id": "ap-prevencion-y-actividades-comunitarias--gestion-de-la-consulta--interpretacion-de-pruebas-sensibilidad-vpp-y-razones-de-verosimilitud",
               "nombre": "Interpretacion de pruebas: sensibilidad, VPP y razones de verosimilitud",
-              "estado": "sin_empezar",
+              "estado": "finalizado",
               "anki": false,
-              "repasos": 0,
-              "fechaEstudio": null,
-              "fechaUltimoRepaso": null,
-              "fechaProximoRepaso": null,
+              "repasos": 1,
+              "fechaEstudio": "2026-09-13",
+              "fechaUltimoRepaso": "2026-09-12",
+              "fechaProximoRepaso": "2026-09-14",
               "minutosDedicados": 0,
               "aplazado": 0,
               "fuentes": []
@@ -2479,12 +2479,12 @@
             {
               "id": "urg-soporte-vital-y-parada-cardiaca--rcp-y-soporte-vital--svb-y-dea-secuencia-y-calidad-de-las-compresiones",
               "nombre": "SVB y DEA: secuencia y calidad de las compresiones",
-              "estado": "sin_empezar",
+              "estado": "finalizado",
               "anki": false,
               "repasos": 0,
               "fechaEstudio": null,
-              "fechaUltimoRepaso": null,
-              "fechaProximoRepaso": null,
+              "fechaUltimoRepaso": "2026-09-04",
+              "fechaProximoRepaso": "2026-09-13",
               "minutosDedicados": 0,
               "aplazado": 0,
               "fuentes": []
@@ -2492,12 +2492,12 @@
             {
               "id": "urg-soporte-vital-y-parada-cardiaca--rcp-y-soporte-vital--sva-algoritmo-de-ritmos-desfibrilables-y-no-desfibrilables",
               "nombre": "SVA: algoritmo de ritmos desfibrilables y no desfibrilables",
-              "estado": "sin_empezar",
+              "estado": "finalizado",
               "anki": false,
               "repasos": 0,
               "fechaEstudio": null,
-              "fechaUltimoRepaso": null,
-              "fechaProximoRepaso": null,
+              "fechaUltimoRepaso": "2026-09-08",
+              "fechaProximoRepaso": "2026-09-13",
               "minutosDedicados": 0,
               "aplazado": 0,
               "fuentes": []
@@ -2559,12 +2559,12 @@
             {
               "id": "urg-urgencias-cardiovasculares--sindrome-coronario-agudo--dolor-toracico-estratificacion-y-ecg-en-10-min",
               "nombre": "Dolor toracico: estratificacion y ECG en <10 min",
-              "estado": "sin_empezar",
-              "anki": false,
+              "estado": "finalizado",
+              "anki": true,
               "repasos": 0,
-              "fechaEstudio": null,
+              "fechaEstudio": "2026-09-13",
               "fechaUltimoRepaso": null,
-              "fechaProximoRepaso": null,
+              "fechaProximoRepaso": "2026-09-14",
               "minutosDedicados": 0,
               "aplazado": 0,
               "fuentes": []
@@ -3738,47 +3738,6 @@
       ]
     }
   ],
-  "sesiones": [
-    {
-      "fecha": "2026-08-30",
-      "bloques": [
-        {
-          "pomodoro": 1,
-          "rol": "repaso",
-          "tipo": "repaso",
-          "rotulo": "REPASO",
-          "microtemaId": "ap-dermatologia-en-ap--lesiones-tumorales-y-cribado--queratosis-actinica-y-campo-de-cancerizacion",
-          "hecho": false
-        },
-        {
-          "pomodoro": 2,
-          "rol": "tema_repaso",
-          "tipo": "tema",
-          "rotulo": "TEMA / REPASO",
-          "microtemaId": "ap-salud-mental--insomnio-y-psicofarmacos--insomnio-cronico-higiene-del-sueno-y-tcc-i",
-          "hecho": true
-        },
-        {
-          "pomodoro": 3,
-          "rol": "tema",
-          "tipo": "tema",
-          "rotulo": "TEMA PRINCIPAL",
-          "microtemaId": "ap-salud-mental--insomnio-y-psicofarmacos--insomnio-cronico-higiene-del-sueno-y-tcc-i",
-          "hecho": true
-        },
-        {
-          "pomodoro": 4,
-          "rol": "cierre",
-          "tipo": "cierre",
-          "rotulo": "CIERRE ACTIVO",
-          "microtemaId": "ap-salud-mental--depresion-y-ansiedad--deteccion-y-diagnostico-de-la-depresion-gravedad",
-          "hecho": true
-        }
-      ],
-      "completada": false,
-      "cerrada": true,
-      "minutos": 75
-    }
-  ],
+  "sesiones": [],
   "actividades": []
 }
