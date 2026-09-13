@@ -1,7 +1,7 @@
 // Grafico circular de la sesion de hoy, con la estetica de img/reparto_estudio_circular.svg:
 // donut de 4 pomodoros 25/5, huecos con "5'" y resumen en el centro.
 // Un bloque estudiado se marca con una linea oscura en el borde exterior del trozo.
-import { bloqueLabel } from "../schedule.js";
+import { bloqueLabel, canReceiveExtra, findMicro } from "../schedule.js";
 
 const NS = "http://www.w3.org/2000/svg";
 const COLOR = { repaso: "var(--repaso)", tema: "var(--ap)", cierre: "var(--ap-2)" };
@@ -31,7 +31,7 @@ function esc(s) {
 }
 
 export function renderCircle(container, plan, sesion, opts) {
-  const { onToggle, onMarkAll, onReset, onCloseDay, onReopenDay, readonly } = opts;
+  const { onToggle, onMarkAll, onReset, onCloseDay, onReopenDay, onDropExtra, onRemoveExtra, readonly } = opts;
   container.innerHTML = "";
   const n = sesion.bloques.length || 4;
   const hechos = sesion.bloques.filter((b) => b.hecho).length;
@@ -128,6 +128,8 @@ export function renderCircle(container, plan, sesion, opts) {
   sesion.bloques.forEach((b, i) => {
     const info = bloqueLabel(plan, b);
     const li = document.createElement("li");
+    const puedeExtra = interactivo && canReceiveExtra(b) && !b.hecho;
+    const tieneExtra = canReceiveExtra(b) && (b.extra || []).length > 0;
     li.className = "pomo-item" + (b.hecho ? " is-done" : cerrada ? " is-skipped" : "");
     li.innerHTML = `
       <span class="pi-bar" style="background:${COLOR[b.tipo] || "var(--ap)"}"></span>
@@ -135,7 +137,44 @@ export function renderCircle(container, plan, sesion, opts) {
         <span class="pi-kicker">P${i + 1} · ${b.rotulo || TIPO[b.tipo] || b.tipo}</span>
         <span class="pi-title">${esc(info.sub || info.titulo)}</span>
         <span class="pi-sub">${esc(info.sub ? info.titulo : "")}</span>
+        ${tieneExtra ? '<span class="pi-extra"></span>' : ""}
       </span>`;
+
+    if (tieneExtra) {
+      const extraHost = li.querySelector(".pi-extra");
+      (b.extra || []).forEach((microId) => {
+        const r = findMicro(plan, microId);
+        const chip = document.createElement("span");
+        chip.className = "pi-extra-chip";
+        chip.innerHTML = `<span>${esc(r ? r.micro.nombre : "?")}</span>`;
+        if (puedeExtra) {
+          const rm = document.createElement("button");
+          rm.type = "button";
+          rm.textContent = "×";
+          rm.title = "Quitar";
+          rm.onclick = () => onRemoveExtra(i, microId);
+          chip.appendChild(rm);
+        }
+        extraHost.appendChild(chip);
+      });
+    }
+
+    if (puedeExtra) {
+      li.classList.add("pi-droppable");
+      li.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        e.dataTransfer.dropEffect = "copy";
+        li.classList.add("drop-hover");
+      });
+      li.addEventListener("dragleave", () => li.classList.remove("drop-hover"));
+      li.addEventListener("drop", (e) => {
+        e.preventDefault();
+        li.classList.remove("drop-hover");
+        const microId = e.dataTransfer.getData("text/plain");
+        if (microId) onDropExtra(i, microId);
+      });
+    }
+
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "pi-check" + (b.hecho ? " on" : "");

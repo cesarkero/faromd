@@ -208,6 +208,7 @@ export function composeSession(plan, iso = todayISO()) {
     rotulo,
     microtemaId: id(cand),
     hecho: false,
+    extra: [], // microtemas repasados rapido durante este bloque (ver addExtra)
   });
   const bloques = [
     b(1, "repaso", "repaso", p1, "REPASO"),
@@ -220,13 +221,46 @@ export function composeSession(plan, iso = todayISO()) {
   return { fecha: iso, bloques, completada: false };
 }
 
+// Bloques donde se puede arrastrar un repaso rapido extra (P1 Repaso / P2 Tema-Repaso).
+export function canReceiveExtra(bloque) {
+  return !!bloque && (bloque.rol === "repaso" || bloque.rol === "tema_repaso");
+}
+
+// Añade un microtema como "repaso rapido" extra dentro de un bloque, para
+// registrarlo cuando se marque el bloque como hecho (ver markBloque). Evita
+// duplicados y que un microtema este a la vez en varios sitios de la sesion.
+export function addExtra(sesion, idx, microId) {
+  const b = sesion.bloques[idx];
+  if (!b || b.hecho || sesion.cerrada || !canReceiveExtra(b)) return false;
+  if (b.microtemaId === microId) return false;
+  const enUso = sesion.bloques.some(
+    (x) => x.microtemaId === microId || (x.extra || []).includes(microId)
+  );
+  if (enUso) return false;
+  b.extra = b.extra || [];
+  b.extra.push(microId);
+  return true;
+}
+
+export function removeExtra(sesion, idx, microId) {
+  const b = sesion.bloques[idx];
+  if (!b || b.hecho) return;
+  b.extra = (b.extra || []).filter((id) => id !== microId);
+}
+
 // Marca / desmarca un bloque concreto de la sesion, aplicando o revirtiendo
 // sus efectos (minutos y, si es repaso, la reprogramacion del repaso).
+// Si el bloque tiene repasos rapidos "extra" (arrastrados desde el panel de
+// repasos), el tiempo del bloque se reparte por igual entre todos ellos.
 export function markBloque(plan, sesion, idx, iso = todayISO()) {
   const b = sesion.bloques[idx];
   if (!b || b.hecho) return;
   b.hecho = true;
   const r = b.microtemaId && findMicro(plan, b.microtemaId);
+  const extras = (b.extra || []).map((id) => findMicro(plan, id)).filter(Boolean);
+  const min = plan.config.minutosPomodoro || 25;
+  const cuota = min / ((r ? 1 : 0) + extras.length || 1);
+
   if (r) {
     b._backup = {
       estado: r.micro.estado,
@@ -234,9 +268,10 @@ export function markBloque(plan, sesion, idx, iso = todayISO()) {
       fechaEstudio: r.micro.fechaEstudio,
       fechaUltimoRepaso: r.micro.fechaUltimoRepaso,
       fechaProximoRepaso: r.micro.fechaProximoRepaso,
+      aplazado: r.micro.aplazado,
       minutosDedicados: r.micro.minutosDedicados || 0,
     };
-    r.micro.minutosDedicados = (r.micro.minutosDedicados || 0) + (plan.config.minutosPomodoro || 25);
+    r.micro.minutosDedicados = (r.micro.minutosDedicados || 0) + cuota;
     if (r.micro.estado === "finalizado" && (b.tipo === "repaso" || b.tipo === "cierre")) {
       // repaso real de algo ya estudiado: reprograma el siguiente repaso
       markReview(r.micro, r.sub, plan.config, iso);
@@ -247,6 +282,24 @@ export function markBloque(plan, sesion, idx, iso = todayISO()) {
     // P1 repaso / P4 cierre sobre algo aun sin estudiar = solo calentamiento
     // (suma minutos, no cambia el estado)
   }
+
+  b._extraBackup = extras.map((er) => ({
+    id: er.micro.id,
+    estado: er.micro.estado,
+    repasos: er.micro.repasos,
+    fechaEstudio: er.micro.fechaEstudio,
+    fechaUltimoRepaso: er.micro.fechaUltimoRepaso,
+    fechaProximoRepaso: er.micro.fechaProximoRepaso,
+    aplazado: er.micro.aplazado,
+    minutosDedicados: er.micro.minutosDedicados || 0,
+  }));
+  for (const er of extras) {
+    er.micro.minutosDedicados = (er.micro.minutosDedicados || 0) + cuota;
+    // solo reprograma si ya estaba finalizado (repaso real); un extra sobre
+    // algo aun no estudiado solo suma minutos, igual que el bloque principal.
+    if (er.micro.estado === "finalizado") markReview(er.micro, er.sub, plan.config, iso);
+  }
+
   sesion.completada = sesion.bloques.every((x) => x.hecho);
 }
 
@@ -257,18 +310,26 @@ export function unmarkBloque(plan, sesion, idx) {
   const r = b.microtemaId && findMicro(plan, b.microtemaId);
   if (r && b._backup) Object.assign(r.micro, b._backup);
   delete b._backup;
+  for (const eb of b._extraBackup || []) {
+    const er = findMicro(plan, eb.id);
+    if (er) Object.assign(er.micro, eb);
+  }
+  delete b._extraBackup;
   sesion.completada = false;
 }
 
 // Rehace los bloques AUN NO marcados de la sesion segun el estado actual del
 // temario (fechas de repaso editadas a mano, microtemas nuevos, etc.).
-// Los bloques ya hechos se conservan intactos.
+// Los bloques ya hechos se conservan intactos; los repasos rapidos "extra"
+// que aun no se han registrado tambien se conservan.
 export function recomposeUnmarked(plan, sesion, iso = todayISO()) {
   if (!sesion || sesion.completada || sesion.cerrada) return sesion;
   const fresh = composeSession(plan, iso);
   sesion.bloques = fresh.bloques.map((fb, i) => {
     const cur = sesion.bloques[i];
-    return cur && cur.hecho ? cur : fb;
+    if (cur && cur.hecho) return cur;
+    if (cur && cur.extra && cur.extra.length) fb.extra = cur.extra.slice();
+    return fb;
   });
   sesion.completada = sesion.bloques.every((x) => x.hecho);
   return sesion;

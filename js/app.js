@@ -24,6 +24,8 @@ import {
   markReview,
   muyRetrasado,
   findMicro,
+  addExtra,
+  removeExtra,
 } from "./schedule.js";
 import { renderCircle } from "./ui/circle.js";
 import { renderBars } from "./ui/bars.js";
@@ -132,6 +134,18 @@ function toggleBloque(idx) {
   mutate();
 }
 
+// Repasos rapidos "extra" arrastrados a un bloque de Repaso / Tema-Repaso:
+// se registran cuando ese bloque se marca hecho, repartiendo su tiempo.
+function addExtraReview(idx, microId) {
+  if (session.cerrada) return;
+  if (!sessionStarted()) upsertSession(plan, session); // congela la composicion del dia
+  if (addExtra(session, idx, microId)) mutate();
+}
+function removeExtraReview(idx, microId) {
+  removeExtra(session, idx, microId);
+  mutate();
+}
+
 // --- render -------------------------------------------------------
 function render() {
   document.body.dataset.readonly = readonly() ? "1" : "0";
@@ -169,12 +183,14 @@ function render() {
       refreshSession();
       mutate();
     },
+    onDropExtra: addExtraReview,
+    onRemoveExtra: removeExtraReview,
   });
 
   renderBars($("#bars"), plan);
   renderActividades($("#actividades"), plan, { onMutate: mutate, readonly: readonly() });
   renderWeekly();
-  renderOverdue();
+  renderQuickReview();
   renderTable($("#table"), plan, { onMutate: mutate, readonly: readonly(), session });
   renderStatus();
 }
@@ -211,20 +227,30 @@ function renderWeekly() {
     </div>`;
 }
 
-function renderOverdue() {
-  const list = overdueMicros(plan).slice(0, 10);
-  const box = $("#overdue");
+// Lista sintetica y priorizada de temas a repasar (Repasos vencidos, ya
+// ordenados por retraso/prioridad en overdueMicros). Cada tarjeta se puede
+// arrastrar a un bloque de Repaso / Tema-Repaso del circulo para registrar
+// varios repasos rapidos en un mismo bloque, o marcar directamente con el
+// boton "repaso hecho".
+function renderQuickReview() {
+  const all = overdueMicros(plan);
+  const list = all.slice(0, 12);
+  const box = $("#quickreview");
+  const enUso = new Set(
+    (session.bloques || []).flatMap((b) => [b.microtemaId, ...(b.extra || [])])
+  );
   if (!list.length) {
     box.classList.add("card-strip");
     box.innerHTML =
-      '<span class="panel-title" style="margin:0">Repasos vencidos</span> <span class="empty">nada vencido, al dia 🎉</span>';
+      '<span class="panel-title" style="margin:0">Repasos rápidos</span> <span class="empty">nada vencido, al dia 🎉</span>';
     return;
   }
   box.classList.remove("card-strip");
   box.innerHTML =
-    `<div class="panel-title">Repasos vencidos <span class="count">${
-      overdueMicros(plan).length
-    }</span></div>` +
+    `<div class="panel-title">Repasos rápidos <span class="count">${all.length}</span></div>` +
+    (readonly()
+      ? ""
+      : '<p class="qr-hint">Arrastra un tema a un bloque de Repaso / Tema-Repaso de hoy para anotarlo como repasado ahí, o usa "repaso hecho".</p>') +
     `<ul class="overdue-list">` +
     list
       .map((r) => {
@@ -232,16 +258,24 @@ function renderOverdue() {
           (new Date(todayISO()) - new Date(r.micro.fechaProximoRepaso)) / 86400000
         );
         const retra = muyRetrasado(r.micro, plan.config);
-        return `<li data-id="${r.micro.id}" class="${retra ? "od-retra" : ""}">
+        const yaEnSesion = enUso.has(r.micro.id);
+        return `<li data-id="${r.micro.id}" class="${retra ? "od-retra" : ""}"
+            ${!readonly() && !yaEnSesion ? 'draggable="true"' : ""}>
           <span class="od-name">${retra ? "⚠ " : ""}${r.micro.nombre}</span>
           <span class="od-meta">${r.sub.nombre} · +${dias}d${
           r.micro.aplazado ? ` · aplazado ×${r.micro.aplazado}` : ""
-        }${r.sub.frecuente ? " · frecuente" : ""}</span>
-          ${readonly() ? "" : '<button class="mini od-do">repaso hecho</button>'}
+        }${r.sub.frecuente ? " · frecuente" : ""}${yaEnSesion ? " · ya en la sesion de hoy" : ""}</span>
+          ${readonly() || yaEnSesion ? "" : '<button class="mini od-do">repaso hecho</button>'}
         </li>`;
       })
       .join("") +
     `</ul>`;
+  box.querySelectorAll("li[draggable]").forEach((li) => {
+    li.addEventListener("dragstart", (e) => {
+      e.dataTransfer.effectAllowed = "copy";
+      e.dataTransfer.setData("text/plain", li.dataset.id);
+    });
+  });
   box.querySelectorAll(".od-do").forEach((btn) => {
     btn.onclick = () => {
       const id = btn.closest("li").dataset.id;

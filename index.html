@@ -33,9 +33,9 @@
       </div>
       <button id="btn-settings" class="btn btn-ghost">Ajustes</button>
       <a id="btn-help" class="btn btn-ghost btn-mini"
-         href="https://github.com/cesarkero/faromd#preguntas-frecuentes"
+         href="https://github.com/cesarkero/faromd#cómo-se-usa"
          target="_blank" rel="noopener"
-         title="Ayuda y preguntas frecuentes (repositorio)" aria-label="Ayuda">?</a>
+         title="Ayuda: cómo se usa (repositorio)" aria-label="Ayuda">?</a>
       <input type="file" id="file-import" accept="application/json,.json" hidden>
     </div>
   </header>
@@ -43,10 +43,14 @@
   <main>
     <section class="card card-strip" id="weekly"></section>
 
-    <section class="card card-compact">
-      <div class="card-title">Sesion de hoy</div>
-      <div id="circle" class="circle-host"></div>
-    </section>
+    <div class="grid-top">
+      <section class="card card-compact">
+        <div class="card-title">Sesion de hoy</div>
+        <div id="circle" class="circle-host"></div>
+      </section>
+
+      <section class="card" id="quickreview"></section>
+    </div>
 
     <section class="card card-compact">
       <div class="card-title">Tiempo por tema</div>
@@ -54,8 +58,6 @@
     </section>
 
     <section class="card" id="actividades"></section>
-
-    <section class="card" id="overdue"></section>
 
     <section class="card table-card">
       <div class="card-title">Base de datos del temario</div>

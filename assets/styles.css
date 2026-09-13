@@ -109,7 +109,7 @@ main {
   flex-direction: column;
   gap: 16px;
 }
-.grid-top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+.grid-top { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 1fr); gap: 16px; align-items: start; }
 @media (max-width: 900px) {
   .grid-top { grid-template-columns: 1fr; }
 }
@@ -122,7 +122,7 @@ main {
   padding: clamp(14px, 2.4vw, 22px);
   min-width: 0;
 }
-.card-compact { padding: 14px 16px; }
+.card-compact { padding: 14px 16px; container-type: inline-size; }
 .card-strip { padding: 12px 16px; }
 .card-title, .panel-title {
   font-size: 11px; font-weight: 800; letter-spacing: 0.14em;
@@ -140,7 +140,10 @@ main {
 .circle-host { display: flex; flex-direction: column; gap: 12px; }
 .circle-wrap { display: flex; flex-direction: row; align-items: center; gap: 22px; width: 100%; min-width: 0; }
 .circle-svg { width: 340px; min-width: 260px; max-width: 380px; height: auto; display: block; }
-@media (max-width: 720px) {
+/* container queries (no @media): esta tarjeta puede ser de ancho completo (movil) o
+   la mitad del panel superior (junto a Repasos rapidos), asi que la ruptura de
+   layout depende del ancho de LA TARJETA, no del viewport. */
+@container (max-width: 720px) {
   .circle-wrap { flex-direction: column; align-items: center; gap: 14px; }
   .circle-svg { width: 100%; max-width: 320px; }
 }
@@ -169,9 +172,9 @@ main {
 
 .pomo-list { list-style: none; margin: 0; padding: 0; flex: 1; min-width: 0;
   display: grid; grid-template-columns: 1fr 1fr; gap: 8px; align-content: center; }
-@media (max-width: 1050px) { .pomo-list { grid-template-columns: 1fr; } }
-@media (max-width: 720px) { .pomo-list { grid-template-columns: 1fr 1fr; width: 100%; } }
-@media (max-width: 480px) { .pomo-list { grid-template-columns: 1fr; } }
+@container (max-width: 1050px) { .pomo-list { grid-template-columns: 1fr; } }
+@container (max-width: 720px) { .pomo-list { grid-template-columns: 1fr 1fr; width: 100%; } }
+@container (max-width: 480px) { .pomo-list { grid-template-columns: 1fr; } }
 .pomo-item {
   display: flex; align-items: center; gap: 10px;
   padding: 9px 11px; background: var(--surface-2); border-radius: 11px; min-width: 0;
@@ -222,15 +225,34 @@ main {
 .progress { margin-top: 4px; height: 6px; width: 100%; max-width: 180px; background: var(--track); border-radius: 999px; overflow: hidden; }
 .progress span { display: block; height: 100%; background: var(--ap); }
 
+.qr-hint { font-size: 11px; color: var(--muted); margin: -4px 0 10px; }
 .overdue-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
 .overdue-list li {
   display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 4px 10px;
   padding: 8px 10px; background: var(--surface-2); border-radius: 10px;
 }
+.overdue-list li[draggable="true"] { cursor: grab; }
+.overdue-list li[draggable="true"]:active { cursor: grabbing; }
 .od-name { font-size: 12.5px; font-weight: 700; }
 .od-meta { grid-column: 1 / -1; font-size: 11px; color: var(--muted); }
 .overdue-list li.od-retra { background: #f6e3d6; }
 .overdue-list li.od-retra .od-name { color: #9a5a2f; }
+
+/* ============ repasos extra arrastrados a un bloque ============ */
+.pomo-item.pi-droppable { outline: 1.5px dashed transparent; outline-offset: 2px; transition: outline-color .15s, background .15s; }
+.pomo-item.pi-droppable.drop-hover { outline-color: var(--ap); background: #eaf1ec; }
+.pi-extra { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px; }
+.pi-extra-chip {
+  display: inline-flex; align-items: center; gap: 4px; font-size: 10px; font-weight: 650;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 2px 4px 2px 8px;
+  max-width: 100%;
+}
+.pi-extra-chip span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 140px; }
+.pi-extra-chip button {
+  border: none; background: none; cursor: pointer; color: var(--muted); font-size: 13px;
+  line-height: 1; padding: 0 2px; font-family: inherit;
+}
+.pi-extra-chip button:hover { color: var(--urg); }
 
 /* ============ artículos y cursos ============ */
 .act-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }

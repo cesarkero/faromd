@@ -156,6 +156,24 @@ Estructura fija de 4 roles, como `img/reparto_estudio_circular.svg`:
   Es el único bloque que arranca un microtema (`sin_empezar → programado`).
 - **P4** cierra con otro tema distinto o un recuerdo activo de algo ya visto.
 
+## Repasos rápidos (varios temas en un mismo bloque)
+
+Junto al círculo, el panel **Repasos rápidos** muestra los mismos repasos vencidos que antes
+(ordenados por prioridad: más aplazados/atrasados y los `frecuente` primero) como tarjetas
+pequeñas.
+
+- **Arrastra** una tarjeta sobre el bloque **P1 Repaso** o **P2 Tema/Repaso** de la lista del
+  círculo para anotar que también repasaste ese tema en ese bloque (aparece como una
+  etiqueta bajo el bloque; la **×** la quita si te equivocas).
+- Al **marcar el bloque como hecho**, todos los temas anotados en él (el principal + los
+  arrastrados) se registran como repasados (`Repasos` +1, reprograma `Próx. repaso`) y el
+  tiempo del bloque (25 min por defecto) **se reparte por igual** entre todos ellos.
+- También puedes pulsar **repaso hecho** directamente en la tarjeta para registrarlo sin
+  pasar por ningún bloque (como antes); en ese caso no suma minutos a *Tiempo por tema*.
+- Solo se puede soltar en P1/P2 (no en P3 Tema principal ni P4 Cierre) y solo mientras el
+  bloque no esté ya marcado ni el día cerrado; un mismo tema no puede estar dos veces en la
+  sesión del día.
+
 ## Cómo se reajusta la planificación
 
 - **Bloques sin marcar**: no se pierden. El microtema sigue pendiente y el repaso sigue vencido,
@@ -230,7 +248,7 @@ En **Ajustes → Zona peligrosa → Restaurar plan de fábrica** (pide escribir 
 - Rellenar `fuentes` a partir de los índices fotografiados en `img/indices/`.
 - Campo de **minutos a mano** por fila, para registrar tiempo de estudio hecho fuera del círculo.
 
-# Preguntas frecuentes
+# Cómo se usa
 
 **Marqué un bloque en el círculo, ¿cuándo se rellenan `F. estudio` y `Próx. repaso`?**
 No con el círculo. Marcar un bloque de un tema nuevo solo lo pasa a `Programado` y le suma 25 min.
