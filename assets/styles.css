@@ -50,10 +50,7 @@ a { color: var(--ap-2); }
   z-index: 20;
 }
 .brand { display: flex; align-items: center; gap: 14px; }
-.brand-mark {
-  width: 10px; height: 44px; border-radius: 6px;
-  background: linear-gradient(var(--repaso), var(--ap));
-}
+.brand-logo { width: 44px; height: 44px; object-fit: contain; flex: none; display: block; }
 .brand h1 { font-size: 20px; font-weight: 850; }
 .brand p { margin: 0; font-size: 12.5px; color: var(--muted); }
 .topbar-right { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
