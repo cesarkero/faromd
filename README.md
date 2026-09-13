@@ -25,7 +25,7 @@ Cuando se completa la sesión de 2 h se hace tick un indicador dentro del círcu
 
 Lo principal del dashboard en una tabla de datos a modo de base de datso. Los subtemas tienen microtemas. 
 La base de datos (tabla) tendrá:
-- çFecha del último repaso
+- Fecha del último repaso
 - Fecha de estudio
 - Fecha del próximo repaso. 
 - Estado (sin empezar, programado, finalizado)
@@ -197,11 +197,13 @@ filtrar. En **móvil** se oculta (usa *Datos → Exportar CSV*). Columnas: micro
 repasos, fechas.
 
 **Fuentes** (dónde está el microtema en los libros): no ocupan columna. El nombre del microtema
-sale con subrayado punteado cuando tiene fuentes anotadas; **al pasar el ratón por encima** se
-despliega la ficha con la lista (`semFYC cap. 12 · p. 145`, `Vázquez Lima cap. 33`…). Si una
-fuente incluye una URL al material digitalizado, aparece como enlace **abrir material ↗**. Para
-añadir/editar: enlace *＋ fuente* junto al nombre (o *Editar fuentes* en la ficha), varias
-separadas por `|`. Se exportan a CSV/Excel en su columna `Fuentes`.
+sale con subrayado punteado cuando tiene fuentes anotadas, y junto a él, **en gris pequeño**, el
+nombre del libro (`semFYC`, `Vázquez Lima`…) para verlo de un vistazo sin desplegar nada.
+**Al pasar el ratón por encima del nombre** se despliega la ficha con la lista completa
+(`semFYC cap. 12 · p. 145`, `Vázquez Lima cap. 33`…). Si una fuente incluye una URL al material
+digitalizado, aparece como enlace **abrir material ↗**. Para añadir/editar: enlace *＋ fuente*
+junto al nombre (o *Editar fuentes* en la ficha), varias separadas por `|`. Se exportan a
+CSV/Excel en su columna `Fuentes`.
 
 ## Artículos y cursos (bitácora de formación)
 
@@ -309,13 +311,20 @@ Libros
 - Medicina de Urgencias y Emergencias – Jiménez Murillo/Montero Pérez	6.ª	Consulta más amplia/profundización en urgencias
 - Dermatoscopia Diagnóstica. Guía ilustrada – Bowling	2.ª	Fuente específica de Dermatología/dermatoscopia
 
+# Autoría y licencia
+
+**Faromd** — primera versión. Herramienta de **Sara Arquero Cabral** y **César Arquero Cabral**.
+
+Código publicado bajo licencia **[MIT](LICENSE)**: libre de usar, copiar y modificar citando a
+los autores, sin garantía de ningún tipo.
+
+El temario y las notas de estudio son un **material de apoyo personal**, no una fuente clínica
+verificada: para la práctica asistencial consulta siempre las guías originales (ver
+*Material para el plan de estudio* arriba) y las fuentes anotadas en cada microtema.
+
 ---
 
 # Cosas por hacer
-- [x] Que se vea bien en modo móvil. La tabla de datos se oculta en el móvil.
-- [x] Poder ver la web en local antes del push (`py -3 -m http.server`).
-- [x] Tabla plegada por defecto.
-- [x] Cierre de día y recalibrado de fechas.
 - [ ] Afinar el temario y rellenar `fuentes` con los índices reales de los libros
   (fotos en `img/indices/`). **Aún NO analizados**: el temario actual es una propuesta
   a partir de los índices *conocidos* de la semFYC y de Urgencias (Vázquez Lima), no de estas fotos.

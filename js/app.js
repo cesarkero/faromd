@@ -32,6 +32,7 @@ import { renderBars } from "./ui/bars.js";
 import { renderActividades } from "./ui/actividades.js";
 import { renderTable } from "./ui/table.js";
 import { openSettings } from "./ui/settings.js";
+import { openHelp } from "./ui/help.js";
 import { downloadCSV, downloadJSON, downloadXLSX } from "./csv.js";
 
 let plan = null;
@@ -344,10 +345,26 @@ function wireToolbar() {
     menu.hidden = true;
     menuBtn.setAttribute("aria-expanded", "false");
   };
+  // Coloca el menu con position:fixed segun el boton, pero sin dejar que se
+  // salga de la pantalla (en movil el boton puede quedar a la izquierda al
+  // envolver la barra superior en varias filas).
+  const positionMenu = () => {
+    const r = menuBtn.getBoundingClientRect();
+    menu.style.top = `${r.bottom + 6}px`;
+    const mw = menu.offsetWidth || 240;
+    const left = Math.min(r.right - mw, window.innerWidth - mw - 12);
+    menu.style.left = `${Math.max(12, left)}px`;
+  };
   menuBtn.onclick = (e) => {
     e.stopPropagation();
-    menu.hidden = !menu.hidden;
-    menuBtn.setAttribute("aria-expanded", String(!menu.hidden));
+    const abrir = menu.hidden;
+    if (abrir) {
+      menu.hidden = false;
+      positionMenu();
+    } else {
+      closeMenu();
+    }
+    menuBtn.setAttribute("aria-expanded", String(abrir));
   };
   document.addEventListener("click", (e) => {
     if (!menu.hidden && !menu.contains(e.target)) closeMenu();
@@ -399,6 +416,8 @@ function wireToolbar() {
         toast("Plan de fábrica cargado.");
       },
     });
+
+  $("#btn-help").onclick = () => openHelp();
 }
 
 // --- utilidades UI -------------------------------------------

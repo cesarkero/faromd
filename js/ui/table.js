@@ -196,6 +196,14 @@ function row(plan, tema, sub, m, today, onMutate, readonly, bloqueHoy) {
     nameSpan.addEventListener("focus", open);
     nameSpan.addEventListener("mouseleave", hideSrcPopover);
     nameSpan.addEventListener("blur", hideSrcPopover);
+
+    const book = bookLabel(m.fuentes);
+    if (book) {
+      const bookSpan = document.createElement("span");
+      bookSpan.className = "name-book";
+      bookSpan.textContent = book;
+      tdName.appendChild(bookSpan);
+    }
   } else if (!readonly) {
     const add = document.createElement("button");
     add.type = "button";
@@ -409,6 +417,20 @@ function showSrcPopover(anchor, m, readonly, onMutate) {
   p.style.top = `${window.scrollY + r.bottom + 6}px`;
   p.style.left = `${Math.max(8, left)}px`;
 }
+// Nombre(s) de libro para el rotulo gris junto al microtema: la parte de
+// cada fuente antes de "cap." / "p. <numero>" (p.ej. "semFYC cap. 12 · p. 145" -> "semFYC").
+function bookLabel(fuentes) {
+  const libros = [];
+  for (const f of fuentes || []) {
+    const sinUrl = f.replace(/https?:\/\/[^\s|]+/, "").trim();
+    const m = sinUrl.match(/^(.+?)(?:\s*,?\s*cap\.|\s+p(?:ág|\.)?\s*\d|$)/i);
+    let libro = (m ? m[1] : sinUrl).trim();
+    libro = libro.replace(/[\s·,|–-]+$/, "").trim(); // separadores sueltos al final
+    if (libro && !libros.includes(libro)) libros.push(libro);
+  }
+  return libros.join(" · ");
+}
+
 function fuenteLine(f) {
   const li = document.createElement("li");
   const url = f.match(/https?:\/\/[^\s|]+/);
