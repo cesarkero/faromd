@@ -1,43 +1,35 @@
-# Objetivo general
-Hay que hacer un dashboard para un plan de estudios. 
-Publicarlo en una sola hoja en github pages.
+# Faromd
 
-# Objetivos
-Repasar contenidos constantemente (estar actualizada en medicina de emergencias y atención primaria)
-Mantener los repasos activos para mejorar en la profesión de medicina de familia con un enfoque para que sirva para un futuro MIR.
+Dashboard personal de plan de estudio para **medicina de familia y urgencias**: repasar de
+forma constante y espaciada el temario de atención primaria y emergencias, con más peso en
+los temas frecuentes en consulta (HTA, diabetes, dislipemia…), para mantenerse al día en la
+profesión y preparar un futuro MIR. Los días sin estudiar no penalizan: la planificación se
+recalcula siempre desde el estado real del temario.
 
-# Funciones
-- Hacer una propuesta de temas y subtemas a partir del material para el plan de estudio.
-- Propuesta semanal de bloques de 2h dividida en pomodoros (ver imágenes en \img\reparto_estudio_circular.svg).
-- El hito sería estudiar 10 h (5 sesiones) pero 1 sesión sería élite.
-- Repasar más habitualmente temas frecuentes en la consulta (hipertensión, diabetes, dislipemia...)
-- Puede haber días donde no se estudie. 
+Es una web estática (HTML + JS, sin build ni servidor) publicada en GitHub Pages; todos los
+datos viven en un único JSON versionado en este mismo repositorio.
 
-# Contenidos 
-Basa tus estilos y colores propuesta en las imágenes de la carpeta /img
-Mézclalos con tonos más pastel y mínimal.
+## Qué hace
 
-# Estilo y datos
-- Dashboard con gráfico arriba a la izquierda similar al img\reparto_estudio_circular.svg donde en cada trozo del círculo se indica el SUBTEMA que toca en la sesión. 
-Cuando se completa la sesión de 2 h se hace tick un indicador dentro del círculo para reflejar que se ha completado la sesisón.
-
-- Arriba a la derecha se mostrará el tiempo de estudio hasta la fecha dedicado a cada tema. Puede ser un gráfico de barras apiladas por subtemas. 
-
-Lo principal del dashboard en una tabla de datos a modo de base de datso. Los subtemas tienen microtemas. 
-La base de datos (tabla) tendrá:
-- Fecha del último repaso
-- Fecha de estudio
-- Fecha del próximo repaso. 
-- Estado (sin empezar, programado, finalizado)
-- Anki (si, no)
-- Repaso (número de repasos)
-
-Un aspecto que hay que pensar es en la forma de registrar los datos. Creo que github pages es estática: ¿se pueden introducir y corregir datos? ¿Cuál sería la forma más sencilla de tener este visor de plan de estudios en un solo lugar con la tabla o base de datos en la que se planifica y se dirige?
+- **Sesión diaria** de 4 bloques de 25 min — repaso · tema/repaso · tema principal · cierre
+  activo —, sorteados con más peso hacia los temas frecuentes y prioritarios, con un círculo
+  visual inspirado en `img/reparto_estudio_circular.svg`.
+- **Repaso espaciado** por microtema (intervalos 1-3-7-21-60 días, más cortos para los temas
+  frecuentes): reprograma solo y desliza a mañana lo que no dé tiempo a hacer.
+- **Repasos rápidos**: arrastra varios temas vencidos a un bloque de repaso para anotarlos
+  todos de una vez, repartiendo el tiempo del bloque entre ellos.
+- **Tiempo por tema** (barras apiladas) y progreso semanal frente a un objetivo de horas y
+  número de sesiones.
+- **Bitácora de formación continuada** (artículos, cursos, sesiones clínicas), aparte del
+  temario pero sumando al total semanal.
+- **Tabla del temario** (temas ▸ subtemas ▸ microtemas) como base de datos: estado, Anki,
+  número de repasos, fechas y fuentes bibliográficas (libro, capítulo, página, enlace) de
+  cada microtema; exportable a CSV, Excel o JSON.
 
 # Cómo funciona el dashboard
 
-La web es estática (HTML + JS vanilla, sin build) y vive en la raíz del repo. Todos los datos
-están en `data/plan.json`, que es la **única fuente de verdad**.
+Vive en la raíz del repo, sin build; todos los datos están en `data/plan.json`, que es la
+**única fuente de verdad**.
 
 ## Estructura
 
