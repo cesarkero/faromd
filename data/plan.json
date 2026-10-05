@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": 1,
-    "actualizado": "2026-09-13T16:41:32Z",
+    "actualizado": "2026-10-05T18:56:30Z",
     "areas": {
       "AP": "Atencion Primaria",
       "URG": "Urgencias y Emergencias",
@@ -46,54 +46,62 @@
             {
               "id": "ap-cardiovascular-y-riesgo-vascular--hipertension-arterial--hta-definicion-cribado-y-medida-correcta-de-la-pa",
               "nombre": "HTA: definicion, cribado y medida correcta de la PA",
-              "estado": "sin_empezar",
+              "estado": "programado",
               "anki": false,
               "repasos": 0,
-              "fechaEstudio": null,
+              "fechaEstudio": "2026-10-06",
               "fechaUltimoRepaso": null,
               "fechaProximoRepaso": null,
               "minutosDedicados": 0,
               "aplazado": 0,
-              "fuentes": []
+              "fuentes": [
+                "SEM 1258"
+              ]
             },
             {
               "id": "ap-cardiovascular-y-riesgo-vascular--hipertension-arterial--mapa-ampa-e-hta-de-bata-blanca-y-enmascarada",
               "nombre": "MAPA / AMPA e HTA de bata blanca y enmascarada",
-              "estado": "sin_empezar",
+              "estado": "programado",
               "anki": false,
               "repasos": 0,
-              "fechaEstudio": null,
+              "fechaEstudio": "2026-10-06",
               "fechaUltimoRepaso": null,
               "fechaProximoRepaso": null,
               "minutosDedicados": 0,
               "aplazado": 0,
-              "fuentes": []
+              "fuentes": [
+                "1258 sem"
+              ]
             },
             {
               "id": "ap-cardiovascular-y-riesgo-vascular--hipertension-arterial--estudio-inicial-y-busqueda-de-lesion-de-organo-diana",
               "nombre": "Estudio inicial y busqueda de lesion de organo diana",
-              "estado": "sin_empezar",
+              "estado": "programado",
               "anki": false,
               "repasos": 0,
-              "fechaEstudio": null,
+              "fechaEstudio": "2026-10-06",
               "fechaUltimoRepaso": null,
               "fechaProximoRepaso": null,
               "minutosDedicados": 0,
               "aplazado": 0,
-              "fuentes": []
+              "fuentes": [
+                "SEM 1258"
+              ]
             },
             {
               "id": "ap-cardiovascular-y-riesgo-vascular--hipertension-arterial--tratamiento-no-farmacologico-y-objetivos-de-pa",
               "nombre": "Tratamiento no farmacologico y objetivos de PA",
-              "estado": "sin_empezar",
+              "estado": "programado",
               "anki": false,
               "repasos": 0,
-              "fechaEstudio": null,
+              "fechaEstudio": "2026-10-06",
               "fechaUltimoRepaso": null,
               "fechaProximoRepaso": null,
               "minutosDedicados": 0,
               "aplazado": 0,
-              "fuentes": []
+              "fuentes": [
+                "SEM 1262"
+              ]
             },
             {
               "id": "ap-cardiovascular-y-riesgo-vascular--hipertension-arterial--escalones-de-tratamiento-farmacologico-y-combinaciones",
@@ -106,7 +114,9 @@
               "fechaProximoRepaso": null,
               "minutosDedicados": 0,
               "aplazado": 0,
-              "fuentes": []
+              "fuentes": [
+                "SEM1262"
+              ]
             },
             {
               "id": "ap-cardiovascular-y-riesgo-vascular--hipertension-arterial--hta-resistente-y-derivacion",
@@ -119,7 +129,9 @@
               "fechaProximoRepaso": null,
               "minutosDedicados": 0,
               "aplazado": 0,
-              "fuentes": []
+              "fuentes": [
+                "SEM 1266/emergencias 120"
+              ]
             },
             {
               "id": "ap-cardiovascular-y-riesgo-vascular--hipertension-arterial--crisis-hipertensiva-urgencia-vs-emergencia",
@@ -132,7 +144,9 @@
               "fechaProximoRepaso": null,
               "minutosDedicados": 0,
               "aplazado": 0,
-              "fuentes": []
+              "fuentes": [
+                "emergencias120/murillo 229/sem1266"
+              ]
             }
           ]
         },
@@ -153,7 +167,9 @@
               "fechaProximoRepaso": null,
               "minutosDedicados": 0,
               "aplazado": 0,
-              "fuentes": []
+              "fuentes": [
+                "1268 sem"
+              ]
             },
             {
               "id": "ap-cardiovascular-y-riesgo-vascular--dislipemia--objetivos-de-cldl-por-categoria-de-riesgo",
@@ -166,7 +182,9 @@
               "fechaProximoRepaso": null,
               "minutosDedicados": 0,
               "aplazado": 0,
-              "fuentes": []
+              "fuentes": [
+                "1268 sem e internet"
+              ]
             },
             {
               "id": "ap-cardiovascular-y-riesgo-vascular--dislipemia--estatinas-eleccion-potencia-y-efectos-adversos",
@@ -179,7 +197,9 @@
               "fechaProximoRepaso": null,
               "minutosDedicados": 0,
               "aplazado": 0,
-              "fuentes": []
+              "fuentes": [
+                "1274 sem"
+              ]
             },
             {
               "id": "ap-cardiovascular-y-riesgo-vascular--dislipemia--ezetimiba-ipcsk9-y-terapia-combinada",
@@ -192,7 +212,9 @@
               "fechaProximoRepaso": null,
               "minutosDedicados": 0,
               "aplazado": 0,
-              "fuentes": []
+              "fuentes": [
+                "1276 sem"
+              ]
             },
             {
               "id": "ap-cardiovascular-y-riesgo-vascular--dislipemia--hipertrigliceridemia-y-dislipemia-aterogenica",
@@ -205,7 +227,9 @@
               "fechaProximoRepaso": null,
               "minutosDedicados": 0,
               "aplazado": 0,
-              "fuentes": []
+              "fuentes": [
+                "1276sem"
+              ]
             }
           ]
         },
@@ -351,10 +375,10 @@
             {
               "id": "ap-cardiovascular-y-riesgo-vascular--cardiopatia-isquemica-cronica--tratamiento-antianginoso-y-prevencion-secundaria",
               "nombre": "Tratamiento antianginoso y prevencion secundaria",
-              "estado": "programado",
+              "estado": "sin_empezar",
               "anki": false,
               "repasos": 0,
-              "fechaEstudio": "2026-09-13",
+              "fechaEstudio": null,
               "fechaUltimoRepaso": null,
               "fechaProximoRepaso": null,
               "minutosDedicados": 0,
@@ -385,12 +409,12 @@
             {
               "id": "ap-cardiovascular-y-riesgo-vascular--enfermedad-tromboembolica-venosa--tvp-probabilidad-clinica-dimero-d-y-ecografia",
               "nombre": "TVP: probabilidad clinica, dimero D y ecografia",
-              "estado": "finalizado",
+              "estado": "sin_empezar",
               "anki": false,
-              "repasos": 1,
+              "repasos": 0,
               "fechaEstudio": null,
-              "fechaUltimoRepaso": "2026-09-13",
-              "fechaProximoRepaso": "2026-09-14",
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
               "minutosDedicados": 0,
               "aplazado": 0,
               "fuentes": []
@@ -398,12 +422,12 @@
             {
               "id": "ap-cardiovascular-y-riesgo-vascular--enfermedad-tromboembolica-venosa--tratamiento-anticoagulante-y-duracion",
               "nombre": "Tratamiento anticoagulante y duracion",
-              "estado": "finalizado",
+              "estado": "sin_empezar",
               "anki": false,
-              "repasos": 1,
+              "repasos": 0,
               "fechaEstudio": null,
-              "fechaUltimoRepaso": "2026-09-13",
-              "fechaProximoRepaso": "2026-09-14",
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
               "minutosDedicados": 0,
               "aplazado": 0,
               "fuentes": []
@@ -2378,12 +2402,12 @@
             {
               "id": "ap-prevencion-y-actividades-comunitarias--actividades-preventivas--papps-recomendaciones-de-cribado-por-edad-y-sexo",
               "nombre": "PAPPS: recomendaciones de cribado por edad y sexo",
-              "estado": "finalizado",
+              "estado": "sin_empezar",
               "anki": false,
-              "repasos": 1,
-              "fechaEstudio": "2026-09-11",
-              "fechaUltimoRepaso": "2026-09-03",
-              "fechaProximoRepaso": "2026-09-17",
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
               "minutosDedicados": 0,
               "aplazado": 0,
               "fuentes": []
@@ -2391,12 +2415,12 @@
             {
               "id": "ap-prevencion-y-actividades-comunitarias--actividades-preventivas--prevencion-cuaternaria-y-no-hacer-recomendaciones",
               "nombre": "Prevencion cuaternaria y no hacer (recomendaciones)",
-              "estado": "finalizado",
+              "estado": "sin_empezar",
               "anki": false,
               "repasos": 0,
-              "fechaEstudio": "2026-09-01",
+              "fechaEstudio": null,
               "fechaUltimoRepaso": null,
-              "fechaProximoRepaso": "2026-09-15",
+              "fechaProximoRepaso": null,
               "minutosDedicados": 0,
               "aplazado": 0,
               "fuentes": []
@@ -2404,12 +2428,12 @@
             {
               "id": "ap-prevencion-y-actividades-comunitarias--actividades-preventivas--consejo-sobre-actividad-fisica-alimentacion-y-alcohol",
               "nombre": "Consejo sobre actividad fisica, alimentacion y alcohol",
-              "estado": "finalizado",
+              "estado": "sin_empezar",
               "anki": false,
-              "repasos": 1,
-              "fechaEstudio": "2026-09-11",
-              "fechaUltimoRepaso": "2026-09-12",
-              "fechaProximoRepaso": "2026-09-13",
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
               "minutosDedicados": 0,
               "aplazado": 0,
               "fuentes": []
@@ -2425,12 +2449,12 @@
             {
               "id": "ap-prevencion-y-actividades-comunitarias--gestion-de-la-consulta--interpretacion-de-pruebas-sensibilidad-vpp-y-razones-de-verosimilitud",
               "nombre": "Interpretacion de pruebas: sensibilidad, VPP y razones de verosimilitud",
-              "estado": "finalizado",
+              "estado": "sin_empezar",
               "anki": false,
-              "repasos": 1,
-              "fechaEstudio": "2026-09-13",
-              "fechaUltimoRepaso": "2026-09-12",
-              "fechaProximoRepaso": "2026-09-14",
+              "repasos": 0,
+              "fechaEstudio": null,
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
               "minutosDedicados": 0,
               "aplazado": 0,
               "fuentes": []
@@ -2479,28 +2503,32 @@
             {
               "id": "urg-soporte-vital-y-parada-cardiaca--rcp-y-soporte-vital--svb-y-dea-secuencia-y-calidad-de-las-compresiones",
               "nombre": "SVB y DEA: secuencia y calidad de las compresiones",
-              "estado": "finalizado",
+              "estado": "programado",
               "anki": false,
               "repasos": 0,
-              "fechaEstudio": null,
-              "fechaUltimoRepaso": "2026-09-04",
-              "fechaProximoRepaso": "2026-09-13",
+              "fechaEstudio": "2026-10-07",
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
               "minutosDedicados": 0,
               "aplazado": 0,
-              "fuentes": []
+              "fuentes": [
+                "emergencias 23/murillo 22"
+              ]
             },
             {
               "id": "urg-soporte-vital-y-parada-cardiaca--rcp-y-soporte-vital--sva-algoritmo-de-ritmos-desfibrilables-y-no-desfibrilables",
               "nombre": "SVA: algoritmo de ritmos desfibrilables y no desfibrilables",
-              "estado": "finalizado",
+              "estado": "sin_empezar",
               "anki": false,
               "repasos": 0,
               "fechaEstudio": null,
-              "fechaUltimoRepaso": "2026-09-08",
-              "fechaProximoRepaso": "2026-09-13",
+              "fechaUltimoRepaso": null,
+              "fechaProximoRepaso": null,
               "minutosDedicados": 0,
               "aplazado": 0,
-              "fuentes": []
+              "fuentes": [
+                "emergencias 24/murillo 7"
+              ]
             },
             {
               "id": "urg-soporte-vital-y-parada-cardiaca--rcp-y-soporte-vital--farmacos-en-la-pcr-y-causas-reversibles-4h-4t",
@@ -2513,7 +2541,9 @@
               "fechaProximoRepaso": null,
               "minutosDedicados": 0,
               "aplazado": 0,
-              "fuentes": []
+              "fuentes": [
+                "emergencias 36"
+              ]
             },
             {
               "id": "urg-soporte-vital-y-parada-cardiaca--rcp-y-soporte-vital--cuidados-posresucitacion-y-pronostico",
@@ -2526,7 +2556,9 @@
               "fechaProximoRepaso": null,
               "minutosDedicados": 0,
               "aplazado": 0,
-              "fuentes": []
+              "fuentes": [
+                "emergencias 36"
+              ]
             },
             {
               "id": "urg-soporte-vital-y-parada-cardiaca--rcp-y-soporte-vital--via-aerea-en-urgencias-dispositivos-y-secuencia-rapida-de-intubacion",
@@ -2539,7 +2571,9 @@
               "fechaProximoRepaso": null,
               "minutosDedicados": 0,
               "aplazado": 0,
-              "fuentes": []
+              "fuentes": [
+                "emergencias 46"
+              ]
             }
           ]
         }
@@ -2559,12 +2593,12 @@
             {
               "id": "urg-urgencias-cardiovasculares--sindrome-coronario-agudo--dolor-toracico-estratificacion-y-ecg-en-10-min",
               "nombre": "Dolor toracico: estratificacion y ECG en <10 min",
-              "estado": "finalizado",
-              "anki": true,
+              "estado": "sin_empezar",
+              "anki": false,
               "repasos": 0,
-              "fechaEstudio": "2026-09-13",
+              "fechaEstudio": null,
               "fechaUltimoRepaso": null,
-              "fechaProximoRepaso": "2026-09-14",
+              "fechaProximoRepaso": null,
               "minutosDedicados": 0,
               "aplazado": 0,
               "fuentes": []
