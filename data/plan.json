@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": 1,
-    "actualizado": "2026-10-05T18:56:30Z",
+    "actualizado": "2026-10-05T18:57:02Z",
     "areas": {
       "AP": "Atencion Primaria",
       "URG": "Urgencias y Emergencias",
@@ -3772,6 +3772,51 @@
       ]
     }
   ],
-  "sesiones": [],
+  "sesiones": [
+    {
+      "fecha": "2026-10-05",
+      "bloques": [
+        {
+          "pomodoro": 1,
+          "rol": "repaso",
+          "tipo": "repaso",
+          "rotulo": "REPASO",
+          "microtemaId": "urg-urgencias-respiratorias--insuficiencia-respiratoria-aguda--valoracion-de-la-disnea-y-gasometria",
+          "hecho": false,
+          "extra": []
+        },
+        {
+          "pomodoro": 2,
+          "rol": "tema_repaso",
+          "tipo": "tema",
+          "rotulo": "TEMA / REPASO",
+          "microtemaId": "ap-neurologia--cefaleas--cefalea-banderas-rojas-y-criterios-de-neuroimagen",
+          "hecho": false,
+          "extra": []
+        },
+        {
+          "pomodoro": 3,
+          "rol": "tema",
+          "tipo": "tema",
+          "rotulo": "TEMA PRINCIPAL",
+          "microtemaId": "ap-cardiovascular-y-riesgo-vascular--hipertension-arterial--hta-definicion-cribado-y-medida-correcta-de-la-pa",
+          "hecho": false,
+          "extra": []
+        },
+        {
+          "pomodoro": 4,
+          "rol": "cierre",
+          "tipo": "cierre",
+          "rotulo": "CIERRE ACTIVO",
+          "microtemaId": "ap-salud-mental--depresion-y-ansiedad--deteccion-y-diagnostico-de-la-depresion-gravedad",
+          "hecho": false,
+          "extra": []
+        }
+      ],
+      "completada": false,
+      "cerrada": true,
+      "minutos": 0
+    }
+  ],
   "actividades": []
 }
