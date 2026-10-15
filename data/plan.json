@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": 1,
-    "actualizado": "2026-10-12T18:29:22Z",
+    "actualizado": "2026-10-15T18:12:14Z",
     "areas": {
       "AP": "Atencion Primaria",
       "URG": "Urgencias y Emergencias",
@@ -51,9 +51,9 @@
               "repasos": 0,
               "fechaEstudio": "2026-10-12",
               "fechaUltimoRepaso": null,
-              "fechaProximoRepaso": "2026-10-13",
+              "fechaProximoRepaso": null,
               "minutosDedicados": 25,
-              "aplazado": 0,
+              "aplazado": 1,
               "fuentes": [
                 "SEM 1258"
               ]
@@ -2503,10 +2503,10 @@
             {
               "id": "urg-soporte-vital-y-parada-cardiaca--rcp-y-soporte-vital--svb-y-dea-secuencia-y-calidad-de-las-compresiones",
               "nombre": "SVB y DEA: secuencia y calidad de las compresiones",
-              "estado": "programado",
+              "estado": "finalizado",
               "anki": false,
               "repasos": 0,
-              "fechaEstudio": "2026-10-07",
+              "fechaEstudio": "2026-10-15",
               "fechaUltimoRepaso": null,
               "fechaProximoRepaso": null,
               "minutosDedicados": 0,
