@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": 1,
-    "actualizado": "2026-10-15T18:12:14Z",
+    "actualizado": "2026-10-19T18:41:01Z",
     "areas": {
       "AP": "Atencion Primaria",
       "URG": "Urgencias y Emergencias",
@@ -76,13 +76,13 @@
             {
               "id": "ap-cardiovascular-y-riesgo-vascular--hipertension-arterial--estudio-inicial-y-busqueda-de-lesion-de-organo-diana",
               "nombre": "Estudio inicial y busqueda de lesion de organo diana",
-              "estado": "programado",
-              "anki": false,
+              "estado": "finalizado",
+              "anki": true,
               "repasos": 0,
-              "fechaEstudio": "2026-10-13",
+              "fechaEstudio": "2026-10-19",
               "fechaUltimoRepaso": null,
               "fechaProximoRepaso": null,
-              "minutosDedicados": 0,
+              "minutosDedicados": 25,
               "aplazado": 0,
               "fuentes": [
                 "SEM 1258"
@@ -91,10 +91,10 @@
             {
               "id": "ap-cardiovascular-y-riesgo-vascular--hipertension-arterial--tratamiento-no-farmacologico-y-objetivos-de-pa",
               "nombre": "Tratamiento no farmacologico y objetivos de PA",
-              "estado": "programado",
-              "anki": false,
+              "estado": "finalizado",
+              "anki": true,
               "repasos": 0,
-              "fechaEstudio": "2026-10-13",
+              "fechaEstudio": "2026-10-19",
               "fechaUltimoRepaso": null,
               "fechaProximoRepaso": null,
               "minutosDedicados": 0,
@@ -3853,6 +3853,50 @@
           "tipo": "cierre",
           "rotulo": "CIERRE ACTIVO",
           "microtemaId": "extra-emergencias-extrahospitalarias--tecnicas-y-transporte--movilizacion-e-inmovilizacion-retirada-de-casco",
+          "hecho": false,
+          "extra": []
+        }
+      ],
+      "completada": false,
+      "cerrada": true,
+      "minutos": 25
+    },
+    {
+      "fecha": "2026-10-19",
+      "bloques": [
+        {
+          "pomodoro": 1,
+          "rol": "repaso",
+          "tipo": "repaso",
+          "rotulo": "REPASO",
+          "microtemaId": "ap-cardiovascular-y-riesgo-vascular--hipertension-arterial--estudio-inicial-y-busqueda-de-lesion-de-organo-diana",
+          "hecho": false,
+          "extra": []
+        },
+        {
+          "pomodoro": 2,
+          "rol": "tema_repaso",
+          "tipo": "tema",
+          "rotulo": "TEMA / REPASO",
+          "microtemaId": "ap-respiratorio--tabaquismo--intervencion-breve-y-entrevista-motivacional",
+          "hecho": false,
+          "extra": []
+        },
+        {
+          "pomodoro": 3,
+          "rol": "tema",
+          "tipo": "tema",
+          "rotulo": "TEMA PRINCIPAL",
+          "microtemaId": "ap-cardiovascular-y-riesgo-vascular--hipertension-arterial--estudio-inicial-y-busqueda-de-lesion-de-organo-diana",
+          "hecho": true,
+          "extra": []
+        },
+        {
+          "pomodoro": 4,
+          "rol": "cierre",
+          "tipo": "cierre",
+          "rotulo": "CIERRE ACTIVO",
+          "microtemaId": "ap-endocrino-y-metabolico--diabetes-mellitus-tipo-2--cribado-diagnostico-y-prediabetes",
           "hecho": false,
           "extra": []
         }
